@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D23AA30A-4470-4E0D-926C-80EE618F4D1D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StageBitz.Data</RootNamespace>
+    <AssemblyName>StageBitz.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\CommonResources\Version.cs">
+      <Link>Version.cs</Link>
+    </Compile>
+    <Compile Include="DataTypes\ActiveTaskListTasks.cs" />
+    <Compile Include="DataTypes\ActiveTasks.cs" />
+    <Compile Include="DataTypes\Analytics\UserActivitySummary.cs" />
+    <Compile Include="DataTypes\Analytics\UserActivity.cs" />
+    <Compile Include="DataTypes\Analytics\ProjectTeamActivitySummary.cs" />
+    <Compile Include="DataTypes\Analytics\ProjectTeamActivity.cs" />
+    <Compile Include="DataTypes\Analytics\InventoryPageViews.cs" />
+    <Compile Include="DataTypes\AnualSummaryDetails.cs" />
+    <Compile Include="DataTypes\BookingInfo.cs" />
+    <Compile Include="DataTypes\BookingDetails.cs" />
+    <Compile Include="DataTypes\Booking\BookingResponse.cs" />
+    <Compile Include="DataTypes\Tier2Location.cs" />
+    <Compile Include="DataTypes\ItemTypeDocumentMedia.cs" />
+    <Compile Include="DataTypes\BudgetListInfo.cs" />
+    <Compile Include="DataTypes\BudgetSummaryBody.cs" />
+    <Compile Include="DataTypes\CompanyInventoryDetails.cs" />
+    <Compile Include="DataTypes\CompanyListInfo.cs" />
+    <Compile Include="DataTypes\CompanyCurrentUsage.cs" />
+    <Compile Include="DataTypes\CompanyListOfUser.cs" />
+    <Compile Include="DataTypes\CompanySearchData.cs" />
+    <Compile Include="DataTypes\DailySummaryRecord.cs" />
+    <Compile Include="DataTypes\ExportFileDetails.cs" />
+    <Compile Include="DataTypes\FieldData.cs" />
+    <Compile Include="DataTypes\CompanyItemBooking.cs" />
+    <Compile Include="DataTypes\InventoryExportDetails.cs" />
+    <Compile Include="DataTypes\ItemBriefExportDetails.cs" />
+    <Compile Include="DataTypes\UserBookings.cs" />
+    <Compile Include="DataTypes\ItemBriefDetails.cs" />
+    <Compile Include="DataTypes\ItemBriefRequestDetails.cs" />
+    <Compile Include="DataTypes\ItemInfo.cs" />
+    <Compile Include="DataTypes\ItemFieldTypeData.cs" />
+    <Compile Include="DataTypes\DocumentMediaInfoList.cs" />
+    <Compile Include="DataTypes\ItemStatusInformationForUser.cs" />
+    <Compile Include="DataTypes\ItemTypeFieldsValues.cs" />
+    <Compile Include="DataTypes\MobileDocumentMedia.cs" />
+    <Compile Include="DataTypes\MobileImageDetails.cs" />
+    <Compile Include="DataTypes\MobileItem.cs" />
+    <Compile Include="DataTypes\InvoiceTransaction.cs" />
+    <Compile Include="DataTypes\ItemResult.cs" />
+    <Compile Include="DataTypes\ItemType.cs" />
+    <Compile Include="DataTypes\MobileInitialData.cs" />
+    <Compile Include="DataTypes\MobileItemDetails.cs" />
+    <Compile Include="DataTypes\MobileItemImageDeleteRequestDetails.cs" />
+    <Compile Include="DataTypes\MobileItemImageRequestDetails.cs" />
+    <Compile Include="DataTypes\MobileItemRequestDetails.cs" />
+    <Compile Include="DataTypes\MobileItemSearchRequest.cs" />
+    <Compile Include="DataTypes\MobileSearchItem.cs" />
+    <Compile Include="DataTypes\MobileSearchResult.cs" />
+    <Compile Include="DataTypes\PackageConfirmationEmailContent.cs" />
+    <Compile Include="DataTypes\PricePlanDetails.cs" />
+    <Compile Include="DataTypes\DefaultImage.cs" />
+    <Compile Include="DataTypes\DeletedItemDatails.cs" />
+    <Compile Include="DataTypes\InventoryActivityData.cs" />
+    <Compile Include="DataTypes\Finance\InventoryPaymentPackageDetails.cs" />
+    <Compile Include="DataTypes\Finance\ProjectPackageDetails.cs" />
+    <Compile Include="DataTypes\InventoryItemData.cs" />
+    <Compile Include="DataTypes\ItemBookingData.cs" />
+    <Compile Include="DataTypes\ItemBriefAttachment.cs" />
+    <Compile Include="DataTypes\ItemBriefListInfo.cs" />
+    <Compile Include="DataTypes\ItemBriefListReportHeaderInfo.cs" />
+    <Compile Include="DataTypes\ItemBriefTaskBudget.cs" />
+    <Compile Include="DataTypes\ItemBriefTasksBudget.cs" />
+    <Compile Include="DataTypes\PinnedItemData.cs" />
+    <Compile Include="DataTypes\ProjectNotificationDetails.cs" />
+    <Compile Include="DataTypes\ProjectAttachment.cs" />
+    <Compile Include="DataTypes\PricingPlanHistoryData.cs" />
+    <Compile Include="DataTypes\BookingPanelToolTipResultForItem.cs" />
+    <Compile Include="DataTypes\ProjectUserData.cs" />
+    <Compile Include="DataTypes\ProjectUserInfo.cs" />
+    <Compile Include="DataTypes\ReportHeaderDetails.cs" />
+    <Compile Include="DataTypes\CompanyProjectDetails.cs" />
+    <Compile Include="DataTypes\ItemBriefTaskDetails.cs" />
+    <Compile Include="DataTypes\ItemTypeSummary.cs" />
+    <Compile Include="DataTypes\NotificationDTD.cs" />
+    <Compile Include="DataTypes\ProjectListInfo.cs" />
+    <Compile Include="DataTypes\ShoppingList.cs" />
+    <Compile Include="DataTypes\SPPCompaniesData.cs" />
+    <Compile Include="DataTypes\TaskLists.cs" />
+    <Compile Include="DataTypes\InitialRequestDetails.cs" />
+    <Compile Include="DataTypes\UserListForAdmin.cs" />
+    <Compile Include="DataTypes\WatchListItemDetails.cs" />
+    <Compile Include="DataTypes\ItemBookingInfo.cs" />
+    <Compile Include="DataTypes\ItemRequestDetails.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StageBitzDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StageBitzDB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="_StageBitzDB.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="StageBitzDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>StageBitzDB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

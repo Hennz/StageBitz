@@ -1,0 +1,17 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "StageBitz", "StageBitz\StageBitz.dtproj", "{75DFF107-6B7D-43F3-AFA2-14BA493C3785}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{75DFF107-6B7D-43F3-AFA2-14BA493C3785}.Development|Default.ActiveCfg = Development
+		{75DFF107-6B7D-43F3-AFA2-14BA493C3785}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E2180C6D-8C6D-48BA-87B2-E8499C8AAFFB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StageBitz.Logic</RootNamespace>
+    <AssemblyName>StageBitz.Logic</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FatZebra">
+      <HintPath>..\CommonResources\Libraries\FatZebra.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\CommonResources\Version.cs">
+      <Link>Version.cs</Link>
+    </Compile>
+    <Compile Include="BLBuilder.cs" />
+    <Compile Include="Business\BaseBL.cs" />
+    <Compile Include="Business\Company\CompanyBL.cs" />
+    <Compile Include="Business\Finance\FinanceBL.cs" />
+    <Compile Include="Business\ItemTypes\ItemTypesBL.cs" />
+    <Compile Include="Business\Location\LocationBL.cs" />
+    <Compile Include="Business\Notification\NotificationBL.cs" />
+    <Compile Include="Business\Personal\PersonalBL.cs" />
+    <Compile Include="Business\Report\ReportBL.cs" />
+    <Compile Include="Business\Utility\UtilityBL.cs" />
+    <Compile Include="Finance\Company\CompanyStatusHandler.cs" />
+    <Compile Include="Finance\FinanceSupport.cs" />
+    <Compile Include="Finance\Project\ProjectFinanceHandler.cs" />
+    <Compile Include="Finance\Project\ProjectStatusHandler.cs" />
+    <Compile Include="Finance\Project\ProjectUsageHandler.cs" />
+    <Compile Include="Business\Project\ProjectBL.cs" />
+    <Compile Include="Business\Inventory\InventoryBL.cs" />
+    <Compile Include="Business\ItemBrief\ItemBriefBL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Support\BookingNotificationHandler.cs" />
+    <Compile Include="Support\UserEmailNotificationHandler.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StageBitz.Common\StageBitz.Common.csproj">
+      <Project>{23f0aadb-bafd-4730-8528-49ce5b15b111}</Project>
+      <Name>StageBitz.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StageBitz.Data\StageBitz.Data.csproj">
+      <Project>{d23aa30a-4470-4e0d-926c-80ee618f4d1d}</Project>
+      <Name>StageBitz.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StageBitz.IO\StageBitz.IO.csproj">
+      <Project>{a1a645c5-48b3-4512-8a6f-9d0a53595bd0}</Project>
+      <Name>StageBitz.IO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

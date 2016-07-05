@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>STAGEBITZ</title>
+        
+        <style type="text/css" media="screen, handheld">
+            @import url("./public/css/main.css");
+            @import url("./public/css/custom.css");
+            @import url("public/css/jquery.mobile-1.2.1.css");
+            @import url("public/css/jquery.mobile.structure-1.2.1.css");
+            @import url("public/css/jquery.selectbox.css");
+            </style>
+        
+        <script type="text/javascript" src="public/js/jquery.js"></script>
+        <script type="text/javascript" src="public/js/jquery.selectbox.js"></script>
+        <script type="text/javascript" src="public/js/jquery.mobile-1.2.1.min.js"></script>
+        <script type="text/javascript" src="public/js/bgstretcher.js"></script>
+        <script type="text/javascript" src="public/js/main.js"></script>
+        
+        
+    </head>
+    <body>
+        <div data-role="page" id="sync">
+            <script type="text/javascript">
+                
+                var myScroll = [];
+                $("#sync").on('pageshow',function() {
+                              if ($.mobile.activePage.find('#scrollDiv').length > 0) {
+                              if (this.id in myScroll) {
+                              myScroll[this.id].refresh();
+                              } else {
+                              
+                              myScroll[this.id] = new iScroll(
+                                                              $.mobile.activePage
+                                                              .find('#scrollDiv')[0].id,
+                                                              {
+                                                              hScroll : false,
+                                                              vScroll : true,
+                                                              hScrollbar : false,
+                                                              vScrollbar : true,
+                                                              
+                                                              fadeScrollbar : false,
+                                                              hideScrollbar : false,
+                                                              bounce : true,
+                                                              momentum : true,
+                                                              lockDirection : true
+                                                              });
+                              }
+                              }
+                              });
+                              
+                              function refresh() {
+                                  if ($.mobile.activePage[0].id in myScroll) {
+                                      myScroll[$.mobile.activePage[0].id].refresh();
+                                  }
+                              }
+            
+            $("#sync").on('pagebeforecreate',function() {
+                          $('#progress').empty();
+                          console.log("sync page");
+                          setSyncCount(updateSyncCount);
+                          });
+                          
+                          $("#sync").on('pageshow',function() {
+                                        if (window.device.platform == "iOS" && parseFloat(window.device.version) >= 7) {
+                                        $('#statusBar').css('display','block');
+                                        }
+                                        });
+                                        
+                                        
+                                        
+                                        function updateSyncCount(itemCount, imageCount){
+                                            if(itemCount == 0 && imageCount == 0){
+                                                $('#syncStat').text("No Items to be uploaded");
+                                                // $('#synchronize').addClass('disabled');
+                                                $('.sync img').attr("src","css/images/icons/sync.png");
+                                                hasSync = false;
+                                            }else{
+                                                $('#syncStat').text("You have " + (itemCount==0?"":itemCount + " Item"+ (itemCount == 1?"":"s"))+((itemCount>0 && imageCount>0)?" with ":"") + (imageCount==0?"":imageCount+" Image"+ (imageCount == 1? "":"s")) +" to be uploaded");
+                                                // $('#synchronize').removeClass('disabled');
+                                                $('.sync img').attr("src","css/images/icons/sync-02.png");
+                                            }
+                                        }
+            
+            
+            function syncItems(){
+                $('#progress').empty();
+                $('#synchronize').addClass('disabled');
+                synchronize(setProgress,updateSyncCount);
+                
+            }
+            
+            function setProgress(text,type){
+                //$('#progress').append(text+"<br/>");
+                if(type=="error"){
+                    $('#progress').append("<li class='error'><div>"+text+"</div></li>");
+                }else{
+                    $('#progress').append("<li><div>"+text+"</div></li>");
+                }
+                myScroll[$.mobile.activePage[0].id].scrollTo(0, myScroll[$.mobile.activePage[0].id].maxScrollY, 0);
+                refresh();
+            }
+            function navigateHome(){
+                $.mobile.changePage("home.html");
+                return false;
+            }
+            
+            function navigateSettings(){
+                $.mobile.changePage("settings.html");
+                return false;
+            }
+            </script>
+            
+            <div class="push-footer absolute-pos">
+                <div class="padding">
+                    <!-- Header -->
+                    <header>
+                        <div id="statusBar" style="height:20px;background:#fff;display:none;"></div>
+                        <div id="header">
+                            <div class="area">
+                                <div class="header">
+                                    <a href="#" class="home" onclick="navigateHome()">
+                                        <img src="css/images/icons/home.png" alt="Home" /></a>
+                                    <h1><a href="#" class="logotype">
+                                        <img src="css/images/logotype.png" alt="STAGEBITZ" /></a></h1>
+                                    <a href="#" class="settings" onclick="navigateSettings()">
+                                        <img src="css/images/icons/settings.png" alt="Settings" /></a>
+                                    <a href="#" class="sync">
+                                        <img src="css/images/icons/sync.png" alt="Sync" /></a>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                    <!-- Content -->
+                    <div id="content">
+                        <div class="area">
+                            <div class="boxes">
+                                <form action="#" method="get">
+                                    <div class="row indent">
+                                        <div class="large" >
+                                            <label id="syncStat">There are Items to be Synced</label>
+                                        </div>
+                                        <div class="clear">&nbsp;</div>
+                                    </div>
+                                </form>
+                                <div class="clear">&nbsp;</div>
+                            </div>
+                            <div class="info">
+                                <ul>
+                                    <li>
+                                        <a id="synchronize" href="#" >
+                                            <img src="css/images/pictures/image-7.png" alt="Picture" onclick="syncItems();"/>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="clear">&nbsp;</div>
+                            </div>
+                        </div>
+                        
+                        <div class="area">
+                            <div class="boxes">
+                                <div class="row" id="row-sync">
+                                    <div class="large sync-status">
+                                        <div id="scrollDiv" class="scrollable">
+                                            
+                                            <div id="scroll-content">
+                                                
+                                                <ul id="progress">
+                                                    
+                                                </ul>
+                                                
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="clear">&nbsp;</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="clear">&nbsp;</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer -->
+            <footer>
+                <div id="footer">
+                    <div class="area">
+                        <!--<a href="#" class="arrow">
+                         <img src="public/images/icons/left-arrow.png" alt="left-arrow" /></a>-->
+                        <a href="#" class="icon">
+                            <img src="css/images/icons/icon.png" alt="icon" onclick="GoToVoiceContactPage()"/></a>
+                    </div>
+                    <div class="clear">&nbsp;</div>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

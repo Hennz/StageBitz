@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ProjectUpdatesLink.ascx.cs" Inherits="StageBitz.UserWeb.Controls.Project.ProjectUpdatesLink" %>
+<a id="lnkProjectNotifications" runat="server">Updates</a><a id="lnkNotificationCount" runat="server" title="View Project Updates" class="inlineNotificationBadge" style="color:White !important; text-decoration:none;">0</a>

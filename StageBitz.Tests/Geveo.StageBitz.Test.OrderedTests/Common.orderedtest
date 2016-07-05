@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="Common" storage="d:\work\stagebitz\dev\holding\stagebitz.tests\geveo.stagebitz.test.orderedtests\common.orderedtest" id="616960f6-f231-4573-a1f4-3bb1c3244579" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="cf1c8a08-9a57-7a79-b952-aca1909ffca8" name="LaunchUserWebURL" storage="..\geveo.stagebitz.test.common\bin\debug\geveo.stagebitz.test.common.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="8e1fac9e-8364-5fed-1a72-2518540c2237" name="LoginUserPortal" storage="..\geveo.stagebitz.test.common\bin\debug\geveo.stagebitz.test.common.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>

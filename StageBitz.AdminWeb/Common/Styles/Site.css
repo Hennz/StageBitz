@@ -1,0 +1,765 @@
+﻿@charset "utf-8";
+
+/* CSS Document */
+html,body,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,em,font,img,ins,kbd,q,s,samp,small,strike,sub,sup,tt,var,center,dl,dt,dd,form,label,table,caption,tbody,tfoot,thead,tr,th,td
+   {
+   padding: 0;
+   margin: 0;
+   border: 0;
+   outline: 0;
+   font-family: Tahoma, Arial, Geneva, sans-serif !important;
+   font-size: 13px;
+   color: #000;
+   text-decoration: none;
+   font-weight: normal;
+}
+
+body {
+   background: url(../images/background_image.png) repeat-x #FFF;
+   text-align: center;
+}
+
+/*Test class to test table borders*/
+/*table td
+{
+    border: 1px solid black;
+}*/
+
+#wrapper {
+   padding: 0;
+   text-align: left;
+   margin: 0 auto;
+   width: 1000px;
+   border: 0px solid #fff;
+}
+
+/*header Start*/
+#header {
+   background: url(../images/header.png) repeat-x;
+   height: 114px;
+   width: 100%;
+   border: 0px solid #000;
+}
+
+#header #left {
+   float: left;
+   text-align: right;
+   width: 685px;
+   height: 114px;
+   border: 0px solid #ff0000;
+}
+
+#header #right {
+   float: right;
+   text-align: left;
+   width: 24px;
+   height: 114px;
+   border: 0px solid #00ff00;
+}
+
+/*header End*/
+.mainNavi {
+   background: url(../images/navi_bg.png) repeat-y;
+   width: 940px;
+   padding: 10px 30px;
+}
+
+.navigation {
+   width: 53%;
+}
+
+.navigation a {
+   padding: 0 5px;
+   font-weight: bold;
+}
+
+userInfo {
+   width: 47%;
+   text-align: right;
+   white-space:nowrap;
+}
+
+#headerUserNameDisplay
+{
+	max-width:190px;
+	float:left;
+	overflow:hidden;
+	white-space:nowrap;
+}
+
+#Container {
+   background: url(../images/container_bg.png) repeat-y;
+   width: 930px;
+   padding: 10px 50px 40px 35px;
+}
+
+.FormHeader {
+   background: url(../images/form_headers_bg.png) repeat-x;
+   height: 23px;
+   padding-top: 8px;
+   padding-left: 10px;
+   color: #666;
+   font-weight: bold;
+}
+
+.gridRow, .RadGrid_Borderless .rgRow {
+   padding-top: 5px;
+   padding-left: 5px;
+   padding-right: 5px;
+   background: #E4EEFA;
+   height: 25px;
+}
+
+.gridAltRow, .RadGrid_Borderless .rgAltRow {
+   padding-top: 5px;
+   padding-left: 5px;
+   padding-right: 5px;
+   background: #F2F8FD;
+   height: 25px;
+}
+
+h1 {
+   color: #8A5E00;
+   font-size: 25px;
+   font-weight: bold;
+   margin-bottom: 10px
+}
+
+h2 {
+   font-size: 14px;
+   font-weight: bold;
+   color: #000;
+   margin: 10px 0;
+}
+
+h3 {
+   font-size: 16px;
+   font-weight: normal;
+   margin-bottom: 10px
+}
+
+h4 {
+   font-size: 15px;
+   font-weight: normal;
+   margin-bottom: 10px
+}
+
+/* Footer Start */
+#footer {
+   text-align: center;
+   line-height: 12px;
+   font-size: 11px;
+   color: #999;
+   width: 1000px;
+   height: 28px;
+   background: url(../images/footer.png) no-repeat;
+   padding-top: 26px;
+   margin: 0 auto;
+}
+
+#footer a.copyright {
+   color: #00C;
+   font-size: 11px;
+   text-decoration: underline;
+}
+
+#footer a.copyright:hover {
+   color: #69F;
+   text-decoration: underline;
+}
+
+#footer a.incognitoLink {
+   color: #999;
+   font-size: 11px;
+   text-decoration: none;
+}
+
+/* Footer End */
+
+img {
+   border: 0;
+}
+
+input[type='text'],input[type='password'],input[type='file'],select,textarea,.ruInput{
+   font-family: Tahoma, Arial, Geneva, sans-serif !important;
+   font-size: 12px;
+   border: 1px solid #FDBC35;
+   margin: 5px 0px;
+   width: 98%;
+}
+
+.ruInput 
+{
+	font-family: Tahoma, Arial, Geneva, sans-serif !important;
+	font-size: 12px !important;
+}
+
+.breadCrumbs {
+   padding-bottom: 20px;
+   color: #000;
+}
+
+.breadCrumbs a {
+   margin-right: 5px;
+}
+
+.breadCrumbs ol {
+   padding-left: 0;
+}
+
+.breadCrumbs ol,.breadCrumbs li {
+   display: inline;
+}
+
+.breadCrumbs li {
+   background: url(../images/bread_crumb_arrow.png) no-repeat left center;
+   padding-left: 10px;
+}
+
+.breadCrumbs ol li:first-child {
+   background: none;
+   padding-left: 0;
+}
+
+.left {
+   float: left;
+}
+
+.right {
+   float: right;
+}
+
+a, .rtsTxt, .ruCancel, .ruRemove {
+   color:#B07802;
+   text-decoration: underline;
+}
+
+a:hover {
+   color:#F2A502;
+   text-decoration: underline;
+}
+
+.RadGrid td a
+{
+	color:#B07802 !important;
+	text-decoration:none !important;
+}
+
+.RadGrid td a:hover {
+   color:#F2A502 !important;
+   text-decoration: none !important;
+}
+
+#loginContainer {
+   margin: 30px auto 0px auto;
+   width: 800px;
+}
+
+.notices {
+   background: #EBFEEC;
+   padding: 10px;
+   border: 1px solid #A9E9A9;
+}
+
+.message,.error,.success {
+   margin: 2px 0px;
+   padding: 0;
+   clear: both;
+   display: block;
+}
+
+.message {
+   border: 1px solid #10508A;
+   padding: 2px 4px;
+   list-style: none;
+   background-color: #BFE0F2;
+   color: #10508A;
+   overflow:hidden;
+}
+
+/* Also for invalid form elements */
+.message.error, input[type='text'].error {
+   background-color: #FFDDDD;
+   color: #111;
+   border-color: #FFBBBB;
+}
+
+.message.warn {
+   background-color: #F2E9BF;
+   color: #111;
+   border-color: #8A7B10;
+}
+
+.message.success {
+   background-color: #DFF2BF;
+   color: #4F8A10;
+   border-color: #4F8A10;
+}
+
+.whiteText {
+   color: #FFF;
+}
+
+.greenText {
+   color: #090;
+}
+
+.whiteBox {
+   background: #FFF;
+   border: 1px solid #eaeaea;
+   padding: 5px;
+}
+
+.richPanel {
+   border: 0px;
+   background: none;
+}
+
+.groupBox
+{
+	margin-bottom:20px;
+}
+
+.groupBoxContent
+{
+	padding:5px;
+}
+
+.groupboxHeaders {
+   background: #8A5E00;
+   border: 1px solid #A47002;
+   color:White;
+   font-weight: bold;
+   padding: 5px 5px 3px 5px;
+}
+
+.groupboxHeadersLeft
+{
+	color:White;
+	font-weight: bold;
+}
+
+.groupboxHeadersRight
+{
+	color:White;
+	font-weight:normal;
+}
+
+.helpTipIcon
+{
+	background-image:url('../Images/help_tip.png');
+	width:16px;
+	height:16px;
+}
+
+.helpTipContent
+{
+    text-align:left;
+    max-width:400px;
+    font-family:Arial, Verdana, sans-serif;
+    font-size:8px;
+}
+
+.helpTipContent h5, .helpTipContent li
+{
+    margin-bottom:10px;
+}
+
+.groupboxHeadersLeft .helpTipIcon
+{
+	float:right;
+	margin:0px 4px;
+}
+
+.dashboardBox
+{
+   text-align: center;
+   width: 140px;
+   height: 110px;
+   margin: 10px;
+   padding:10px;
+   vertical-align: middle;
+   border: 1px solid gray;
+   color:Black;
+   line-height:25px;
+   background-image:url('../Images/shade _background.png');
+   background-repeat:repeat-x;
+}
+
+a:hover .dashboardBox
+{
+	border:1px solid #F2A502;
+}
+
+fieldset
+{
+	 border: 1px solid Black;
+	 min-height:200px;
+	 padding:10px;
+	 display: inline-block;
+	 text-align: center;
+	 width:250px;
+}
+
+.largeText {
+   font-size: 16px !important;
+}
+
+.smallText {
+   font-size: 10px;
+}
+
+.focusEditField.largeText {
+   font-size: 16px !important;
+}
+
+.buttonStyle, .buttonArea button[type="button"], .buttonArea button[type="reset"], .buttonArea button[type="submit"], .buttonArea input[type='button'],.buttonArea input[type='submit'], .buttonArea input[type='reset']
+{
+   background-color: #eeeeee;
+   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eeeeee),color-stop(100%, #cbe0f5) );
+   background-image: -webkit-linear-gradient(top, #eeeeee, #cbe0f5);
+   background-image: -moz-linear-gradient(top, #eeeeee, #cbe0f5);
+   background-image: -ms-linear-gradient(top, #eeeeee, #cbe0f5);
+   background-image: -o-linear-gradient(top, #eeeeee, #cbe0f5);
+   background-image: linear-gradient(top, #eeeeee, #cbe0f5);
+   border: 1px solid #ccc;
+   border-bottom: 1px solid #bbb;
+   -webkit-border-radius: 3px;
+   -moz-border-radius: 3px;
+   border-radius: 3px;
+   color: #333;
+   font: bold 11px "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans",Geneva, Verdana, sans-serif;
+   line-height: 1;   
+   text-align: center;
+   vertical-align:middle;
+   text-shadow: 0 1px 0 #eee;
+   height:20px;
+   padding-left: 7px;
+   padding-right: 7px;
+   margin: 4px;
+   float: right;
+}
+
+.buttonStyle:hover, .buttonArea input[type='button']:hover, .buttonArea input[type='submit']:hover, .buttonArea input[type='reset']:hover,.buttonArea input[type='submit']:hover
+{
+    background-color: #dddddd;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #dddddd), color-stop(100%, #cbe0f5));
+    background-image: -webkit-linear-gradient(top, #dddddd, #cbe0f5);
+    background-image: -moz-linear-gradient(top, #dddddd, #cbe0f5);
+    background-image: -ms-linear-gradient(top, #dddddd, #cbe0f5);
+    background-image: -o-linear-gradient(top, #dddddd, #cbe0f5);
+    background-image: linear-gradient(top, #dddddd, #cbe0f5);
+    border: 1px solid #bbb;
+    border-bottom: 1px solid #999;
+    text-shadow: 0 1px 0 #ddd;
+}
+
+.buttonStyle[disabled], .buttonArea input[type='button'][disabled], .buttonArea input[type='submit'][disabled], .buttonArea input[type='reset'][disabled],.buttonArea input[type='submit'][disabled]
+{
+   background-color: #eeeeee;
+   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eeeeee),color-stop(100%, #eeeeee) );
+   background-image: -webkit-linear-gradient(top, #eeeeee, #eeeeee);
+   background-image: -moz-linear-gradient(top, #eeeeee, #eeeeee);
+   background-image: -ms-linear-gradient(top, #eeeeee, #eeeeee);
+   background-image: -o-linear-gradient(top, #eeeeee, #eeeeee);
+   background-image: linear-gradient(top, #eeeeee, #eeeeee);
+   border: 1px solid #ccc;
+   border-bottom: 1px solid #bbb;
+   -webkit-border-radius: 3px;
+   -moz-border-radius: 3px;
+   border-radius: 3px;
+   color: #999;
+   font: bold 11px "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans",Geneva, Verdana, sans-serif;
+   line-height: 1;   
+   text-align: center;
+   text-shadow: 0 1px 0 #eee;
+   height:20px;
+   padding-left: 7px;
+   padding-right: 7px;
+   margin: 4px;
+   float: right;
+}
+
+/* Styles for the PopupBox control */
+
+.popupBox
+{
+    display:none;
+    width:0px;
+    height:0px;
+}
+
+.popupBoxOverlay
+{
+    position:fixed;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    background-color:#D0D0D0;
+    filter:alpha(opacity=50);
+    opacity:.5;
+    z-index:100;
+}
+
+.popupBoxDialogContainer
+{
+    position:fixed;
+    top:30%;
+    left:30%;
+    z-index:101;
+}
+
+.popupBoxDialogShadow
+{
+    background-color:Black;
+    width:100%;
+    height:100%;
+    position:absolute;
+    left:3px;
+    top:3px;
+    z-index:-1;
+    filter:alpha(opacity=20);
+    opacity:.2;
+}
+
+.popupBoxDialog
+{
+    background-color:White;
+    border: 1px solid #F8D389;
+}
+
+.popupBoxTitlebar
+{
+    font-size:11px;    
+    background-position:0 50%;
+    background-color:#F8D389;
+    white-space:nowrap;
+    border:1px solid white;
+    text-align:center;
+    vertical-align:middle;
+    font-weight:bold;
+    cursor:move;
+    padding:5px;
+    overflow:hidden;
+}
+
+.popupBoxCornerCloseButton
+{
+    background-image:url('../Images/popup_close_btn.png');
+    cursor:pointer;
+    width:27px;
+    height:17px;
+    position:absolute;
+    top:3px;
+    right:3px;
+}
+
+/*The class that should be used by elements that will act as popupbox close buttons.
+This is not intended for visual styling. This is included in the css
+for VisualStudio intellisense support.*/
+.popupBoxCloser
+{
+}
+
+.popupBoxContent
+{
+    text-align:left;
+    padding:10px;
+}
+
+.popupBoxBottomStripe
+{
+	height:30px;
+	padding:5px;
+}
+/* End of popupbox control stlyes */
+.focusEditBoxDisplay
+{
+	cursor:default;
+}
+
+.focusEditBoxInput, .focusEditBoxDisplay
+{
+	padding:0px !important;
+	margin:0px !important;
+}
+
+.focusEditField, .focusEditBoxDisplay
+{
+	padding:0px;
+    border:1px solid transparent !important;
+    border-bottom:1px dashed black !important;
+    background-color:#EEE !important;
+}
+
+.focusEditField:focus
+{
+    border: 1px solid #A3D1FF !important;
+    background-color:White !important;
+}
+
+.inputError
+{
+	color:red;
+	position:relative;
+	top:-5px;
+}
+
+.sideErrorContainer .inputError
+{
+    position:inherit;
+}
+
+/*Telerik RadTabStrip style overrides*/
+.rtsTxt
+{
+	font-weight:bold;
+}
+
+.rtsSelected .rtsTxt
+{
+	color:Black;
+}
+
+/*Telerik RadUpload style overrides*/
+.ruFakeInput
+{
+	margin:0px !important;
+	width:inherit !important;
+}
+
+.ruCancel, .ruRemove
+{
+	color:#00C !important;
+	background:none !important;
+}
+
+.grayText
+{
+	color:gray;
+}
+
+.boxBorder
+{
+	border: 1px solid #A3D1FF;
+}
+
+.boxBorderDark, .groupBoxContent
+{
+	border: 1px solid #A47002;
+}
+
+.updateProgressOverlay
+{
+	position:fixed;
+	top:0px;
+	left:0px;
+	bottom:0px;
+	right:0px;
+	opacity: .5;
+	filter: alpha(opacity = 50);
+	background-color:White;
+	z-index:99998;
+}
+
+.updateProgressIcon
+{
+	position:fixed;
+	background:url('../images/in_progress.gif');
+	top:50%;
+	left:50%;
+	margin-top:-16px;
+	margin-left:-16px;
+	width:32px;
+	height:32px;
+	z-index:99999;
+}
+
+/* RadGrid global style overrides */
+
+/*.rgDataDiv > table, .rgHeaderDiv > table
+{
+	width:100% !important;
+}*/
+
+.rgDataDiv
+{
+	overflow-x:hidden !important;
+	/*overflow-y:scroll !important;*/
+}
+
+.rgHeader
+{
+	font-weight:bold !important;
+}
+
+.rgHeader a
+{
+	font-weight:bold !important;
+	text-decoration:underline !important;
+}
+
+.rgHeader, .rgHeader a
+{
+    font-size:11px;
+}
+
+.rgEditRow > td
+{
+    background-color:#FFF7E7 !important;
+    border-top:1px solid black !important;
+}
+
+td.rgSorted
+{
+    border:0px;
+}
+
+.watermark
+{
+	color:gray;
+}
+
+.noData
+{
+	color:#C0C3C6;
+	text-align:center;
+	padding:5px;
+}
+
+.thumbListItem
+{
+	float:left;
+	text-align:center;
+	margin:10px 7px;
+	width:130px;
+	height:127px;
+	white-space:nowrap;
+	overflow:hidden;
+}
+
+.rcbInputCell input[type='text']
+{
+ margin:0px;
+}
+
+.RoleIndicater
+{
+    font-size:11px;
+    color:#666666;
+}
+
+.notification, .inlineNotification
+{
+	display:none;
+	color:Gray;
+}
+
+.tabPage {
+    border: 1px solid #c5c5c5;
+    margin: 0px auto;
+    border-top:0px;
+    margin-left:0px;
+    padding:20px;
+}

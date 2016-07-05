@@ -1,0 +1,48 @@
+﻿input.small-input
+{
+    max-width: 40%;
+}
+
+
+select.small-select
+{
+    max-width: 50%;
+}
+
+label.small-block
+{
+    width : 31%;
+    display:inline-block;
+}
+
+div.col1
+{
+    width: 49%;
+    padding-right: 1%;
+}
+
+div.col2
+{
+    width: 49%;
+    padding-left: 1%;
+}
+
+    div.col1 .jqxexpander, div.col2 .jqxexpander
+    {
+        padding-top: 5px;
+    }
+
+.jqxexpander > .ui-accordion-content > table
+{
+    width: 100%;
+}
+
+.jqxexpander > .ui-accordion-content > table > tbody > tr > td:first-child
+{
+    width: 30%;
+}
+
+.ui-accordion .ui-accordion-content
+{
+    padding: 10px;
+}

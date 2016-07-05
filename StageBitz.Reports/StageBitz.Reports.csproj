@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4986F884-2F5A-4080-B287-4A6ADB62A771}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StageBitz.Reports</RootNamespace>
+    <AssemblyName>StageBitz.Reports</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 11.0\ReportViewer\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminWeb\sbDataSource\StageBitzReportDataSource.Designer.cs">
+      <DependentUpon>StageBitzReportDataSource.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ExportFilesHandler.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AdminWeb\Helper\AdminWebReportHandler.cs" />
+    <Compile Include="ReportHandlerBase.cs" />
+    <Compile Include="UserWeb\Parameters\InventoryManageBookingListReportParameters.cs" />
+    <Compile Include="UserWeb\Parameters\ItemBriefSpecificationsReportParameters.cs" />
+    <Compile Include="UserWeb\Parameters\ItemBookingListReportParameters.cs" />
+    <Compile Include="UserWeb\Parameters\ItemisedPurchaseReportParameters.cs" />
+    <Compile Include="UserWeb\Parameters\TaskListReportParameters.cs" />
+    <Compile Include="UserWeb\Parameters\InventoryItemListReportParameters.cs" />
+    <Compile Include="UserWeb\Parameters\BudgetSummaryReportParameters.cs" />
+    <Compile Include="UserWeb\Parameters\ActiveTaskListReportParameters.cs" />
+    <Compile Include="UserWeb\Helper\UserWebReportHandler.cs" />
+    <Compile Include="UserWeb\Parameters\BookingDetailsReportParameters.cs" />
+    <Compile Include="UserWeb\Parameters\ItemBriefListReportParameters.cs" />
+    <Compile Include="UserWeb\sbDataSource\StageBitzReportDataSource.cs">
+      <DependentUpon>StageBitzReportDataSource.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserWeb\sbDataSource\StageBitzReportDataSource.Designer.cs">
+      <DependentUpon>StageBitzReportDataSource.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AdminWeb\PrcingPlanHistory.rdlc" />
+    <EmbeddedResource Include="AdminWeb\UserList.rdlc" />
+    <EmbeddedResource Include="UserWeb\ActiveTaskList.rdlc" />
+    <EmbeddedResource Include="UserWeb\BookingDetails.rdlc" />
+    <EmbeddedResource Include="UserWeb\BudgetSummary.rdlc" />
+    <EmbeddedResource Include="UserWeb\BudgetSummary_AllTypes.rdlc" />
+    <EmbeddedResource Include="UserWeb\ExportedInventoryItems.rdlc" />
+    <EmbeddedResource Include="UserWeb\ExportedItemBriefList.rdlc" />
+    <EmbeddedResource Include="UserWeb\InventoryItemList.rdlc" />
+    <EmbeddedResource Include="UserWeb\InventoryManageBookingList.rdlc" />
+    <EmbeddedResource Include="UserWeb\ItemBookingList.rdlc" />
+    <EmbeddedResource Include="UserWeb\ItemBriefList.rdlc" />
+    <EmbeddedResource Include="UserWeb\ItemBriefSpecifications.rdlc" />
+    <EmbeddedResource Include="UserWeb\ItemisedPurchase.rdlc" />
+    <EmbeddedResource Include="UserWeb\TaskList.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminWeb\sbDataSource\StageBitzReportDataSource.xsc">
+      <DependentUpon>StageBitzReportDataSource.xsd</DependentUpon>
+    </Content>
+    <None Include="AdminWeb\sbDataSource\StageBitzReportDataSource.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StageBitzReportDataSource.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="AdminWeb\sbDataSource\StageBitzReportDataSource.xss">
+      <DependentUpon>StageBitzReportDataSource.xsd</DependentUpon>
+    </Content>
+    <None Include="UserWeb\sbDataSource\StageBitzReportDataSource.xsc">
+      <DependentUpon>StageBitzReportDataSource.xsd</DependentUpon>
+    </None>
+    <None Include="UserWeb\sbDataSource\StageBitzReportDataSource.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StageBitzReportDataSource.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UserWeb\sbDataSource\StageBitzReportDataSource.xss">
+      <DependentUpon>StageBitzReportDataSource.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StageBitz.Common\StageBitz.Common.csproj">
+      <Project>{23f0aadb-bafd-4730-8528-49ce5b15b111}</Project>
+      <Name>StageBitz.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StageBitz.Data\StageBitz.Data.csproj">
+      <Project>{d23aa30a-4470-4e0d-926c-80ee618f4d1d}</Project>
+      <Name>StageBitz.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StageBitz.IO\StageBitz.IO.csproj">
+      <Project>{a1a645c5-48b3-4512-8a6f-9d0a53595bd0}</Project>
+      <Name>StageBitz.IO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StageBitz.Logic\StageBitz.Logic.csproj">
+      <Project>{e2180c6d-8c6d-48ba-87b2-e8499c8aaffb}</Project>
+      <Name>StageBitz.Logic</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

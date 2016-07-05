@@ -1,0 +1,46 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Content.master.cs" Inherits="StageBitz.AdminWeb.Content" %>
+
+<%@ Register src="~/Controls/Common/BreadCrumbs.ascx" tagname="BreadCrumbs" tagprefix="sb" %>
+
+<asp:Content ID="HtmlHeaderContent" ContentPlaceHolderID="HeadContent" runat="server">
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+
+</asp:Content>
+
+<asp:Content ID="NavigationContent" ContentPlaceHolderID="NavigationContent" runat="server">
+
+    <div class="mainNavi">
+    
+        <div class="left navigation">
+            <a href="~/Default.aspx" runat="server">Home</a><asp:ContentPlaceHolder ID="PageNavigationLinks" runat="server"></asp:ContentPlaceHolder>
+        </div>
+
+        <div id="divUserInfo" runat="server" class="right userInfo">
+            <div id="headerUserNameDisplay">
+                Welcome <asp:Literal ID="ltrlUser" runat="server"></asp:Literal>&nbsp;
+            </div>
+            <div class="left">
+            | <a href="~/Account/Logout.aspx" runat="server">Sign Out</a>
+            </div>
+        </div>
+
+        <br style="clear: both;" />
+
+    </div>
+
+</asp:Content>
+
+<asp:Content ID="PageTitleArea" ContentPlaceHolderID="MainContent" runat="server">
+    
+    <h1><asp:Literal ID="ltrlPageTitle" runat="server"></asp:Literal></h1>
+
+    <div class="breadCrumbs">
+        <sb:BreadCrumbs ID="breadCrumbs" runat="server" />
+    </div>
+
+    <asp:ContentPlaceHolder ID="PageContent" runat="server">
+    </asp:ContentPlaceHolder>
+
+</asp:Content>

@@ -1,0 +1,42 @@
+.RadGrid_Default .rgHeader, .RadGrid_Default .rgHeader a {
+    color: #675271 !important;
+}
+
+.RadGrid_Default .rgHeader, .RadGrid_Default th.rgResizeCol {
+    border-color: -moz-use-text-color -moz-use-text-color #FFF !important;
+    border-image: none !important;
+    border-style: solid !important;
+    border-width: 0 0 1px 1px !important;
+    background : none !important;
+    border-color : #FFF !important;
+    background-color: #D8D5DB !important;
+}
+
+.RadGrid_Default td.rgPagerCell {
+    border-color: #DDD1E3 #EEEEEE #EEEEEE !important;
+}
+
+.RadGrid_Default {
+    border: 1px solid #DDD1E3 !important;
+}
+
+.RadGrid_Default .rgRow td {
+    border-color: -moz-use-text-color -moz-use-text-color #DDD1E3 !important;
+    border-image: none !important;
+    border-style: solid !important;
+    border-width: 0 0 1px 1px !important;
+    border-color : #DDD1E3 !important;
+}
+
+.RadGrid_Default .rgAltRow td {
+    border-color: -moz-use-text-color -moz-use-text-color #DDD1E3 !important;
+    border-image: none !important;
+    border-style: solid !important;
+    border-width: 0 0 1px 1px !important;
+    border-color : #DDD1E3 !important;
+}
+
+ div.RadGrid_Default .rgPager .rgPagerCell {
+
+	background-color: #D8D5DB !important ;
+}

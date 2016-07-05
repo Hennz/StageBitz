@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>STAGEBITZ</title>
+        
+        <style type="text/css" media="screen, handheld">
+            @import url("./css/main.css");
+            
+            @import url("css/jquery.mobile-1.2.1.css");
+            
+            @import url("css/jquery.mobile.structure-1.2.1.css");
+            
+            @import url("css/jquery.selectbox.css");
+            </style>
+        
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.2.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery.selectbox.js"></script>
+        <script type="text/javascript" src="js/bgstretcher.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        
+        
+    </head>
+    <body>
+        <div data-role="page" id="home">
+            
+            <script type="text/javascript">
+                
+                var hasRefreshed = true;
+                var companyPos = new Array();
+                
+                $("#home").on('pagebeforecreate',function() {
+                              if(appGetPaused==true){
+                              var usertoken=window.localStorage["usertoken"];
+                              requestDataAtHome(usertoken, appAPIVersion);
+                              
+                              
+                              }
+                              
+                              });
+                              
+                              $("#home").on('pageshow',function() {
+                                            
+                                            if (window.device.platform == "iOS" && parseFloat(window.device.version) >= 7) {
+                                            $('#statusBar').css('display','block');
+                                            }
+                                            
+                                            checkSync(function(hasSync){
+                                                      if(hasSync){
+                                                      $('.sync img').attr("src","css/images/icons/sync-02.png");
+                                                      }else{
+                                                      $('.sync img').attr("src","css/images/icons/sync.png");
+                                                      }
+                                                      });
+                                            
+                                            var inventorySelect = $('#inventory');
+                                            var success = function (tx, results) {
+                                            
+                                            if($('#inventory').children().length > 0){
+                                            console.log($('#inventory').children().length);
+                                            inventorySelect.children().remove();
+                                            }
+                                            
+                                            var len = results.rows.length;
+                                            
+                                            if(len > 0){
+                                            inventorySelect.prop('disabled', false);
+                                            companyDetails = new Array(len);
+                                            for(var i=0; i<len; i++){
+                                            inventorySelect.append('<option value="'+results.rows.item(i).companyid+'">'+ results.rows.item(i).companyname+ '</option>');
+                                            //console.log($('#inventory').children().length);
+                                            companyPos[results.rows.item(i).companyid] = results.rows.item(i).cancreate;
+                                            //console.log(results.rows.item(i).cancreate);
+                                            }
+                                            
+                                            if (window.sessionStorage["inventoryType"] != null && inventorySelect.children().length > 0 && $("#inventory option[value='"+window.sessionStorage["inventoryType"]+"']").length != 0) {
+                                            inventorySelect.val(window.sessionStorage["inventoryType"]);
+                                            //console.log("session Type:"+$('#itemTypeList').val());
+                                            if (companyPos[window.sessionStorage["inventoryType"]] == 0) {
+                                            $('#create').css('display', 'none');
+                                            }
+                                            }else if(window.sessionStorage["inventoryType"] == null){
+                                            
+                                            /*initially show/hide create item*/
+                                            if (results.rows.item(0).cancreate == 0) {
+                                            $('#create').css('display', 'none');
+                                            }
+                                            }
+                                            
+                                            
+                                            inventorySelect.listview('refresh');
+                                            }else{
+                                            navigator.notification.alert("You are currently not working in any Company.", function(){}, "No Companies to display", "OK");
+                                            $('#create').addClass('disabled');
+                                            $('#search').addClass('disabled');
+                                            inventorySelect.append('<option value="1">You have no Companies</option>');
+                                            
+                                            inventorySelect.prop('disabled', true);
+                                            inventorySelect.addClass("disabled");
+                                            inventorySelect.listview('refresh');
+                                            
+                                            }
+                                            }
+                                            if(appGetPaused == true || hasRefreshed == true){
+                                            getCompanyDetails(success);
+                                            appGetPaused=false;
+                                            hasRefreshed = false;
+                                            noData = true;
+                                            }
+                                            });
+                                            
+                                            $("#home").on("pageshow", function(e) {
+                                                          navigator.splashscreen.hide();
+                                                          });
+                                                          
+                                                          function selectChange(item) {
+                                                              if (companyPos[item.value] == 1) {
+                                                                  $('#create').css('display', 'block');
+                                                              } else {
+                                                                  $('#create').css('display', 'none');
+                                                              }
+                                                          }
+            
+            function changePage(){
+                window.sessionStorage["inventoryType"] = $('#inventory').val().toString();
+                window.sessionStorage["inventoryName"] = $('#inventory option:selected').text();
+                $.mobile.changePage("item.html");
+                return false;
+            }
+            
+            function navigateSync(){
+                $.mobile.changePage("sync.html");
+                return false;
+            }
+            
+            function navigateHome(){
+                $.mobile.changePage("home.html");
+                return false;
+            }
+            
+            //display popup div background
+            function popupClose() {
+                navigator.app.exitApp();
+            }
+            function dddeleteItems(){
+                alert();
+                mockItemsAndImagesDeleted();
+            }
+            
+            function searchItems(){
+                dropAndCreateSearchResultTable();
+                window.sessionStorage["searchItemType"] = null;
+                window.sessionStorage["searchItemText"] = "";
+                window.sessionStorage["scrollToItem"] = null;
+                window.sessionStorage["inventoryType"] = $('#inventory').val().toString();
+                window.sessionStorage["inventoryName"] = $('#inventory option:selected').text();
+                window.sessionStorage["inventoryPermission"] = companyPos[$('#inventory').val()];
+                $.mobile.changePage("search.html");
+                return false;
+            }
+            
+            function navigateSettings(){
+                $.mobile.changePage("settings.html");
+                return false;
+            }
+            </script>
+            
+            <div class="push-footer">
+                <div class="padding">
+                    
+                    <!-- Header -->
+                    <header>
+                        <div id="statusBar" style="height:20px;background:#fff;display:none;"></div>
+                        <div id="header">
+                            <div class="area">
+                                <div class="header">
+                                    <a href="#" class="home" onclick="navigateHome()"> <img
+                                        src="css/images/icons/home.png" alt="Home" /> </a>
+                                    <h1>
+                                        <a href="#" class="logotype"> <img
+                                            src="css/images/logotype.png" alt="STAGEBITZ" /> </a>
+                                    </h1>
+                                    <a href="#" class="settings" onclick="navigateSettings()"> <img
+                                        src="css/images/icons/settings.png" alt="Settings" /> </a>
+                                    <a href="#" class="sync" onclick="navigateSync()">
+                                        <img src="css/images/icons/sync.png" alt="Sync" /></a>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                    <!-- Content -->
+                    <div id="content">
+                        <div class="area">
+                            <div class="boxes">
+                                <form action="#" method="get">
+                                    <div class="row indent selectWrap">
+                                        <label>INVENTORY:</label>
+                                        <select id="inventory" name="find"
+                                            onchange="selectChange(this);" data-role="none">
+                                        </select>
+                                        <div class="clear">&nbsp;</div>
+                                    </div>
+                                </form>
+                                <div class="clear">&nbsp;</div>
+                            </div>
+                            <div class="info">
+                                <ul>
+                                    <li><a id="create" > <img
+										src="css/images/pictures/image-5.png" alt="Picture" onclick="return changePage()"/> </a></li>
+                                    <li><a id="search" href="#"> <img
+										src="css/images/pictures/image-6.png" alt="Picture" onclick="searchItems()"/> </a></li>
+                                </ul>
+                                <div class="clear">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="clear">&nbsp;</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer -->
+            <footer>
+                <div id="footer">
+                    <div class="area">
+                        <a href="#" class="icon"> <img src="css/images/icons/icon.png"
+                            alt="icon" onclick="GoToVoiceContactPage()"/> </a>
+                    </div>
+                    <div class="clear">&nbsp;</div>
+                </div>
+            </footer>
+            
+            <div id="light">
+                <p>No Data to Display</p>
+                <button class="popupClose"  onclick="popupClose();" data-role="none">Exit</button>		    
+            </div>
+            <div id="fade" onclick="lightbox_close();"></div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,169 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="StageBitz.UserWeb.SiteMaster" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title>StageBitz</title>
+    <link rel="shortcut icon" type="image/png" href="<%# ResolveUrl("Common/Images/sb_favicon.png?v="+ this.ApplicationVersionString) %>"/>
+    <link rel="icon" type="image/png" href="<%# ResolveUrl("Common/Images/sb_favicon.png?v="+ this.ApplicationVersionString) %>"/>
+
+    <link href="<%# ResolveUrl("Common/Styles/Site.css?v="+ this.ApplicationVersionString) %>"
+        rel="stylesheet" type="text/css" />
+    <link href="<%# ResolveUrl("Common/Styles/jquery-ui.min.css?v="+ this.ApplicationVersionString) %>" rel="stylesheet" type="text/css" />
+        <!--[if IE 8]>
+        <link rel="stylesheet" type="text/css" href="Common/Styles/ie8.css" media="screen" />
+        <![endif]-->
+    <link href="<%# ResolveUrl("Common/Styles/Purple/Calendar.Purple.css?v="+ this.ApplicationVersionString) %>"
+        rel="stylesheet" type="text/css" />
+    <link href="<%# ResolveUrl("Common/Styles/Purple/Grid.Purple.css?v="+ this.ApplicationVersionString) %>"
+        rel="stylesheet" type="text/css" />
+    <link href="<%# ResolveUrl("Common/Styles/Purple/Input.Purple.css?v="+ this.ApplicationVersionString) %>"
+        rel="stylesheet" type="text/css" />
+    <link href="<%# ResolveUrl("Common/Styles/Purple/Window.Purple.css?v="+ this.ApplicationVersionString) %>"
+        rel="stylesheet" type="text/css" />
+    <link href="<%# ResolveUrl("Common/Styles/Purple/DataPager.Purple.css?v="+ this.ApplicationVersionString) %>"
+        rel="stylesheet" type="text/css" />
+
+    <link href="<%# ResolveUrl("Common/Styles/Default/DataPager.Default.css?v="+ this.ApplicationVersionString) %>"
+        rel="stylesheet" type="text/css" />
+    <link href="<%# ResolveUrl("Common/Styles/Default/RadGrid.Borderless.css?v="+ this.ApplicationVersionString) %>"
+        rel="stylesheet" type="text/css" />
+    <link href="<%# ResolveUrl("Common/Styles/Default/RadGrid.Default.css?v="+ this.ApplicationVersionString) %>"
+        rel="stylesheet" type="text/css" />
+    <link href="<%# ResolveUrl("Common/Styles/Default/RadGrid.Windows7.css?v="+ this.ApplicationVersionString) %>"
+        rel="stylesheet" type="text/css" />
+    <link href="<%# ResolveUrl("Common/Styles/Purple/TreeView.Purple.css?v="+ this.ApplicationVersionString) %>"
+        rel="stylesheet" type="text/css" />
+    <link href="<%# ResolveUrl("Common/Styles/Purple/Menu.Purple.css?v="+ this.ApplicationVersionString) %>"
+        rel="stylesheet" type="text/css" />
+
+    <link href="<%# ResolveUrl("Common/Styles/Font-Awesome/css/font-awesome.min.css?v="+ this.ApplicationVersionString) %>" 
+        rel="stylesheet" type="text/css" />
+
+    <script src="<%# ResolveUrl("Common/Scripts/jquery.min.js?v="+ this.ApplicationVersionString)  %>"
+        type="text/javascript"></script>
+    <script src="<%# ResolveUrl("Common/Scripts/jquery-ui.custom.min.js?v="+ this.ApplicationVersionString) %>"
+        type="text/javascript"></script>
+    <script src="<%# ResolveUrl("Common/Scripts/global.js?v="+ this.ApplicationVersionString) %>"
+        type="text/javascript"></script>
+    <script src="<%# ResolveUrl("Common/Scripts/jsrender.js?v="+ this.ApplicationVersionString) %>"
+        type="text/javascript"></script>
+     <script type="text/javascript" src="<%# ResolveUrl("Common/Scripts/jquery.glob.js?v="+ this.ApplicationVersionString) %>"></script>
+    <script type="text/javascript" src="<%# ResolveUrl("Common/Scripts/jQuery.glob.all.min.js?v="+ this.ApplicationVersionString) %>"></script>
+   
+        <script src="<%# ResolveUrl("Common/Scripts/FinanceLogic.js?v="+ this.ApplicationVersionString) %>"
+        type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            window.onbeforeunload = globalWindowUnload;
+        });
+
+        //This will be called on initial page load and for every updatepanel postback.
+        function pageLoad() {
+            //This is implemented in global.js
+            globalDocumentReady();
+
+            //$('div.rgDataDiv').each(function () {
+            //    $(this).prev('div.rgHeaderDiv').css('width', this.scrollWidth);
+            //});
+
+            IntializeErrorMessages();
+        }
+
+    </script>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+    <%--<script type="text/javascript">
+        //Google analytics
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', '<%# ConfigurationManager.AppSettings["AnalyticsAccount"] %>']);
+        _gaq.push(['_setDomainName', '<%# ConfigurationManager.AppSettings["AnalyticsDomain"] %>']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>--%>
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', '<%# ConfigurationManager.AppSettings["AnalyticsAccount"] %>']);
+        _gaq.push(['_setDomainName', '<%# ConfigurationManager.AppSettings["AnalyticsDomain"] %>']);
+        _gaq.push(['_setAllowLinker', true]);
+        _gaq.push(['_trackPageview']);
+
+        // count the single page visit (without navigation) as page visit (not as bounce)
+        setTimeout("_gaq.push(['_trackEvent', '10_seconds', 'read'])",10000);
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+</head>
+<body>
+    <form id="pageForm" runat="server">
+        <asp:ScriptManager ID="masterScriptManager" AllowCustomErrorsRedirect="true" AsyncPostBackTimeout="60"
+            runat="server">
+        </asp:ScriptManager>
+        <asp:UpdatePanel ID="upnlGlobalDirtyFlag" UpdateMode="Conditional" runat="server">
+            <ContentTemplate>
+                <!--Global dirty flag field used to track dirty status from the server side. (see global.js and MasterBase.cs)-->
+                <asp:HiddenField ID="hdnGlobalDirtyFlagField" ClientIDMode="Static" Value="" runat="server" />                
+            </ContentTemplate>
+        </asp:UpdatePanel>
+        <!--progress indicator to display for UpdatePanel operations-->
+        <asp:UpdateProgress ID="updateProgress" runat="server">
+            <ProgressTemplate>
+                <div class="updateProgressOverlay">
+                </div>
+                <div class="updateProgressIcon">
+                </div>
+            </ProgressTemplate>
+        </asp:UpdateProgress>
+        <div  runat="server" id="divWrapper">
+            <div id="header">
+                <div class="left" style="width: 60%;">
+                </div>
+                <div class="right" style="width: 30%; padding-top: 30px; text-align: right; padding-right: 30px;">
+                    <div>
+                        <a href="https://twitter.com/stagebitz">Follow us on Twitter</a>
+                        <img src="~/Common/Images/twitter.png" alt="Twitter" width="25" height="25" align="absmiddle"
+                            runat="server" />
+                    </div>
+                    <div>
+                        <a href="https://www.facebook.com/StageBitz">Find us on Facebook</a>
+                        <img src="~/Common/Images/facebook.png" alt="Facebook" width="25" height="25" align="absmiddle"
+                            runat="server" />
+                    </div>
+                </div>
+            </div>
+            <asp:ContentPlaceHolder ID="NavigationContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <div runat="server" id="divContainer">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div id="footer">
+                &copy;
+            <%= this.ApplicationReleaseYear %>
+            All Rights Reserved. StageBitz Pty Ltd. | <a href="~/Public/About.aspx" runat="server"
+                class="copyright">About StageBitz&#8482;</a> | <a href="~/Public/TermsOfUse.aspx"
+                    runat="server" class="copyright">Terms of Use</a> | <a href="~/Public/PrivacyPolicy.aspx"
+                        runat="server" class="copyright">Privacy Policy</a> | <a href="http://www.stagebitz.com/contact-us/"
+                            class="copyright">Contact Us</a>
+                <div id="appVersion">
+                    <%= this.ApplicationVersionString %>
+                    <br />
+                    <a href="http://www.geveo.com">Software Developed by Geveo</a>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

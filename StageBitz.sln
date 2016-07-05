@@ -1,0 +1,295 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StageBitz.UserWeb", "StageBitz.UserWeb\StageBitz.UserWeb.csproj", "{F6F650AB-9988-4E58-A08C-3F135B195F78}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StageBitz.AdminWeb", "StageBitz.AdminWeb\StageBitz.AdminWeb.csproj", "{7883EDF8-00CA-4ADE-968D-DE2EAF453E95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StageBitz.Data", "StageBitz.Data\StageBitz.Data.csproj", "{D23AA30A-4470-4E0D-926C-80EE618F4D1D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StageBitz.Common", "StageBitz.Common\StageBitz.Common.csproj", "{23F0AADB-BAFD-4730-8528-49CE5B15B111}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CommonResources", "CommonResources", "{AC75C265-7B39-4B3E-9F17-8F60678C5640}"
+	ProjectSection(SolutionItems) = preProject
+		CommonResources\Version.cs = CommonResources\Version.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{FE629D3E-621C-48E3-B3F9-E7D2C72FFB02}"
+	ProjectSection(SolutionItems) = preProject
+		CommonResources\Libraries\AjaxControlToolkit.dll = CommonResources\Libraries\AjaxControlToolkit.dll
+		CommonResources\Libraries\FatZebra.dll = CommonResources\Libraries\FatZebra.dll
+		CommonResources\Libraries\System.Json.dll = CommonResources\Libraries\System.Json.dll
+		CommonResources\Libraries\Telerik.Web.Design.dll = CommonResources\Libraries\Telerik.Web.Design.dll
+		CommonResources\Libraries\Telerik.Web.UI.dll = CommonResources\Libraries\Telerik.Web.UI.dll
+		CommonResources\Libraries\Telerik.Web.UI.Skins.dll = CommonResources\Libraries\Telerik.Web.UI.Skins.dll
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StageBitz.Server.Agent", "StageBitz.Server.Agent\StageBitz.Server.Agent.csproj", "{8F973DE7-FBD1-4C5F-8ABB-DB66BA49F1D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StageBitz.Server.AgentController", "StageBitz.Server.AgentController\StageBitz.Server.AgentController.csproj", "{8FC0D909-EB48-4324-9D5D-F160CD7480AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StageBitz.Server.AgentHarness", "StageBitz.Server.AgentHarness\StageBitz.Server.AgentHarness.csproj", "{F5B0F661-FE0F-4944-9A53-616F03C45DFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StageBitz.Server.Service.Agent", "StageBitz.Server.Service.Agent\StageBitz.Server.Service.Agent.csproj", "{5BA49C1F-4054-4972-BBC0-00048BC3DC12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StageBitz.UnitTests", "StageBitz.UnitTests\StageBitz.UnitTests.csproj", "{2C031BAE-B431-4436-A9FE-EC94C0962830}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StageBitz.Logic", "StageBitz.Logic\StageBitz.Logic.csproj", "{E2180C6D-8C6D-48BA-87B2-E8499C8AAFFB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Google", "Google", "{AC168FD7-5EE1-4796-94FC-44A5D865F7A5}"
+	ProjectSection(SolutionItems) = preProject
+		CommonResources\Libraries\Google\DotNetOpenAuth.dll = CommonResources\Libraries\Google\DotNetOpenAuth.dll
+		CommonResources\Libraries\Google\Google.Apis.Analytics.v3.dll = CommonResources\Libraries\Google\Google.Apis.Analytics.v3.dll
+		CommonResources\Libraries\Google\Google.Apis.Authentication.OAuth2.dll = CommonResources\Libraries\Google\Google.Apis.Authentication.OAuth2.dll
+		CommonResources\Libraries\Google\Google.Apis.Authentication.OAuth2.xml = CommonResources\Libraries\Google\Google.Apis.Authentication.OAuth2.xml
+		CommonResources\Libraries\Google\Google.Apis.dll = CommonResources\Libraries\Google\Google.Apis.dll
+		CommonResources\Libraries\Google\Google.Apis.Silverlight.dll = CommonResources\Libraries\Google\Google.Apis.Silverlight.dll
+		CommonResources\Libraries\Google\Google.Apis.xml = CommonResources\Libraries\Google\Google.Apis.xml
+		CommonResources\Libraries\Google\log4net.dll = CommonResources\Libraries\Google\log4net.dll
+		CommonResources\Libraries\Google\Newtonsoft.Json.Net35.dll = CommonResources\Libraries\Google\Newtonsoft.Json.Net35.dll
+		CommonResources\Libraries\Google\Newtonsoft.Json.Net35.xml = CommonResources\Libraries\Google\Newtonsoft.Json.Net35.xml
+		CommonResources\Libraries\Google\Newtonsoft.Json.Silverlight.dll = CommonResources\Libraries\Google\Newtonsoft.Json.Silverlight.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Keys", "Keys", "{3B816A4E-3BF4-4FEB-8DEF-6FF111F43610}"
+	ProjectSection(SolutionItems) = preProject
+		CommonResources\Keys\19506d396832f6eb585bb77917aa397bf96fb3b8-privatekey.p12 = CommonResources\Keys\19506d396832f6eb585bb77917aa397bf96fb3b8-privatekey.p12
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StageBitz.Service", "StageBitz.Service\StageBitz.Service.csproj", "{1DB0DFFB-5113-4BF5-80FE-F8D9740C9284}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API References", "API References", "{67D615A2-6E70-4DD7-8DAE-29261F057FE3}"
+	ProjectSection(SolutionItems) = preProject
+		CommonResources\API References\Antlr3.Runtime.dll = CommonResources\API References\Antlr3.Runtime.dll
+		CommonResources\API References\EntityFramework.dll = CommonResources\API References\EntityFramework.dll
+		CommonResources\API References\Microsoft.Data.Edm.dll = CommonResources\API References\Microsoft.Data.Edm.dll
+		CommonResources\API References\Microsoft.Data.OData.dll = CommonResources\API References\Microsoft.Data.OData.dll
+		CommonResources\API References\Microsoft.Web.Infrastructure.dll = CommonResources\API References\Microsoft.Web.Infrastructure.dll
+		CommonResources\API References\Microsoft.Web.Mvc.FixedDisplayModes.dll = CommonResources\API References\Microsoft.Web.Mvc.FixedDisplayModes.dll
+		CommonResources\API References\Newtonsoft.Json.dll = CommonResources\API References\Newtonsoft.Json.dll
+		CommonResources\API References\System.Net.Http.Formatting.dll = CommonResources\API References\System.Net.Http.Formatting.dll
+		CommonResources\API References\System.Spatial.dll = CommonResources\API References\System.Spatial.dll
+		CommonResources\API References\System.Web.Helpers.dll = CommonResources\API References\System.Web.Helpers.dll
+		CommonResources\API References\System.Web.Http.dll = CommonResources\API References\System.Web.Http.dll
+		CommonResources\API References\System.Web.Http.OData.dll = CommonResources\API References\System.Web.Http.OData.dll
+		CommonResources\API References\System.Web.Http.Tracing.dll = CommonResources\API References\System.Web.Http.Tracing.dll
+		CommonResources\API References\System.Web.Http.WebHost.dll = CommonResources\API References\System.Web.Http.WebHost.dll
+		CommonResources\API References\System.Web.Mvc.dll = CommonResources\API References\System.Web.Mvc.dll
+		CommonResources\API References\System.Web.Optimization.dll = CommonResources\API References\System.Web.Optimization.dll
+		CommonResources\API References\System.Web.Providers.dll = CommonResources\API References\System.Web.Providers.dll
+		CommonResources\API References\System.Web.Razor.dll = CommonResources\API References\System.Web.Razor.dll
+		CommonResources\API References\System.Web.WebPages.Deployment.dll = CommonResources\API References\System.Web.WebPages.Deployment.dll
+		CommonResources\API References\System.Web.WebPages.dll = CommonResources\API References\System.Web.WebPages.dll
+		CommonResources\API References\System.Web.WebPages.Razor.dll = CommonResources\API References\System.Web.WebPages.Razor.dll
+		CommonResources\API References\WebGrease.dll = CommonResources\API References\WebGrease.dll
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StageBitz.Reports", "StageBitz.Reports\StageBitz.Reports.csproj", "{4986F884-2F5A-4080-B287-4A6ADB62A771}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StageBitz.IO", "StageBitz.IO\StageBitz.IO.csproj", "{A1A645C5-48B3-4512-8A6F-9D0A53595BD0}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 14
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://spartacus:8080/tfs/geveo
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = StageBitz.AdminWeb\\StageBitz.AdminWeb.csproj
+		SccProjectName1 = StageBitz.AdminWeb
+		SccLocalPath1 = StageBitz.AdminWeb
+		SccProjectUniqueName2 = StageBitz.Common\\StageBitz.Common.csproj
+		SccProjectName2 = StageBitz.Common
+		SccLocalPath2 = StageBitz.Common
+		SccProjectUniqueName3 = StageBitz.Data\\StageBitz.Data.csproj
+		SccProjectName3 = StageBitz.Data
+		SccLocalPath3 = StageBitz.Data
+		SccProjectUniqueName4 = StageBitz.UserWeb\\StageBitz.UserWeb.csproj
+		SccProjectName4 = StageBitz.UserWeb
+		SccLocalPath4 = StageBitz.UserWeb
+		SccProjectUniqueName5 = StageBitz.Server.Agent\\StageBitz.Server.Agent.csproj
+		SccProjectName5 = StageBitz.Server.Agent
+		SccLocalPath5 = StageBitz.Server.Agent
+		SccProjectUniqueName6 = StageBitz.Server.AgentController\\StageBitz.Server.AgentController.csproj
+		SccProjectName6 = StageBitz.Server.AgentController
+		SccLocalPath6 = StageBitz.Server.AgentController
+		SccProjectUniqueName7 = StageBitz.Server.AgentHarness\\StageBitz.Server.AgentHarness.csproj
+		SccProjectName7 = StageBitz.Server.AgentHarness
+		SccLocalPath7 = StageBitz.Server.AgentHarness
+		SccProjectUniqueName8 = StageBitz.Server.Service.Agent\\StageBitz.Server.Service.Agent.csproj
+		SccProjectName8 = StageBitz.Server.Service.Agent
+		SccLocalPath8 = StageBitz.Server.Service.Agent
+		SccProjectUniqueName9 = StageBitz.UnitTests\\StageBitz.UnitTests.csproj
+		SccProjectName9 = StageBitz.UnitTests
+		SccLocalPath9 = StageBitz.UnitTests
+		SccProjectUniqueName10 = StageBitz.Logic\\StageBitz.Logic.csproj
+		SccProjectName10 = StageBitz.Logic
+		SccLocalPath10 = StageBitz.Logic
+		SccProjectUniqueName11 = StageBitz.Service\\StageBitz.Service.csproj
+		SccProjectName11 = StageBitz.Service
+		SccLocalPath11 = StageBitz.Service
+		SccProjectUniqueName12 = StageBitz.Reports\\StageBitz.Reports.csproj
+		SccProjectName12 = StageBitz.Reports
+		SccLocalPath12 = StageBitz.Reports
+		SccProjectUniqueName13 = StageBitz.IO\\StageBitz.IO.csproj
+		SccProjectName13 = StageBitz.IO
+		SccLocalPath13 = StageBitz.IO
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F6F650AB-9988-4E58-A08C-3F135B195F78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6F650AB-9988-4E58-A08C-3F135B195F78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6F650AB-9988-4E58-A08C-3F135B195F78}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{F6F650AB-9988-4E58-A08C-3F135B195F78}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{F6F650AB-9988-4E58-A08C-3F135B195F78}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F6F650AB-9988-4E58-A08C-3F135B195F78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6F650AB-9988-4E58-A08C-3F135B195F78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6F650AB-9988-4E58-A08C-3F135B195F78}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{F6F650AB-9988-4E58-A08C-3F135B195F78}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{F6F650AB-9988-4E58-A08C-3F135B195F78}.Release|x86.ActiveCfg = Release|Any CPU
+		{7883EDF8-00CA-4ADE-968D-DE2EAF453E95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7883EDF8-00CA-4ADE-968D-DE2EAF453E95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7883EDF8-00CA-4ADE-968D-DE2EAF453E95}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{7883EDF8-00CA-4ADE-968D-DE2EAF453E95}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{7883EDF8-00CA-4ADE-968D-DE2EAF453E95}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7883EDF8-00CA-4ADE-968D-DE2EAF453E95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7883EDF8-00CA-4ADE-968D-DE2EAF453E95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7883EDF8-00CA-4ADE-968D-DE2EAF453E95}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{7883EDF8-00CA-4ADE-968D-DE2EAF453E95}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{7883EDF8-00CA-4ADE-968D-DE2EAF453E95}.Release|x86.ActiveCfg = Release|Any CPU
+		{D23AA30A-4470-4E0D-926C-80EE618F4D1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D23AA30A-4470-4E0D-926C-80EE618F4D1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D23AA30A-4470-4E0D-926C-80EE618F4D1D}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{D23AA30A-4470-4E0D-926C-80EE618F4D1D}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{D23AA30A-4470-4E0D-926C-80EE618F4D1D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D23AA30A-4470-4E0D-926C-80EE618F4D1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D23AA30A-4470-4E0D-926C-80EE618F4D1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D23AA30A-4470-4E0D-926C-80EE618F4D1D}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{D23AA30A-4470-4E0D-926C-80EE618F4D1D}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{D23AA30A-4470-4E0D-926C-80EE618F4D1D}.Release|x86.ActiveCfg = Release|Any CPU
+		{23F0AADB-BAFD-4730-8528-49CE5B15B111}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23F0AADB-BAFD-4730-8528-49CE5B15B111}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23F0AADB-BAFD-4730-8528-49CE5B15B111}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{23F0AADB-BAFD-4730-8528-49CE5B15B111}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{23F0AADB-BAFD-4730-8528-49CE5B15B111}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{23F0AADB-BAFD-4730-8528-49CE5B15B111}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23F0AADB-BAFD-4730-8528-49CE5B15B111}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23F0AADB-BAFD-4730-8528-49CE5B15B111}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{23F0AADB-BAFD-4730-8528-49CE5B15B111}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{23F0AADB-BAFD-4730-8528-49CE5B15B111}.Release|x86.ActiveCfg = Release|Any CPU
+		{8F973DE7-FBD1-4C5F-8ABB-DB66BA49F1D4}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{8F973DE7-FBD1-4C5F-8ABB-DB66BA49F1D4}.Debug|Any CPU.Build.0 = Debug|x86
+		{8F973DE7-FBD1-4C5F-8ABB-DB66BA49F1D4}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{8F973DE7-FBD1-4C5F-8ABB-DB66BA49F1D4}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{8F973DE7-FBD1-4C5F-8ABB-DB66BA49F1D4}.Debug|x86.ActiveCfg = Debug|x86
+		{8F973DE7-FBD1-4C5F-8ABB-DB66BA49F1D4}.Debug|x86.Build.0 = Debug|x86
+		{8F973DE7-FBD1-4C5F-8ABB-DB66BA49F1D4}.Release|Any CPU.ActiveCfg = Release|x86
+		{8F973DE7-FBD1-4C5F-8ABB-DB66BA49F1D4}.Release|Any CPU.Build.0 = Release|x86
+		{8F973DE7-FBD1-4C5F-8ABB-DB66BA49F1D4}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{8F973DE7-FBD1-4C5F-8ABB-DB66BA49F1D4}.Release|Mixed Platforms.Build.0 = Release|x86
+		{8F973DE7-FBD1-4C5F-8ABB-DB66BA49F1D4}.Release|x86.ActiveCfg = Release|x86
+		{8F973DE7-FBD1-4C5F-8ABB-DB66BA49F1D4}.Release|x86.Build.0 = Release|x86
+		{8FC0D909-EB48-4324-9D5D-F160CD7480AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FC0D909-EB48-4324-9D5D-F160CD7480AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FC0D909-EB48-4324-9D5D-F160CD7480AE}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{8FC0D909-EB48-4324-9D5D-F160CD7480AE}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{8FC0D909-EB48-4324-9D5D-F160CD7480AE}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{8FC0D909-EB48-4324-9D5D-F160CD7480AE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8FC0D909-EB48-4324-9D5D-F160CD7480AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FC0D909-EB48-4324-9D5D-F160CD7480AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FC0D909-EB48-4324-9D5D-F160CD7480AE}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{8FC0D909-EB48-4324-9D5D-F160CD7480AE}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{8FC0D909-EB48-4324-9D5D-F160CD7480AE}.Release|x86.ActiveCfg = Release|Any CPU
+		{F5B0F661-FE0F-4944-9A53-616F03C45DFF}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{F5B0F661-FE0F-4944-9A53-616F03C45DFF}.Debug|Any CPU.Build.0 = Debug|x86
+		{F5B0F661-FE0F-4944-9A53-616F03C45DFF}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{F5B0F661-FE0F-4944-9A53-616F03C45DFF}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{F5B0F661-FE0F-4944-9A53-616F03C45DFF}.Debug|x86.ActiveCfg = Debug|x86
+		{F5B0F661-FE0F-4944-9A53-616F03C45DFF}.Debug|x86.Build.0 = Debug|x86
+		{F5B0F661-FE0F-4944-9A53-616F03C45DFF}.Release|Any CPU.ActiveCfg = Release|x86
+		{F5B0F661-FE0F-4944-9A53-616F03C45DFF}.Release|Any CPU.Build.0 = Release|x86
+		{F5B0F661-FE0F-4944-9A53-616F03C45DFF}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{F5B0F661-FE0F-4944-9A53-616F03C45DFF}.Release|Mixed Platforms.Build.0 = Release|x86
+		{F5B0F661-FE0F-4944-9A53-616F03C45DFF}.Release|x86.ActiveCfg = Release|x86
+		{F5B0F661-FE0F-4944-9A53-616F03C45DFF}.Release|x86.Build.0 = Release|x86
+		{5BA49C1F-4054-4972-BBC0-00048BC3DC12}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{5BA49C1F-4054-4972-BBC0-00048BC3DC12}.Debug|Any CPU.Build.0 = Debug|x86
+		{5BA49C1F-4054-4972-BBC0-00048BC3DC12}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{5BA49C1F-4054-4972-BBC0-00048BC3DC12}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{5BA49C1F-4054-4972-BBC0-00048BC3DC12}.Debug|x86.ActiveCfg = Debug|x86
+		{5BA49C1F-4054-4972-BBC0-00048BC3DC12}.Debug|x86.Build.0 = Debug|x86
+		{5BA49C1F-4054-4972-BBC0-00048BC3DC12}.Release|Any CPU.ActiveCfg = Release|x86
+		{5BA49C1F-4054-4972-BBC0-00048BC3DC12}.Release|Any CPU.Build.0 = Release|x86
+		{5BA49C1F-4054-4972-BBC0-00048BC3DC12}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{5BA49C1F-4054-4972-BBC0-00048BC3DC12}.Release|Mixed Platforms.Build.0 = Release|x86
+		{5BA49C1F-4054-4972-BBC0-00048BC3DC12}.Release|x86.ActiveCfg = Release|x86
+		{5BA49C1F-4054-4972-BBC0-00048BC3DC12}.Release|x86.Build.0 = Release|x86
+		{2C031BAE-B431-4436-A9FE-EC94C0962830}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C031BAE-B431-4436-A9FE-EC94C0962830}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C031BAE-B431-4436-A9FE-EC94C0962830}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{2C031BAE-B431-4436-A9FE-EC94C0962830}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{2C031BAE-B431-4436-A9FE-EC94C0962830}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2C031BAE-B431-4436-A9FE-EC94C0962830}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C031BAE-B431-4436-A9FE-EC94C0962830}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C031BAE-B431-4436-A9FE-EC94C0962830}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{2C031BAE-B431-4436-A9FE-EC94C0962830}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{2C031BAE-B431-4436-A9FE-EC94C0962830}.Release|x86.ActiveCfg = Release|Any CPU
+		{E2180C6D-8C6D-48BA-87B2-E8499C8AAFFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2180C6D-8C6D-48BA-87B2-E8499C8AAFFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2180C6D-8C6D-48BA-87B2-E8499C8AAFFB}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{E2180C6D-8C6D-48BA-87B2-E8499C8AAFFB}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{E2180C6D-8C6D-48BA-87B2-E8499C8AAFFB}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E2180C6D-8C6D-48BA-87B2-E8499C8AAFFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2180C6D-8C6D-48BA-87B2-E8499C8AAFFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2180C6D-8C6D-48BA-87B2-E8499C8AAFFB}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{E2180C6D-8C6D-48BA-87B2-E8499C8AAFFB}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{E2180C6D-8C6D-48BA-87B2-E8499C8AAFFB}.Release|x86.ActiveCfg = Release|Any CPU
+		{1DB0DFFB-5113-4BF5-80FE-F8D9740C9284}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DB0DFFB-5113-4BF5-80FE-F8D9740C9284}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DB0DFFB-5113-4BF5-80FE-F8D9740C9284}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{1DB0DFFB-5113-4BF5-80FE-F8D9740C9284}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{1DB0DFFB-5113-4BF5-80FE-F8D9740C9284}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1DB0DFFB-5113-4BF5-80FE-F8D9740C9284}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DB0DFFB-5113-4BF5-80FE-F8D9740C9284}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DB0DFFB-5113-4BF5-80FE-F8D9740C9284}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{1DB0DFFB-5113-4BF5-80FE-F8D9740C9284}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{1DB0DFFB-5113-4BF5-80FE-F8D9740C9284}.Release|x86.ActiveCfg = Release|Any CPU
+		{4986F884-2F5A-4080-B287-4A6ADB62A771}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4986F884-2F5A-4080-B287-4A6ADB62A771}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4986F884-2F5A-4080-B287-4A6ADB62A771}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{4986F884-2F5A-4080-B287-4A6ADB62A771}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{4986F884-2F5A-4080-B287-4A6ADB62A771}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4986F884-2F5A-4080-B287-4A6ADB62A771}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4986F884-2F5A-4080-B287-4A6ADB62A771}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4986F884-2F5A-4080-B287-4A6ADB62A771}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{4986F884-2F5A-4080-B287-4A6ADB62A771}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{4986F884-2F5A-4080-B287-4A6ADB62A771}.Release|x86.ActiveCfg = Release|Any CPU
+		{A1A645C5-48B3-4512-8A6F-9D0A53595BD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1A645C5-48B3-4512-8A6F-9D0A53595BD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1A645C5-48B3-4512-8A6F-9D0A53595BD0}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{A1A645C5-48B3-4512-8A6F-9D0A53595BD0}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{A1A645C5-48B3-4512-8A6F-9D0A53595BD0}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A1A645C5-48B3-4512-8A6F-9D0A53595BD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1A645C5-48B3-4512-8A6F-9D0A53595BD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1A645C5-48B3-4512-8A6F-9D0A53595BD0}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{A1A645C5-48B3-4512-8A6F-9D0A53595BD0}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{A1A645C5-48B3-4512-8A6F-9D0A53595BD0}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FE629D3E-621C-48E3-B3F9-E7D2C72FFB02} = {AC75C265-7B39-4B3E-9F17-8F60678C5640}
+		{3B816A4E-3BF4-4FEB-8DEF-6FF111F43610} = {AC75C265-7B39-4B3E-9F17-8F60678C5640}
+		{67D615A2-6E70-4DD7-8DAE-29261F057FE3} = {AC75C265-7B39-4B3E-9F17-8F60678C5640}
+		{AC168FD7-5EE1-4796-94FC-44A5D865F7A5} = {FE629D3E-621C-48E3-B3F9-E7D2C72FFB02}
+	EndGlobalSection
+EndGlobal

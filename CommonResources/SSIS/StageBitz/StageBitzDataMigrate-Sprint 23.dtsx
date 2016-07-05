@@ -1,0 +1,1040 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="12/13/2012 9:41:22 AM"
+  DTS:CreationName="SSIS.Package.3"
+  DTS:CreatorComputerName="ANURADHA"
+  DTS:CreatorName="GEVEO\anuradha"
+  DTS:DTSID="{8F5DEDAF-9997-4507-B0F8-7B20362F868A}"
+  DTS:ExecutableType="SSIS.Package.3"
+  DTS:LastModifiedProductVersion="11.0.2100.60"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="StageBitzDataMigrate-Sprint 23"
+  DTS:PackageType="5"
+  DTS:VersionBuild="216"
+  DTS:VersionGUID="{A3BF088E-0BC4-4A20-B23F-5D7C9915DB49}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">6</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Destination.StageBitz.Ado.Net]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{AA0A5EE2-65F6-46C1-8F1F-B830602FADD0}"
+      DTS:ObjectName="Destination.StageBitz.Ado.Net">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=user.stagebitz.com;User ID=stagebitz;Initial Catalog=StageBitz;Persist Security Info=True;Application Name=&quot;SSIS-Package-{AA0A5EE2-65F6-46C1-8F1F-B830602FADD0}optimus.StageBitz.sa 1&quot;;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAQOPCAKtuF0C8+oxzC3UNVAAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABmwu8kAq0jIgAgz9KcJAcyAAAAAASAAACgAAAAEAAAAB3CEaoGc9YGkeR2QRHPsl8QAAAA0UrLXoJnO15jV6nw0xccXRQAAABjUoZA27ILHkjDbDtvTxb1NHPvJA</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Source.StageBitz.Ado.Net]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{B7F71A0F-2B73-4974-8AE3-2DEDBF453083}"
+      DTS:ObjectName="Source.StageBitz.Ado.Net">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=111.67.22.100;User ID=stagebitz;Initial Catalog=StageBitz;Application Name=SSIS-Package-{B7F71A0F-2B73-4974-8AE3-2DEDBF453083}perseus.StageBitzDev.sa1;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAQOPCAKtuF0C8+oxzC3UNVAAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADcZd0W72xGyeYsgq7yA/X1AAAAAASAAACgAAAAEAAAAESQIGu/lA1CEcwpcrkoexsgAAAAdC5Ze1ROb2tFyghrbSfhHm6rPB9+/brWtXdZgOUrBgoUAAAALBnGuEx/RuCBSu7XSGgEYvUb8qQ</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{2BB862BA-3152-47D4-96F4-C2229552A7A0}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="CodeHeaders_Source">
+      <DTS:VariableValue
+        DTS:DataSubType="ManagedSerializable"
+        DTS:DataType="13">
+        <SOAP-ENV:Envelope xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+          <SOAP-ENV:Body>
+            <xsd:anyType
+              id="ref-1"></xsd:anyType>
+          </SOAP-ENV:Body>
+        </SOAP-ENV:Envelope>
+      </DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{AA5509B3-99BD-4306-A4E4-53E605027105}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="FieldId">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{F315E74A-AD47-41E9-92F1-05D4BF8E2AE0}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="SystemValues_Source">
+      <DTS:VariableValue
+        DTS:DataSubType="ManagedSerializable"
+        DTS:DataType="13">
+        <SOAP-ENV:Envelope xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+          <SOAP-ENV:Body>
+            <xsd:anyType
+              id="ref-1"></xsd:anyType>
+          </SOAP-ENV:Body>
+        </SOAP-ENV:Envelope>
+      </DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Foreach Code Headers"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Foreach Code Headers"
+      DTS:DTSID="{66BFE18E-5851-4969-B6C8-CF3E9D14B6E7}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Foreach Code Headers">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.SqlServer.Dts.Runtime.Enumerators.ADO.ForEachADOEnumerator, Microsoft.SqlServer.ForEachADOEnumerator, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+        DTS:DTSID="{82FA1C91-C1F5-4130-A8C4-69D7213269D5}"
+        DTS:ObjectName="{82FA1C91-C1F5-4130-A8C4-69D7213269D5}">
+        <DTS:ObjectData>
+          <FEEADO
+            EnumType="EnumerateRowsInFirstTable"
+            VarName="User::CodeHeaders_Source" />
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:DTSID="{D86F0E67-2BE2-43DA-86C9-41D15CE0E08E}"
+          DTS:IncludeInDebugDump="6789"
+          DTS:Namespace="User"
+          DTS:ObjectName="CodeHeaderId_Destination">
+          <DTS:VariableValue
+            DTS:DataType="3">0</DTS:VariableValue>
+        </DTS:Variable>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:DTSID="{75117BDD-59EF-4E8F-BE13-113FBB41A5D6}"
+          DTS:IncludeInDebugDump="6789"
+          DTS:Namespace="User"
+          DTS:ObjectName="CodeHeaderId_Source">
+          <DTS:VariableValue
+            DTS:DataType="3">0</DTS:VariableValue>
+        </DTS:Variable>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:DTSID="{A1AA609E-AEB4-41BC-8A72-BFF2A284EE01}"
+          DTS:IncludeInDebugDump="2345"
+          DTS:Namespace="User"
+          DTS:ObjectName="CodeHeaderName_Source">
+          <DTS:VariableValue
+            DTS:DataType="8"
+            xml:space="preserve"></DTS:VariableValue>
+        </DTS:Variable>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:DTSID="{256A4AE6-145F-4AD0-B5A9-8A6059E74A48}"
+          DTS:IncludeInDebugDump="6789"
+          DTS:Namespace="User"
+          DTS:ObjectName="Codes">
+          <DTS:VariableValue
+            DTS:DataSubType="ManagedSerializable"
+            DTS:DataType="13">
+            <SOAP-ENV:Envelope xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+              <SOAP-ENV:Body>
+                <xsd:anyType
+                  id="ref-1"></xsd:anyType>
+              </SOAP-ENV:Body>
+            </SOAP-ENV:Envelope>
+          </DTS:VariableValue>
+        </DTS:Variable>
+      </DTS:Variables>
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Foreach Code Headers\Foreach Codes"
+          DTS:CreationName="STOCK:FOREACHLOOP"
+          DTS:Description="Foreach Codes"
+          DTS:DTSID="{CB19608C-23E7-404C-95CD-857909445F45}"
+          DTS:ExecutableType="STOCK:FOREACHLOOP"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Foreach Codes">
+          <DTS:ForEachEnumerator
+            DTS:CreationName="Microsoft.SqlServer.Dts.Runtime.Enumerators.ADO.ForEachADOEnumerator, Microsoft.SqlServer.ForEachADOEnumerator, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+            DTS:DTSID="{861B1875-7621-4267-8139-7A75C56D8476}"
+            DTS:ObjectName="{861B1875-7621-4267-8139-7A75C56D8476}">
+            <DTS:ObjectData>
+              <FEEADO
+                EnumType="EnumerateRowsInFirstTable"
+                VarName="User::Codes" />
+            </DTS:ObjectData>
+          </DTS:ForEachEnumerator>
+          <DTS:Variables>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{C549DB6A-968B-44EF-A448-192BED6CE08C}"
+              DTS:IncludeInDebugDump="2345"
+              DTS:Namespace="User"
+              DTS:ObjectName="CodeDescription_Source">
+              <DTS:VariableValue
+                DTS:DataType="8"
+                xml:space="preserve"></DTS:VariableValue>
+            </DTS:Variable>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{D5AFEF91-0B91-4CB1-8144-6CF43D711455}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="User"
+              DTS:ObjectName="CodeId_Destination">
+              <DTS:VariableValue
+                DTS:DataType="3">0</DTS:VariableValue>
+            </DTS:Variable>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{BF4C2D5C-D850-4543-93DC-567B992C2B7A}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="User"
+              DTS:ObjectName="CodeId_Source">
+              <DTS:VariableValue
+                DTS:DataType="3">0</DTS:VariableValue>
+            </DTS:Variable>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{7796CD3A-B8EB-420A-8517-9C8006BFEF5A}"
+              DTS:IncludeInDebugDump="2345"
+              DTS:Namespace="User"
+              DTS:ObjectName="CodeName_Source">
+              <DTS:VariableValue
+                DTS:DataType="8"
+                xml:space="preserve"></DTS:VariableValue>
+            </DTS:Variable>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{124F10BF-8E3E-4553-AB81-E89604ECC727}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="User"
+              DTS:ObjectName="CodeSortOrder_Source">
+              <DTS:VariableValue
+                DTS:DataType="3">0</DTS:VariableValue>
+            </DTS:Variable>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{63172C1E-0129-49D1-9935-5F454D2DA6F1}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="User"
+              DTS:ObjectName="EmailTemplates">
+              <DTS:VariableValue
+                DTS:DataSubType="ManagedSerializable"
+                DTS:DataType="13">
+                <SOAP-ENV:Envelope xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+                  <SOAP-ENV:Body>
+                    <xsd:anyType
+                      id="ref-1"></xsd:anyType>
+                  </SOAP-ENV:Body>
+                </SOAP-ENV:Envelope>
+              </DTS:VariableValue>
+            </DTS:Variable>
+          </DTS:Variables>
+          <DTS:Executables>
+            <DTS:Executable
+              DTS:refId="Package\Foreach Code Headers\Foreach Codes\Foreach Email Template"
+              DTS:CreationName="STOCK:FOREACHLOOP"
+              DTS:Description="Foreach Email Template"
+              DTS:DTSID="{44FCCFD2-24D6-4260-A25B-D53C6BAAFCDD}"
+              DTS:ExecutableType="STOCK:FOREACHLOOP"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Foreach Email Template">
+              <DTS:ForEachEnumerator
+                DTS:CreationName="Microsoft.SqlServer.Dts.Runtime.Enumerators.ADO.ForEachADOEnumerator, Microsoft.SqlServer.ForEachADOEnumerator, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+                DTS:DTSID="{9CCBE8B7-1538-4089-AA37-1049C9DF86ED}"
+                DTS:ObjectName="{9CCBE8B7-1538-4089-AA37-1049C9DF86ED}">
+                <DTS:ObjectData>
+                  <FEEADO
+                    EnumType="EnumerateRowsInFirstTable"
+                    VarName="User::EmailTemplates" />
+                </DTS:ObjectData>
+              </DTS:ForEachEnumerator>
+              <DTS:Variables>
+                <DTS:Variable
+                  DTS:CreationName=""
+                  DTS:DTSID="{0906A125-9D85-46F6-8888-C3167FBD9811}"
+                  DTS:IncludeInDebugDump="2345"
+                  DTS:Namespace="User"
+                  DTS:ObjectName="EmailTemplateBody">
+                  <DTS:VariableValue
+                    DTS:DataType="8"
+                    xml:space="preserve"></DTS:VariableValue>
+                </DTS:Variable>
+                <DTS:Variable
+                  DTS:CreationName=""
+                  DTS:DTSID="{1CF181A1-8E04-4EB2-8E40-F932FF3C53E9}"
+                  DTS:IncludeInDebugDump="2345"
+                  DTS:Namespace="User"
+                  DTS:ObjectName="EmailTemplateSubject">
+                  <DTS:VariableValue
+                    DTS:DataType="8"
+                    xml:space="preserve"></DTS:VariableValue>
+                </DTS:Variable>
+              </DTS:Variables>
+              <DTS:Executables>
+                <DTS:Executable
+                  DTS:refId="Package\Foreach Code Headers\Foreach Codes\Foreach Email Template\Insert or Update Email Template"
+                  DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+                  DTS:Description="Execute SQL Task"
+                  DTS:DTSID="{0D6F3EE4-B23B-4E23-B402-3AB953E67994}"
+                  DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+                  DTS:LocaleID="-1"
+                  DTS:ObjectName="Insert or Update Email Template"
+                  DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+                  DTS:ThreadHint="0">
+                  <DTS:Variables />
+                  <DTS:ObjectData>
+                    <SQLTask:SqlTaskData
+                      SQLTask:Connection="{AA0A5EE2-65F6-46C1-8F1F-B830602FADD0}"
+                      SQLTask:SqlStatementSource="IF EXISTS(SELECT *  FROM  dbo.EmailTemplates WHERE EmailTemplateTypeCodeId = @CodeId)&#xA;BEGIN&#xA;&#x9;UPDATE&#x9;dbo.EmailTemplates&#xA;&#x9;SET&#x9;&#x9;[Subject] = @Subject&#xA;&#x9;&#x9;&#x9;,MessageBody  = @Body&#xA;&#x9;WHERE&#x9;EmailTemplateTypeCodeId = @CodeId&#xA;&#x9;&#xA;END&#xA;ELSE&#xA;BEGIN&#xA;&#x9;INSERT INTO dbo.EmailTemplates (EmailTemplateTypeCodeId, [Subject], MessageBody, IsActive, CreatedByUserId, CreatedDate, LastUpdatedByUserId, LastUpdatedDate)&#xA;&#x9;VALUES (@CodeId, @Subject, @Body, 1, NULL, NULL, NULL, NULL)&#xA;END" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="@CodeId"
+                        SQLTask:DtsVariableName="User::CodeId_Destination"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="11"
+                        SQLTask:ParameterSize="10" />
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="@Subject"
+                        SQLTask:DtsVariableName="User::EmailTemplateSubject"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="16"
+                        SQLTask:ParameterSize="-1" />
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="@Body"
+                        SQLTask:DtsVariableName="User::EmailTemplateBody"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="16"
+                        SQLTask:ParameterSize="-1" />
+                    </SQLTask:SqlTaskData>
+                  </DTS:ObjectData>
+                </DTS:Executable>
+              </DTS:Executables>
+              <DTS:ForEachVariableMappings>
+                <DTS:ForEachVariableMapping
+                  DTS:CreationName=""
+                  DTS:DTSID="{3BB81D8A-C273-4C01-B3EA-15CB29001392}"
+                  DTS:ObjectName="{3BB81D8A-C273-4C01-B3EA-15CB29001392}"
+                  DTS:ValueIndex="3"
+                  DTS:VariableName="User::EmailTemplateBody" />
+                <DTS:ForEachVariableMapping
+                  DTS:CreationName=""
+                  DTS:DTSID="{A48E0F50-6256-4DDA-BA1D-5C87F79AB6F6}"
+                  DTS:ObjectName="{A48E0F50-6256-4DDA-BA1D-5C87F79AB6F6}"
+                  DTS:ValueIndex="2"
+                  DTS:VariableName="User::EmailTemplateSubject" />
+              </DTS:ForEachVariableMappings>
+            </DTS:Executable>
+            <DTS:Executable
+              DTS:refId="Package\Foreach Code Headers\Foreach Codes\Insert or Update Code"
+              DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+              DTS:Description="Execute SQL Task"
+              DTS:DTSID="{7A533090-981F-4B49-AAD7-D4450911E4D1}"
+              DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Insert or Update Code"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+              DTS:ThreadHint="0">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{AA0A5EE2-65F6-46C1-8F1F-B830602FADD0}"
+                  SQLTask:SqlStatementSource="IF EXISTS(SELECT *  FROM  dbo.Codes WHERE Value = @CodeName AND CodeHeaderId = @CodeHeaderId)&#xA;BEGIN&#xA;&#x9;SELECT @CodeId = CodeId  FROM  dbo.Codes WHERE Value = @CodeName AND CodeHeaderId = @CodeHeaderId&#xA;&#x9;UPDATE&#x9;dbo.Codes&#xA;&#x9;SET&#x9;&#x9;[Description] = @CodeDescription&#xA;&#x9;&#x9;&#x9;,SortOrder&#x9;  = @CodeSortOrder&#xA;&#x9;WHERE&#x9;CodeId = @CodeId&#xA;&#x9;&#xA;END&#xA;ELSE&#xA;BEGIN&#xA;&#x9;INSERT INTO dbo.Codes (CodeHeaderId, Value, [Description], SortOrder, IsActive)&#xA;&#x9;VALUES (@CodeHeaderId, @CodeName, @CodeDescription, @CodeSortOrder, 1)&#xA;&#x9;&#xA;&#x9;SET @CodeId = @@IDENTITY&#xA;END" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+                  <SQLTask:ParameterBinding
+                    SQLTask:ParameterName="@CodeName"
+                    SQLTask:DtsVariableName="User::CodeName_Source"
+                    SQLTask:ParameterDirection="Input"
+                    SQLTask:DataType="16"
+                    SQLTask:ParameterSize="50" />
+                  <SQLTask:ParameterBinding
+                    SQLTask:ParameterName="@CodeDescription"
+                    SQLTask:DtsVariableName="User::CodeDescription_Source"
+                    SQLTask:ParameterDirection="Input"
+                    SQLTask:DataType="16"
+                    SQLTask:ParameterSize="100" />
+                  <SQLTask:ParameterBinding
+                    SQLTask:ParameterName="@CodeSortOrder"
+                    SQLTask:DtsVariableName="User::CodeSortOrder_Source"
+                    SQLTask:ParameterDirection="Input"
+                    SQLTask:DataType="11"
+                    SQLTask:ParameterSize="10" />
+                  <SQLTask:ParameterBinding
+                    SQLTask:ParameterName="@CodeHeaderId"
+                    SQLTask:DtsVariableName="User::CodeHeaderId_Destination"
+                    SQLTask:ParameterDirection="Input"
+                    SQLTask:DataType="11"
+                    SQLTask:ParameterSize="10" />
+                  <SQLTask:ParameterBinding
+                    SQLTask:ParameterName="@CodeId "
+                    SQLTask:DtsVariableName="User::CodeId_Destination"
+                    SQLTask:ParameterDirection="Output"
+                    SQLTask:DataType="11"
+                    SQLTask:ParameterSize="10" />
+                </SQLTask:SqlTaskData>
+              </DTS:ObjectData>
+            </DTS:Executable>
+            <DTS:Executable
+              DTS:refId="Package\Foreach Code Headers\Foreach Codes\Select Email Templates"
+              DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+              DTS:Description="Execute SQL Task"
+              DTS:DTSID="{A079BC4C-7762-42AE-A6E1-22C622ACFB78}"
+              DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Select Email Templates"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+              DTS:ThreadHint="0">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{B7F71A0F-2B73-4974-8AE3-2DEDBF453083}"
+                  SQLTask:SqlStatementSource="SELECT * FROM  dbo.EmailTemplates WHERE  EmailTemplateTypeCodeId = @CodeId"
+                  SQLTask:ResultType="ResultSetType_Rowset" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+                  <SQLTask:ResultBinding
+                    SQLTask:ResultName="0"
+                    SQLTask:DtsVariableName="User::EmailTemplates" />
+                  <SQLTask:ParameterBinding
+                    SQLTask:ParameterName="@CodeId"
+                    SQLTask:DtsVariableName="User::CodeId_Source"
+                    SQLTask:ParameterDirection="Input"
+                    SQLTask:DataType="11"
+                    SQLTask:ParameterSize="10" />
+                </SQLTask:SqlTaskData>
+              </DTS:ObjectData>
+            </DTS:Executable>
+          </DTS:Executables>
+          <DTS:PrecedenceConstraints>
+            <DTS:PrecedenceConstraint
+              DTS:refId="Package\Foreach Code Headers\Foreach Codes.PrecedenceConstraints[Constraint]"
+              DTS:CreationName=""
+              DTS:DTSID="{3CCD0D72-D0C2-4651-88F4-99FDFFBF970F}"
+              DTS:From="Package\Foreach Code Headers\Foreach Codes\Insert or Update Code"
+              DTS:LogicalAnd="True"
+              DTS:ObjectName="Constraint"
+              DTS:To="Package\Foreach Code Headers\Foreach Codes\Select Email Templates" />
+            <DTS:PrecedenceConstraint
+              DTS:refId="Package\Foreach Code Headers\Foreach Codes.PrecedenceConstraints[Constraint 1]"
+              DTS:CreationName=""
+              DTS:DTSID="{5B8548C6-F1CB-40CD-96DE-01BECB4FACAA}"
+              DTS:From="Package\Foreach Code Headers\Foreach Codes\Select Email Templates"
+              DTS:LogicalAnd="True"
+              DTS:ObjectName="Constraint 1"
+              DTS:To="Package\Foreach Code Headers\Foreach Codes\Foreach Email Template" />
+          </DTS:PrecedenceConstraints>
+          <DTS:ForEachVariableMappings>
+            <DTS:ForEachVariableMapping
+              DTS:CreationName=""
+              DTS:DTSID="{D3C4229F-B69C-48D5-A4F4-1DEF0DDA38A6}"
+              DTS:ObjectName="{D3C4229F-B69C-48D5-A4F4-1DEF0DDA38A6}"
+              DTS:ValueIndex="0"
+              DTS:VariableName="User::CodeId_Source" />
+            <DTS:ForEachVariableMapping
+              DTS:CreationName=""
+              DTS:DTSID="{FAFE5296-A60D-4DA5-881D-1BD47347D19C}"
+              DTS:ObjectName="{FAFE5296-A60D-4DA5-881D-1BD47347D19C}"
+              DTS:ValueIndex="2"
+              DTS:VariableName="User::CodeName_Source" />
+            <DTS:ForEachVariableMapping
+              DTS:CreationName=""
+              DTS:DTSID="{1013857C-ED3D-4B04-9144-C87CCBBC1F61}"
+              DTS:ObjectName="{1013857C-ED3D-4B04-9144-C87CCBBC1F61}"
+              DTS:ValueIndex="3"
+              DTS:VariableName="User::CodeDescription_Source" />
+            <DTS:ForEachVariableMapping
+              DTS:CreationName=""
+              DTS:DTSID="{BF547282-5323-458C-9AE6-EE9E60CB0342}"
+              DTS:ObjectName="{BF547282-5323-458C-9AE6-EE9E60CB0342}"
+              DTS:ValueIndex="4"
+              DTS:VariableName="User::CodeSortOrder_Source" />
+          </DTS:ForEachVariableMappings>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Foreach Code Headers\Insert or Update Code Header"
+          DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{1A0818C1-18B3-4B4A-BACC-2F7F6D1D7AC8}"
+          DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Insert or Update Code Header"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{AA0A5EE2-65F6-46C1-8F1F-B830602FADD0}"
+              SQLTask:SqlStatementSource="IF EXISTS(SELECT *  FROM  dbo.CodeHeaders WHERE Name = @CodeHeaderName)&#xA;BEGIN&#xA;&#x9;SELECT @CodeHeaderId = CodeHeaderId  FROM  dbo.CodeHeaders WHERE Name = @CodeHeaderName &#xA;END&#xA;ELSE&#xA;BEGIN&#xA;&#x9;INSERT INTO dbo.CodeHeaders (Name) VALUES (@CodeHeaderName)&#xA;&#x9;SET @CodeHeaderId = @@IDENTITY&#xA;END" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="@CodeHeaderName"
+                SQLTask:DtsVariableName="User::CodeHeaderName_Source"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="16"
+                SQLTask:ParameterSize="50" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="@CodeHeaderId"
+                SQLTask:DtsVariableName="User::CodeHeaderId_Destination"
+                SQLTask:ParameterDirection="Output"
+                SQLTask:DataType="11"
+                SQLTask:ParameterSize="10" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Foreach Code Headers\Select Codes"
+          DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{B5C7885A-B078-4B22-A187-C5A83899A91C}"
+          DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Select Codes"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{B7F71A0F-2B73-4974-8AE3-2DEDBF453083}"
+              SQLTask:SqlStatementSource="SELECT * FROM dbo.Codes WHERE  CodeHeaderId = @CodeHeaderId"
+              SQLTask:ResultType="ResultSetType_Rowset" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ResultBinding
+                SQLTask:ResultName="0"
+                SQLTask:DtsVariableName="User::Codes" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="@CodeHeaderId"
+                SQLTask:DtsVariableName="User::CodeHeaderId_Source"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="11"
+                SQLTask:ParameterSize="10" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Foreach Code Headers.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{2DFEE5D7-0023-4FCD-A9AC-398B32A3E798}"
+          DTS:From="Package\Foreach Code Headers\Insert or Update Code Header"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Foreach Code Headers\Select Codes" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Foreach Code Headers.PrecedenceConstraints[Constraint 1]"
+          DTS:CreationName=""
+          DTS:DTSID="{BE1DC132-AE40-46CD-9DF5-4862FF1750F2}"
+          DTS:From="Package\Foreach Code Headers\Select Codes"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 1"
+          DTS:To="Package\Foreach Code Headers\Foreach Codes" />
+      </DTS:PrecedenceConstraints>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{97CABBDC-C4DC-4BF0-949B-23441F4793D2}"
+          DTS:ObjectName="{97CABBDC-C4DC-4BF0-949B-23441F4793D2}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::CodeHeaderId_Source" />
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{4F75A568-9681-404F-9992-CD09822E1B47}"
+          DTS:ObjectName="{4F75A568-9681-404F-9992-CD09822E1B47}"
+          DTS:ValueIndex="1"
+          DTS:VariableName="User::CodeHeaderName_Source" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Foreach System Values"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Foreach System Values"
+      DTS:DTSID="{01E71F51-4E6B-4EBA-95D2-7A0B39938593}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Foreach System Values">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.SqlServer.Dts.Runtime.Enumerators.ADO.ForEachADOEnumerator, Microsoft.SqlServer.ForEachADOEnumerator, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+        DTS:DTSID="{D1FADB79-AAC9-49C8-8934-48DC6CAD83B4}"
+        DTS:ObjectName="{D1FADB79-AAC9-49C8-8934-48DC6CAD83B4}">
+        <DTS:ObjectData>
+          <FEEADO
+            EnumType="EnumerateRowsInFirstTable"
+            VarName="User::SystemValues_Source" />
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:DTSID="{D0BA2BFC-48AF-4A65-AE55-72D39BEB331B}"
+          DTS:IncludeInDebugDump="2345"
+          DTS:Namespace="User"
+          DTS:ObjectName="SystemValueDescription_Source">
+          <DTS:VariableValue
+            DTS:DataType="8"
+            xml:space="preserve"></DTS:VariableValue>
+        </DTS:Variable>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:DTSID="{38C78D85-81C8-4817-8FFE-6DF932F14E48}"
+          DTS:IncludeInDebugDump="2345"
+          DTS:Namespace="User"
+          DTS:ObjectName="SystemValueName_Source">
+          <DTS:VariableValue
+            DTS:DataType="8"
+            xml:space="preserve"></DTS:VariableValue>
+        </DTS:Variable>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:DTSID="{95176458-AFBA-4DB7-8539-69B5A09A96F2}"
+          DTS:IncludeInDebugDump="2345"
+          DTS:Namespace="User"
+          DTS:ObjectName="SystemValueValue_Source">
+          <DTS:VariableValue
+            DTS:DataType="8"
+            xml:space="preserve"></DTS:VariableValue>
+        </DTS:Variable>
+      </DTS:Variables>
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Foreach System Values\Insert System Values"
+          DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{9A84DB38-4353-4D4D-97EA-52D8BFF53A39}"
+          DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Insert System Values"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{AA0A5EE2-65F6-46C1-8F1F-B830602FADD0}"
+              SQLTask:SqlStatementSource="IF NOT EXISTS(SELECT *  FROM  dbo.SystemValues WHERE Name = @SystemValueName)&#xA;BEGIN&#xA;&#x9;INSERT INTO dbo.SystemValues (Name, [Description], Value, CreatedByUserId, CreatedDate, LastUpdatedByUserId, LastUpdatedDate)&#xA;&#x9;VALUES (@SystemValueName, @SystemValueDescription, @SystemValueValue, NULL, NULL, NULL, NULL)&#xA;END" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="@SystemValueName"
+                SQLTask:DtsVariableName="User::SystemValueName_Source"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="16"
+                SQLTask:ParameterSize="50" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="@SystemValueDescription"
+                SQLTask:DtsVariableName="User::SystemValueDescription_Source"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="16"
+                SQLTask:ParameterSize="100" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="@SystemValueValue"
+                SQLTask:DtsVariableName="User::SystemValueValue_Source"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="16"
+                SQLTask:ParameterSize="200" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{F7340E66-E74A-45CD-B201-4E9C4DF5A0FF}"
+          DTS:ObjectName="{F7340E66-E74A-45CD-B201-4E9C4DF5A0FF}"
+          DTS:ValueIndex="1"
+          DTS:VariableName="User::SystemValueName_Source" />
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{540DFB6A-0F92-4DD0-AC7E-62EB6F22CD82}"
+          DTS:ObjectName="{540DFB6A-0F92-4DD0-AC7E-62EB6F22CD82}"
+          DTS:ValueIndex="2"
+          DTS:VariableName="User::SystemValueDescription_Source" />
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{F168144C-BC37-4800-96F5-8D6F5904DB27}"
+          DTS:ObjectName="{F168144C-BC37-4800-96F5-8D6F5904DB27}"
+          DTS:ValueIndex="3"
+          DTS:VariableName="User::SystemValueValue_Source" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Select All Code Headers"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{059A475F-A012-4B3C-8BF1-6D93FD36B7D5}"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Select All Code Headers"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{B7F71A0F-2B73-4974-8AE3-2DEDBF453083}"
+          SQLTask:SqlStatementSource="SELECT * FROM dbo.CodeHeaders"
+          SQLTask:ResultType="ResultSetType_Rowset" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="0"
+            SQLTask:DtsVariableName="User::CodeHeaders_Source" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Sellect All System Values"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{FBA35AA1-50D5-4056-9CC7-642BBEFAD337}"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Sellect All System Values"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{B7F71A0F-2B73-4974-8AE3-2DEDBF453083}"
+          SQLTask:SqlStatementSource="SELECT * FROM dbo.SystemValues"
+          SQLTask:ResultType="ResultSetType_Rowset" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="0"
+            SQLTask:DtsVariableName="User::SystemValues_Source" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Set FromDate as Today in ItemBriefItem"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{61792758-1e1d-4f07-8583-336253f7c2f1}"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Set FromDate as Today in ItemBriefItem"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{AA0A5EE2-65F6-46C1-8F1F-B830602FADD0}"
+          SQLTask:SqlStatementSource="update ItemBriefItem set FromDate = DATEADD(dd, 0, DATEDIFF(dd, 0, [dbo].[GetSystemDate]()))&#xA;where IsActive = 1" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{F05C8229-F64F-417B-A1D2-08A69214DC2E}"
+      DTS:From="Package\Select All Code Headers"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Foreach Code Headers" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{59D853AB-1F5D-4284-9EB2-F820CFD41377}"
+      DTS:From="Package\Foreach Code Headers"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Sellect All System Values" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{A99AC663-ACE5-43B5-A3AD-56AB6E55E530}"
+      DTS:From="Package\Sellect All System Values"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Foreach System Values" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{7A71DA26-9D50-4488-A31E-9E53D1F5B222}"
+      DTS:From="Package\Foreach System Values"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\Set FromDate as Today in ItemBriefItem" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="sql11">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="171,49"
+          Id="Package\Foreach Code Headers\Foreach Codes\Foreach Email Template\Insert or Update Email Template"
+          TopLeft="205.735849056604,11.8679245283019" />
+        <ContainerLayout
+          HeaderHeight="43.924528301886795"
+          IsExpanded="True"
+          PanelSize="571,76"
+          Size="571,120"
+          Id="Package\Foreach Code Headers\Foreach Codes\Foreach Email Template"
+          TopLeft="34.0754716981132,117.566037735849" />
+        <NodeLayout
+          Size="136,60"
+          Id="Package\Foreach Code Headers\Foreach Codes\Insert or Update Code"
+          TopLeft="35.245283018868,23.7169811320755" />
+        <NodeLayout
+          Size="140,58"
+          Id="Package\Foreach Code Headers\Foreach Codes\Select Email Templates"
+          TopLeft="206.943396226415,24.6981132075472" />
+        <EdgeLayout
+          Id="Package\Foreach Code Headers\Foreach Codes.PrecedenceConstraints[Constraint]"
+          TopLeft="171.018867924528,53.6415094339623">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="35.9245283018868,0"
+              Start="0,0"
+              End="28.4245283018868,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="28.4245283018868,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Code Headers\Foreach Codes.PrecedenceConstraints[Constraint 1]"
+          TopLeft="256.075471698113,82.622641509434">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="63.5094339622642,34.9433962264151"
+              Start="0,0"
+              End="63.5094339622642,27.4433962264151">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.188679245283" />
+                  <mssgle:LineSegment
+                    End="63.5094339622642,26.188679245283" />
+                  <mssgle:LineSegment
+                    End="63.5094339622642,27.4433962264151" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43.924528301886795"
+          IsExpanded="True"
+          PanelSize="655,255"
+          Size="655,298"
+          Id="Package\Foreach Code Headers\Foreach Codes"
+          TopLeft="43.0566037735848,114.77358490566" />
+        <NodeLayout
+          Size="136,58"
+          Id="Package\Foreach Code Headers\Insert or Update Code Header"
+          TopLeft="41.3207547169811,20.9245283018868" />
+        <NodeLayout
+          Size="136,61"
+          Id="Package\Foreach Code Headers\Select Codes"
+          TopLeft="236.037735849057,19.8679245283019" />
+        <EdgeLayout
+          Id="Package\Foreach Code Headers.PrecedenceConstraints[Constraint]"
+          TopLeft="177.094339622641,49.8679245283019">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="58.9433962264151,0.452830188679229"
+              Start="0,0"
+              End="51.4433962264151,0.452830188679229">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="29.4716981132076,0" />
+                  <mssgle:LineSegment
+                    End="29.4716981132076,0.452830188679229" />
+                  <mssgle:LineSegment
+                    End="51.4433962264151,0.452830188679229" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Code Headers.PrecedenceConstraints[Constraint 1]"
+          TopLeft="283.169811320755,80.7735849056604">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="87.3584905660377,34"
+              Start="0,0"
+              End="87.3584905660377,26.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.4716981132075" />
+                  <mssgle:LineSegment
+                    End="87.3584905660377,25.4716981132075" />
+                  <mssgle:LineSegment
+                    End="87.3584905660377,26.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43.924528301886795"
+          IsExpanded="True"
+          PanelSize="734,425"
+          Size="734,469"
+          Id="Package\Foreach Code Headers"
+          TopLeft="171.028301886793,107.311320754717" />
+        <NodeLayout
+          Size="174,60"
+          Id="Package\Foreach System Values\Insert System Values"
+          TopLeft="284.490566037736,18.8867924528302" />
+        <ContainerLayout
+          HeaderHeight="43.924528301886795"
+          IsExpanded="True"
+          PanelSize="739,101"
+          Size="739,145"
+          Id="Package\Foreach System Values"
+          TopLeft="168.5,732.179245283019" />
+        <NodeLayout
+          Size="130,52"
+          Id="Package\Select All Code Headers"
+          TopLeft="174.537735849057,5.5" />
+        <NodeLayout
+          Size="176,56"
+          Id="Package\Sellect All System Values"
+          TopLeft="450.047169811321,626.745283018868" />
+        <NodeLayout
+          Size="214,60"
+          Id="Package\Set FromDate as Today in ItemBriefItem"
+          TopLeft="426,955" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="239.405660377359,57.4245283018868">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="298.528301886792,49.8867924528302"
+              Start="0,0"
+              End="298.528301886792,42.3867924528302">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.9433962264151" />
+                  <mssgle:LineSegment
+                    End="298.528301886792,24.9433962264151" />
+                  <mssgle:LineSegment
+                    End="298.528301886792,42.3867924528302" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="537.933962264151,576.632075471698">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-0.0377358490565882,50.1132075471697"
+              Start="0,0"
+              End="-0.0377358490565882,42.6132075471697">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.0566037735848" />
+                  <mssgle:LineSegment
+                    End="-0.0377358490565882,25.0566037735848" />
+                  <mssgle:LineSegment
+                    End="-0.0377358490565882,42.6132075471697" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="538.023584905661,682.745283018868">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,49.433962264151"
+              Start="0,0"
+              End="0,41.933962264151">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,41.933962264151" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="535.5,877.179245283019">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,77.820754716981"
+              Start="0,0"
+              End="0,70.320754716981">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,70.320754716981" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

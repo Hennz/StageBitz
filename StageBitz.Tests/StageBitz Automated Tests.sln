@@ -1,0 +1,104 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C2221EA1-CD49-413B-899C-68EEA952B9D7}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+		StageBitz Automated Tests.vsmdi = StageBitz Automated Tests.vsmdi
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSV files", "CSV files", "{EA8A9CB1-B088-4C05-91C7-33A64A87965B}"
+	ProjectSection(SolutionItems) = preProject
+		Companies.csv = Companies.csv
+		CreditcardDetails.csv = CreditcardDetails.csv
+		InviteUserDetails.csv = InviteUserDetails.csv
+		ProjectDetails.csv = ProjectDetails.csv
+		Users.csv = Users.csv
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geveo.StageBitz.Test.Common", "Geveo.StageBitz.Test.Common\Geveo.StageBitz.Test.Common.csproj", "{33100583-8FFD-4A56-8866-E0D4272C7C27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geveo.StageBitz.Test.UserRegistration", "Geveo.StageBitz.Test.UserRegistration\Geveo.StageBitz.Test.UserRegistration.csproj", "{CBEBC5B4-840F-4FAE-AF0C-2EB4F19CAE8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geveo.StageBitz.Test.OrderedTests", "Geveo.StageBitz.Test.OrderedTests\Geveo.StageBitz.Test.OrderedTests.csproj", "{98B54398-EEBD-4EF8-8B9E-DDB503E8BBAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geveo.StageBitz.Test.CompanyMaintenance", "Geveo.StageBitz.Test.CompanyMaintenance\Geveo.StageBitz.Test.CompanyMaintenance.csproj", "{139F4D68-E815-401F-B40D-4D85D7CC0D1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geveo.StageBitz.Test.ProjectMaintanance", "Geveo.StageBitz.Test.ProjectMaintanance\Geveo.StageBitz.Test.ProjectMaintanance.csproj", "{8C5D709C-D4B2-4070-9D41-5E7C53E0A18E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geveo.StageBitz.Test.ItemBriefMaintanance", "Geveo.StageBitz.Test.ItemBriefMaintanance\Geveo.StageBitz.Test.ItemBriefMaintanance.csproj", "{F9B57145-3C77-4FD4-8A43-7EF40899E0E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geveo.StageBitz.Test.CompanyInventory", "CompanyInventory\Geveo.StageBitz.Test.CompanyInventory.csproj", "{007038A7-F7B9-4474-98D3-273711A64882}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 8
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://spartacus:8080/tfs/geveo
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Geveo.StageBitz.Test.Common\\Geveo.StageBitz.Test.Common.csproj
+		SccProjectName1 = Geveo.StageBitz.Test.Common
+		SccLocalPath1 = Geveo.StageBitz.Test.Common
+		SccProjectUniqueName2 = Geveo.StageBitz.Test.UserRegistration\\Geveo.StageBitz.Test.UserRegistration.csproj
+		SccProjectName2 = Geveo.StageBitz.Test.UserRegistration
+		SccLocalPath2 = Geveo.StageBitz.Test.UserRegistration
+		SccProjectUniqueName3 = Geveo.StageBitz.Test.OrderedTests\\Geveo.StageBitz.Test.OrderedTests.csproj
+		SccProjectName3 = Geveo.StageBitz.Test.OrderedTests
+		SccLocalPath3 = Geveo.StageBitz.Test.OrderedTests
+		SccProjectUniqueName4 = Geveo.StageBitz.Test.CompanyMaintenance\\Geveo.StageBitz.Test.CompanyMaintenance.csproj
+		SccProjectName4 = Geveo.StageBitz.Test.CompanyMaintenance
+		SccLocalPath4 = Geveo.StageBitz.Test.CompanyMaintenance
+		SccProjectUniqueName5 = Geveo.StageBitz.Test.ProjectMaintanance\\Geveo.StageBitz.Test.ProjectMaintanance.csproj
+		SccProjectName5 = Geveo.StageBitz.Test.ProjectMaintanance
+		SccLocalPath5 = Geveo.StageBitz.Test.ProjectMaintanance
+		SccProjectUniqueName6 = Geveo.StageBitz.Test.ItemBriefMaintanance\\Geveo.StageBitz.Test.ItemBriefMaintanance.csproj
+		SccProjectName6 = Geveo.StageBitz.Test.ItemBriefMaintanance
+		SccLocalPath6 = Geveo.StageBitz.Test.ItemBriefMaintanance
+		SccProjectUniqueName7 = CompanyInventory\\Geveo.StageBitz.Test.CompanyInventory.csproj
+		SccProjectName7 = CompanyInventory
+		SccLocalPath7 = CompanyInventory
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{33100583-8FFD-4A56-8866-E0D4272C7C27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33100583-8FFD-4A56-8866-E0D4272C7C27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33100583-8FFD-4A56-8866-E0D4272C7C27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33100583-8FFD-4A56-8866-E0D4272C7C27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBEBC5B4-840F-4FAE-AF0C-2EB4F19CAE8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBEBC5B4-840F-4FAE-AF0C-2EB4F19CAE8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBEBC5B4-840F-4FAE-AF0C-2EB4F19CAE8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBEBC5B4-840F-4FAE-AF0C-2EB4F19CAE8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98B54398-EEBD-4EF8-8B9E-DDB503E8BBAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98B54398-EEBD-4EF8-8B9E-DDB503E8BBAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98B54398-EEBD-4EF8-8B9E-DDB503E8BBAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98B54398-EEBD-4EF8-8B9E-DDB503E8BBAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{139F4D68-E815-401F-B40D-4D85D7CC0D1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{139F4D68-E815-401F-B40D-4D85D7CC0D1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{139F4D68-E815-401F-B40D-4D85D7CC0D1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{139F4D68-E815-401F-B40D-4D85D7CC0D1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C5D709C-D4B2-4070-9D41-5E7C53E0A18E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C5D709C-D4B2-4070-9D41-5E7C53E0A18E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C5D709C-D4B2-4070-9D41-5E7C53E0A18E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C5D709C-D4B2-4070-9D41-5E7C53E0A18E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9B57145-3C77-4FD4-8A43-7EF40899E0E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9B57145-3C77-4FD4-8A43-7EF40899E0E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9B57145-3C77-4FD4-8A43-7EF40899E0E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9B57145-3C77-4FD4-8A43-7EF40899E0E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{007038A7-F7B9-4474-98D3-273711A64882}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{007038A7-F7B9-4474-98D3-273711A64882}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{007038A7-F7B9-4474-98D3-273711A64882}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{007038A7-F7B9-4474-98D3-273711A64882}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = StageBitz Automated Tests.vsmdi
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>STAGEBITZ</title>
+        
+        <style type="text/css" media="screen, handheld">
+            @import url("./css/main.css");
+            
+            @import url("css/jquery.mobile-1.2.1.css");
+            
+            @import url("css/jquery.mobile.structure-1.2.1.css");
+            
+            @import url("css/jquery.selectbox.css");
+            </style>
+        
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.2.1.min.js"></script>
+        <!-- <script type="text/javascript" src="js/jquery.selectbox.js"></script> -->
+        <script type="text/javascript" src="js/bgstretcher.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        
+    </head>
+    <body>
+        <div data-role="page" id="searchItems">
+            
+            <script type="text/javascript">
+                var companyName;
+                var companyId;
+                var scrollY = 0;
+                var isback = false;
+                var lastEditedItemId;
+                var myScroll = [];
+                $("#searchItems").on('pageshow',function() {
+                                     if ($.mobile.activePage.find('#scrollDiv').length > 0) {
+                                     if (this.id in myScroll) {
+                                     myScroll[this.id].refresh();
+                                     } else {
+                                     
+                                     myScroll[this.id] = new iScroll($.mobile.activePage.find('#scrollDiv')[0].id,{
+                                                                     hScroll : false,
+                                                                     vScroll : true,
+                                                                     hScrollbar : false,
+                                                                     vScrollbar : true,
+                                                                     
+                                                                     fadeScrollbar : false,
+                                                                     hideScrollbar : false,
+                                                                     bounce : true,
+                                                                     momentum : true,
+                                                                     lockDirection : true,
+                                                                     onScrollMove: function(){
+                                                                     
+                                                                     },
+                                                                     onScrollEnd : function(){
+                                                                     
+                                                                     if(Math.abs(this.y) != 0 && (Math.abs(this.maxScrollY) - Math.abs(this.y) < 10)){
+                                                                     if($('#noMore').length == 0 && isSearching == false){
+                                                                     $('#searchButton').addClass('disabled');
+                                                                     $('#searchText').addClass('disabled');
+                                                                     $('#searchItemTypes').addClass('disabled');
+                                                                     $('#searchItemTypes').prop('disabled', true);
+                                                                     //$('#searchItemTypes').listview('refresh');
+                                                                     setTimeout(function() {
+                                                                                $.mobile.loading('show');
+                                                                                },100);
+                                                                     doSearch(companyId, $('#searchText').val(),$('#searchItemTypes').val(), $('#searchResults').children().length, appendSearchItem,appendNoMore,appendNoData,enableSearchButton);
+                                                                     }
+                                                                     }
+                                                                     }
+                                                                     
+                                                                     });
+                                     }
+                                     }
+                                     });
+                                     
+                                     function refresh() {
+                                         if ($.mobile.activePage[0].id in myScroll) {
+                                        	 setTimeout(function() {
+                                                        myScroll[$.mobile.activePage[0].id].refresh();
+                                                        },0);
+                                         }
+                                     }
+            
+            $('#searchItems').on('pagebeforecreate',function() {
+                                 
+                                 checkSync(function(hasSync){
+                                           if(hasSync){
+                                           $('.sync img').attr("src","css/images/icons/sync-02.png");
+                                           }else{
+                                           $('.sync img').attr("src","css/images/icons/sync.png");
+                                           }
+                                           });
+                                 companyName = window.sessionStorage["inventoryName"]
+                                 companyId = window.sessionStorage["inventoryType"]
+                                 });
+                                 
+                                 $('#searchItems').on('pageshow',function() {
+                                                      if (window.device.platform == "iOS" && parseFloat(window.device.version) >= 7) {
+                                                      $('#statusBar').css('display','block');
+                                                      }
+                                                      $('#companyName').html(companyName);
+                                                      
+                                                      var itemTypeSelect = $('#searchItemTypes');
+                                                      
+                                                      getItemTypeList(function (tx, results) {
+                                                                      itemTypeSelect.children().remove();
+                                                                      var len = results.rows.length;
+                                                                      if(len > 0){
+                                                                      /*generate itemtype dropdown*/
+                                                                      itemTypeSelect.append('<option value=0>All Item Types</option>');
+                                                                      for ( var i = 0; i < len; i++) {
+                                                                      itemTypeSelect.append('<option value="' + results.rows.item(i).typeid + '">'+ results.rows.item(i).typename+ '</option>');
+                                                                      // console.log("id"+results.rows.item(i).typeid);
+                                                                      }
+                                                                      }
+                                                                      if (window.sessionStorage["searchItemType"] != null && itemTypeSelect.children().length > 0) {
+                                                                      itemTypeSelect.val(window.sessionStorage["searchItemType"]);
+                                                                      }
+                                                                      if(window.sessionStorage["searchItemText"] != null){
+                                                                      $('#searchText').val(window.sessionStorage["searchItemText"]);
+                                                                      }
+                                                                      itemTypeSelect.listview('refresh');
+                                                                      });
+                                                      
+                                                      
+                                                      
+                                                      if(lastEditedItemId > 0){
+                                                      getItemFromSBItemId(lastEditedItemId, function(tx,results){
+                                                                          if(results.rows.length > 0){
+                                                                          if(results.rows.item(0).status == "DIRTY" || results.rows.item(0).status == "SYNCFAILED"){
+                                                                          updateSearchResult(results.rows.item(0).sbitemid, results.rows.item(0).itemname , results.rows.item(0).quantity, results.rows.item(0).description, 1,function(){
+                                                                                             appendSearchData();
+                                                                                             });
+                                                                          }else if (results.rows.item(0).status == "FRESH" || results.rows.item(0).status == "SYNCED"){
+                                                                          getImagesFromMobileItemID(results.rows.item(0).mobileitemid,function(tx,imgresults){
+                                                                                                    if(imgresults.rows.length > 0){
+                                                                                                    updateSearchResultStatus(results.rows.item(0).sbitemid,1,function(){
+                                                                                                                             appendSearchData();
+                                                                                                                             });
+                                                                                                    }else{
+                                                                                                    updateSearchResultStatus(results.rows.item(0).sbitemid,0,function(){
+                                                                                                                             appendSearchData();
+                                                                                                                             });
+                                                                                                    }
+                                                                                                    });
+                                                                          }
+                                                                          }else{
+                                                                          appendSearchData();
+                                                                          }
+                                                                          });
+                                                      }else{
+                                                      $('#searchResults').append('<li><div class="message"><br/>Search for '+(window.sessionStorage["inventoryPermission"]==1?'and edit ':'')+'Items in your Inventory.</div></li>');
+                                                      refresh();
+                                                      $('#searchResults').append('<li><a><div class="message"></div></a></li>');
+                                                      refresh();
+                                                      }
+                                                      
+                                                      
+                                                      //$('#searchResults').append('<li><div class="bottom"><br/>Search for and edit Items in your Inventory</div></li>');
+                                                      });
+                                                      
+                                                      function search(){
+                                                          
+                                                          window.sessionStorage["searchItemType"] = $('#searchItemTypes').val();
+                                                          window.sessionStorage["searchItemText"] = $('#searchText').val();
+                                                          
+                                                          $('#searchResults').empty();
+                                                          dropAndCreateSearchResultTable(function(tx,results){
+                                                                                         $('#searchButton').addClass('disabled');
+                                                                                         $('#searchText').addClass('disabled');
+                                                                                         $('#searchItemTypes').addClass('disabled');
+                                                                                         $('#searchItemTypes').prop('disabled', true);
+                                                                                         //$('#searchItemTypes').listview('refresh');
+                                                                                         setTimeout(function() {
+                                                                                                    $.mobile.loading('show');
+                                                                                                    },100);
+                                                                                         doSearch(companyId, $('#searchText').val().trim(),$('#searchItemTypes').val(), 0, appendSearchItem,appendNoMore,appendNoData,enableSearchButton);
+                                                                                         });
+                                                      }
+            
+            function appendSearchData(){
+                $('#searchResults').empty();
+                refresh();
+                getSearchResults(function (tx, results) {
+                                 var len = results.rows.length;
+                                 
+                                 if(len > 0){
+                                 
+                                 var i = 0;
+                                 /*populate search results*/
+                                 for ( ; i < len; i++) {
+                                 //console.log(results.rows.item(i).rowid);
+                                 appendSearchItem(results.rows.item(i).sbitemid, results.rows.item(i).sbitemname, results.rows.item(i).quantity, results.rows.item(i).description, results.rows.item(i).status);
+                                 
+                                 }
+                                 
+                                 if(window.sessionStorage["searchEnd"] == "true"){
+                                 appendNoMore();
+                                 }
+                                 if(window.sessionStorage["scrollToItem"] != null){
+                                 console.log(window.sessionStorage["scrollToItem"]);
+                                 
+                                 myScroll[$.mobile.activePage[0].id].scrollTo(0,parseInt(window.sessionStorage["scrollToItem"] ), 200);
+                                 refresh();
+                                 }
+                                 }else{
+                                 console.log("none");
+                                 $('#searchResults').append('<li><div class="message"><br/>Search for '+(window.sessionStorage["inventoryPermission"]==1?'and edit ':'')+'Items in your Inventory.</div></li>');
+                                 refresh();
+                                 $('#searchResults').append('<li><a><div class="message"></div></a></li>');
+                                 refresh();
+                                 }
+                                 });
+            }
+            
+            function onEnterPress(){
+                if(window.event.keyCode == 13){
+                    window.event.preventDefault();
+                    search();
+                }else{
+                    $('#searchResults').empty();
+                    $('#searchResults').append('<li><div class="message"><br/>Search for '+(window.sessionStorage["inventoryPermission"]==1?'and edit ':'')+'Items in your Inventory.</div></li>');
+                    refresh();
+                }
+            }
+            
+            function enableSearchButton(){
+                $('#searchButton').removeClass('disabled');
+                $('#searchText').removeClass('disabled');
+                $('#searchItemTypes').removeClass('disabled');
+                $('#searchItemTypes').prop('disabled', false);
+                //$('#searchItemTypes').listview('refresh');
+                setTimeout(function() {
+                           $.mobile.loading('hide');
+                           },100);
+                           $('#content').click();
+            }
+            
+            /*append item details to search result div*/
+            function appendSearchItem(itemid, itemName, quantity, description,status){
+                if($('#'+itemid).length == 0){
+                    $('#searchResults').append('<li id="'+itemid+'" class="searchItem"><a class="border"><div class="icon">'+(status=="1"?'<img src="css/images/icons/edit.png"/>':'')+
+                                               '</div><div class="left"><h1>'+itemName+
+                                               '</h1></div><div class="right"><h1>'+quantity+
+                                               '</h1></div><div class="clear">&nbsp;</div><div class="bottom">'+(description==""?'<br/>':description)+
+                                               '</div> </a> </li>');
+                                               
+                                               refresh();
+                }
+                
+            }
+            
+            function appendNoMore(){
+                if($('#noMore').length == 0){
+                    $('#searchResults').append('<li id="noMore" class="message error">NO MORE ITEMS</li>');
+                    refresh();
+                    
+                    if($('#searchResults').children().length < 2){
+                        $('#searchResults').append('<li><a><div class="message"></div></a></li>');
+                        refresh();
+                    }
+                }
+            }
+            
+            function appendNoData(message){
+                $('#searchResults').empty();
+                $('#searchResults').append('<li><a><div class="message error"><br/>'+message+'</div></a></li>');
+                refresh();
+                $('#searchResults').append('<li><a><div class="message"></div></a></li>');
+                refresh();
+            }
+            
+            $('#searchResults').on('click', 'li.searchItem', function() {
+                                   lastEditedItemId = $(this).attr('id');
+                                   isback = true;
+                                   if($('#noMore').length > 0){
+                                   window.sessionStorage["searchEnd"] = "true";
+                                   }else{
+                                   window.sessionStorage["searchEnd"] = "false";
+                                   }
+                                   window.sessionStorage["scrollToItem"] = myScroll[$.mobile.activePage[0].id].y;
+                                   $.mobile.changePage("item.html",{data:{itemId : $(this).attr('id'), companyId:companyId}});
+                                   });
+                                   
+                                   function selectChange(){
+                                       $('#searchResults').empty();
+                                       $('#searchResults').append('<li><div class="message"><br/>Search for '+(window.sessionStorage["inventoryPermission"]==1?'and edit ':'')+'Items in your Inventory.</div></li>');
+                                       refresh();
+                                   }
+            
+            function navigateHome(){
+                $.mobile.changePage("home.html");
+                return false;
+            }
+            
+            function navigateSync(){
+                $.mobile.changePage("sync.html");
+                return false;
+            }
+            function navigateSettings(){
+                $.mobile.changePage("settings.html");
+                return false;
+            }
+            </script>
+            <div id="item-background" style="opacity: 0.3"></div>
+            <div class="push-footer absolute-pos">
+                <div class="padding">
+                    <!-- Header -->
+                    <header>
+                        <div id="statusBar" style="height:20px;background:#fff;display:none;"></div>
+                        <div id="header">
+                            <div class="area">
+                                <div class="header">
+                                    <a href="#" class="home" onclick="navigateHome()"><img
+                                        src="css/images/icons/home.png" alt="Home" /> </a>
+                                    <h1>
+                                        <a href="#" class="logotype"><img
+                                            src="css/images/logotype.png" alt="STAGEBITZ" /> </a>
+                                    </h1>
+                                    <a href="#" class="settings" onclick="navigateSettings()"><img
+                                        src="css/images/icons/settings.png" alt="Settings" /> </a>
+                                    <a href="#" class="sync" onclick="navigateSync()">
+                                        <img src="css/images/icons/sync.png" alt="Sync" /></a>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                    <!-- Content -->
+                    <div id="content" class="search">
+                        <div class="bg">
+                            <div class="area">
+                                <h2>Company Inventory</h2>
+                                <h2 id="companyName"></h2>
+                                <div class="boxes">
+                                    <form action="#" method="get">
+                                        <div class="row indent selectWrap">
+                                            <select id="searchItemTypes" name="find" data-role="none" onchange="selectChange();">
+                                            </select>
+                                            <div class="clear">&nbsp;</div>
+                                        </div>
+                                    </form>
+                                    <div class="clear">&nbsp;</div>
+                                </div>
+                                <div class="boxes">
+                                    <form action="#">
+                                        <div class="form-box">
+                                            <div class="row">
+                                                <input type="search" id="searchText" placeholder="Search" data-role="none" onInput="onEnterPress()" onKeyPress="onEnterPress()"/>
+                                                <button id="searchButton" type="button" data-role="none" onclick="search()">
+                                                    <img src="css/images/icons/button.jpg" alt="Picture" /></button>
+                                                <div class="clear">&nbsp;</div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="clear">&nbsp;</div>
+                            </div>
+                            <div class="clear">&nbsp;</div>
+                        </div>
+                        <div class="area ">
+                            <div class="text search-result">
+                                <div id="scrollDiv" class="scrollable">
+                                    <div id="scroll-content">
+                                        <ul id="searchResults">
+                                            
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clear">&nbsp;</div>
+                        </div>
+                    </div>
+                    <div class="clear">&nbsp;</div>
+                </div>
+            </div>
+            
+            <!-- Footer -->
+            <footer>
+                <div id="footer">
+                    <div class="area">
+                        <a href="#" class="icon">
+                            <img src="css/images/icons/icon.png" alt="icon" onclick="GoToVoiceContactPage()"/></a>
+                    </div>
+                    <div class="clear">&nbsp;</div>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

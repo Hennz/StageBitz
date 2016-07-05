@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="StageBitzReportDataSource" targetNamespace="http://tempuri.org/StageBitzReportDataSource.xsd" xmlns:mstns="http://tempuri.org/StageBitzReportDataSource.xsd" xmlns="http://tempuri.org/StageBitzReportDataSource.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="StageBitzReportDataSource" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="StageBitzReportDataSource" msprop:Generator_UserDSName="StageBitzReportDataSource">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Users" msprop:Generator_TableClassName="UsersDataTable" msprop:Generator_TableVarName="tableUsers" msprop:Generator_RowChangedName="UsersRowChanged" msprop:Generator_TablePropName="Users" msprop:Generator_RowDeletingName="UsersRowDeleting" msprop:Generator_RowChangingName="UsersRowChanging" msprop:Generator_RowEvHandlerName="UsersRowChangeEventHandler" msprop:Generator_RowDeletedName="UsersRowDeleted" msprop:Generator_RowClassName="UsersRow" msprop:Generator_UserTableName="Users" msprop:Generator_RowEvArgName="UsersRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FirstName" msprop:Generator_ColumnVarNameInTable="columnFirstName" msprop:Generator_ColumnPropNameInRow="FirstName" msprop:Generator_ColumnPropNameInTable="FirstNameColumn" msprop:Generator_UserColumnName="FirstName" type="xs:string" minOccurs="0" />
+              <xs:element name="LastName" msprop:Generator_ColumnVarNameInTable="columnLastName" msprop:Generator_ColumnPropNameInRow="LastName" msprop:Generator_ColumnPropNameInTable="LastNameColumn" msprop:Generator_UserColumnName="LastName" type="xs:string" minOccurs="0" />
+              <xs:element name="City" msprop:Generator_ColumnVarNameInTable="columnCity" msprop:Generator_ColumnPropNameInRow="City" msprop:Generator_ColumnPropNameInTable="CityColumn" msprop:Generator_UserColumnName="City" type="xs:string" minOccurs="0" />
+              <xs:element name="Country" msprop:Generator_ColumnVarNameInTable="columnCountry" msprop:Generator_ColumnPropNameInRow="Country" msprop:Generator_ColumnPropNameInTable="CountryColumn" msprop:Generator_UserColumnName="Country" type="xs:string" minOccurs="0" />
+              <xs:element name="LastLogIn" msprop:Generator_ColumnVarNameInTable="columnLastLogIn" msprop:Generator_ColumnPropNameInRow="LastLogIn" msprop:Generator_ColumnPropNameInTable="LastLogInColumn" msprop:Generator_UserColumnName="LastLogIn" type="xs:string" minOccurs="0" />
+              <xs:element name="Email" msprop:Generator_ColumnVarNameInTable="columnEmail" msprop:Generator_ColumnPropNameInRow="Email" msprop:Generator_ColumnPropNameInTable="EmailColumn" msprop:Generator_UserColumnName="Email" type="xs:string" minOccurs="0" />
+              <xs:element name="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" msprop:Generator_UserColumnName="Status" type="xs:string" minOccurs="0" />
+              <xs:element name="State" msprop:Generator_ColumnVarNameInTable="columnState" msprop:Generator_ColumnPropNameInRow="State" msprop:Generator_ColumnPropNameInTable="StateColumn" msprop:Generator_UserColumnName="State" type="xs:string" minOccurs="0" />
+              <xs:element name="RegisteredDate" msprop:Generator_ColumnVarNameInTable="columnRegisteredDate" msprop:Generator_ColumnPropNameInRow="RegisteredDate" msprop:Generator_ColumnPropNameInTable="RegisteredDateColumn" msprop:Generator_UserColumnName="RegisteredDate" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PricingPlanHistory" msprop:Generator_TableClassName="PricingPlanHistoryDataTable" msprop:Generator_TableVarName="tablePricingPlanHistory" msprop:Generator_RowChangedName="PricingPlanHistoryRowChanged" msprop:Generator_TablePropName="PricingPlanHistory" msprop:Generator_RowDeletingName="PricingPlanHistoryRowDeleting" msprop:Generator_RowChangingName="PricingPlanHistoryRowChanging" msprop:Generator_RowEvHandlerName="PricingPlanHistoryRowChangeEventHandler" msprop:Generator_RowDeletedName="PricingPlanHistoryRowDeleted" msprop:Generator_RowClassName="PricingPlanHistoryRow" msprop:Generator_UserTableName="PricingPlanHistory" msprop:Generator_RowEvArgName="PricingPlanHistoryRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CompanyName" msprop:Generator_ColumnVarNameInTable="columnCompanyName" msprop:Generator_ColumnPropNameInRow="CompanyName" msprop:Generator_ColumnPropNameInTable="CompanyNameColumn" msprop:Generator_UserColumnName="CompanyName" type="xs:string" minOccurs="0" />
+              <xs:element name="CompanyAdminName" msprop:Generator_ColumnVarNameInTable="columnCompanyAdminName" msprop:Generator_ColumnPropNameInRow="CompanyAdminName" msprop:Generator_ColumnPropNameInTable="CompanyAdminNameColumn" msprop:Generator_UserColumnName="CompanyAdminName" type="xs:string" minOccurs="0" />
+              <xs:element name="ProjectLevel" msprop:Generator_ColumnVarNameInTable="columnProjectLevel" msprop:Generator_ColumnPropNameInRow="ProjectLevel" msprop:Generator_ColumnPropNameInTable="ProjectLevelColumn" msprop:Generator_UserColumnName="ProjectLevel" type="xs:string" minOccurs="0" />
+              <xs:element name="InventoryLevel" msprop:Generator_ColumnVarNameInTable="columnInventoryLevel" msprop:Generator_ColumnPropNameInRow="InventoryLevel" msprop:Generator_ColumnPropNameInTable="InventoryLevelColumn" msprop:Generator_UserColumnName="InventoryLevel" type="xs:string" minOccurs="0" />
+              <xs:element name="PromotionalCode" msprop:Generator_ColumnVarNameInTable="columnPromotionalCode" msprop:Generator_ColumnPropNameInRow="PromotionalCode" msprop:Generator_ColumnPropNameInTable="PromotionalCodeColumn" msprop:Generator_UserColumnName="PromotionalCode" type="xs:string" minOccurs="0" />
+              <xs:element name="Educational" msprop:Generator_ColumnVarNameInTable="columnEducational" msprop:Generator_ColumnPropNameInRow="Educational" msprop:Generator_ColumnPropNameInTable="EducationalColumn" msprop:Generator_UserColumnName="Educational" type="xs:string" minOccurs="0" />
+              <xs:element name="Period" msprop:Generator_ColumnVarNameInTable="columnPeriod" msprop:Generator_ColumnPropNameInRow="Period" msprop:Generator_ColumnPropNameInTable="PeriodColumn" msprop:Generator_UserColumnName="Period" type="xs:string" minOccurs="0" />
+              <xs:element name="StartDate" msprop:Generator_ColumnVarNameInTable="columnStartDate" msprop:Generator_ColumnPropNameInRow="StartDate" msprop:Generator_ColumnPropNameInTable="StartDateColumn" msprop:Generator_UserColumnName="StartDate" type="xs:string" minOccurs="0" />
+              <xs:element name="TotalCost" msprop:Generator_ColumnVarNameInTable="columnTotalCost" msprop:Generator_ColumnPropNameInRow="TotalCost" msprop:Generator_ColumnPropNameInTable="TotalCostColumn" msprop:Generator_UserColumnName="TotalCost" type="xs:string" minOccurs="0" />
+              <xs:element name="PaymentMethod" msprop:Generator_ColumnVarNameInTable="columnPaymentMethod" msprop:Generator_ColumnPropNameInRow="PaymentMethod" msprop:Generator_ColumnPropNameInTable="PaymentMethodColumn" msprop:Generator_UserColumnName="PaymentMethod" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

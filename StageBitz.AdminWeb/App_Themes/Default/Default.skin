@@ -1,0 +1,48 @@
+﻿<asp:RequiredFieldValidator runat="server" Display="Dynamic" CssClass="inputError"></asp:RequiredFieldValidator>
+<asp:RegularExpressionValidator runat="server" Display="Dynamic" CssClass="inputError"></asp:RegularExpressionValidator>
+<asp:CustomValidator runat="server" Display="Dynamic" CssClass="inputError"></asp:CustomValidator>
+<asp:CompareValidator runat="server" Display="Dynamic" CssClass="inputError"></asp:CompareValidator>
+<asp:RangeValidator runat="server" Display="Dynamic" CssClass="inputError"></asp:RangeValidator>
+
+<asp:RequiredFieldValidator runat="server" Display="None" SkinID="Hidden"></asp:RequiredFieldValidator>
+<asp:RegularExpressionValidator runat="server" Display="None" SkinID="Hidden"></asp:RegularExpressionValidator>
+<asp:CustomValidator runat="server" Display="None" SkinID="Hidden"></asp:CustomValidator>
+<asp:CompareValidator runat="server" Display="None" SkinID="Hidden"></asp:CompareValidator>
+<asp:RangeValidator runat="server" Display="None" SkinID="Hidden"></asp:RangeValidator>
+
+<telerik:RadDatePicker Skin="Sunset" Height="19" Width="120" runat="server">
+    <DateInput DateFormat="dd MMM yyyy">
+    </DateInput>
+</telerik:RadDatePicker>
+<telerik:RadDateTimePicker Skin="Sunset" runat="server">
+    <DateInput DateFormat="dd MMM yyyy hh:mm tt">
+    </DateInput>
+</telerik:RadDateTimePicker>
+
+<sb:SBRadGrid Skin="Default"  PageSize="50" runat="server"></sb:SBRadGrid>
+<sb:SBRadGrid SkinID="Borderless" Skin="Borderless" EnableEmbeddedSkins="false" runat="server"></sb:SBRadGrid>
+<telerik:RadTabStrip SelectedIndex="0" Skin="Office2010Silver" runat="server"></telerik:RadTabStrip>
+<telerik:RadMultiPage SelectedIndex="0" runat="server"></telerik:RadMultiPage>
+<telerik:RadToolTipManager Animation="None" RelativeTo="Element" AutoCloseDelay="0" RenderInPageRoot="true" runat="server"></telerik:RadToolTipManager>
+
+<telerik:RadNumericTextBox Skin="Vista"  Type="Number" NumberFormat-DecimalDigits="0" Height="20"  MaxValue="99999999" MinValue="0" MaxLength="8" runat="server">
+    <NumberFormat GroupSeparator="" />
+</telerik:RadNumericTextBox>
+
+<telerik:RadNumericTextBox SkinID="MinNumberOne"  Type="Number" NumberFormat-DecimalDigits="0" Height="20"  MaxValue="99999999" MinValue="1" MaxLength="8" runat="server">
+    <NumberFormat GroupSeparator="" />
+</telerik:RadNumericTextBox>
+
+<telerik:RadNumericTextBox  SkinID="Percentage" Type="Percent" NumberFormat-DecimalDigits="0" Height="20"  MaxValue="100" MinValue="1" runat="server">
+    <NumberFormat DecimalDigits="2" AllowRounding="False"></NumberFormat>
+</telerik:RadNumericTextBox>
+
+<telerik:RadNumericTextBox SkinID="Currency" Type="Currency" Height="20"  MaxValue="99999999.99" MinValue="0" MaxLength="11" runat="server">
+    <EnabledStyle HorizontalAlign="Right"  />
+</telerik:RadNumericTextBox>
+<telerik:RadAsyncUpload Skin="Vista" runat="server"></telerik:RadAsyncUpload>
+
+<telerik:RadWindowManager Skin="Default" EnableShadow="true" runat="server"></telerik:RadWindowManager>
+
+<asp:TextBoxWatermarkExtender WatermarkCssClass="watermark" runat="server"></asp:TextBoxWatermarkExtender>
+<asp:TextBoxWatermarkExtender SkinID="NoCSS" runat="server"></asp:TextBoxWatermarkExtender>

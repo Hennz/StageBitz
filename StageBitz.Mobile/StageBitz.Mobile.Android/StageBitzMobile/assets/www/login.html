@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>STAGEBITZ</title>
+        
+        <style type="text/css" media="screen, handheld">
+            @import url("./css/main.css");
+            
+            @import url("css/jquery.mobile-1.2.1.css");
+            
+            @import url("css/jquery.mobile.structure-1.2.1.css");
+            
+            @import url("css/jquery.selectbox.css");
+            </style>
+        
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.2.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery.selectbox.js"></script>
+        <script type="text/javascript" src="js/bgstretcher.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        
+    </head>
+    <body>
+        <div data-role="page" id="login" style="height:100%;">
+           <script>
+                $("#login").on('pageshow',function() {
+                        if (window.device.platform == "iOS" &&  parseFloat(window.device.version) >= 7) {
+                              $('#statusBar').css('display','block');
+                        }
+                });
+                function changePage(){
+                    alert();
+                    $.mobile.changePage("index.html");
+                    return false;
+                }
+            function GoToVoiceContactPage(){
+                var userVoiceContactURL;
+                $.ajax({
+                       url : "config.xml",
+                       dataType : "html",
+                       success : function(xmlResponse) {
+                       userVoiceContactURL = $(xmlResponse).find('contacturl').attr('value');
+                       },
+                       error : function(error) {
+                       },
+                       async : false
+                       });
+                       userVoiceContactURL = encodeURI(userVoiceContactURL);
+                       window.open(userVoiceContactURL, '_blank', 'location=yes');
+            }
+            </script>
+            <div id="login-background"></div>
+            <div class="push-footer">
+               <script type="text/javascript" src="js/bgstretcher.js"></script>
+                <div class="padding">
+                    <!-- Header -->
+                    <header>
+                        <div id="statusBar" style="height:20px;background:#fff;display:none;"></div>
+                        <div id="header" data-enhance="false">
+                            <div class="area">
+                                <div class="header">
+                                   
+                                    <h1>
+                                        <a href="#" class="logotype"><img
+                                            src="css/images/logotype.png" alt="STAGEBITZ" /> </a>
+                                    </h1>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                    <!-- Content -->
+                    <div id="content" class="login">
+                        <div class="area">
+                            <h1>
+                                CREATE AND SEARCH
+                                <br />INVENTORY ITEMS
+                                <br /> DIRECTLY FROM YOUR
+                                <br />MOBILE DEVICE
+                            </h1>
+                        </div>
+                        <div class="box-bg">
+                            <div class="area">
+                                <form action="#">
+                                    <div class="form-box">
+                                        <div class="row">
+                                            <input type="email" id="username" name="Email address"
+                                            placeholder="Email address" title="Email address" class="auto-hint" data-role="none" maxlength="50"/>
+                                            <div class="clear">&nbsp;</div>
+                                        </div>
+                                        <div class="row">
+                                            <input type="password" id="password" name="Password"
+                                            placeholder="Password" title="Password" class="auto-hint"  data-role="none" maxlength="50"/>
+                                            <div class="clear">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="box-check">
+                                    
+                                    <div class="clear">&nbsp;</div>
+                                    <form>
+                                        <div class="button">
+                                            <button id="loginbutton" type="button" value="" name="submit" class="sign"  data-role="none">Sign In</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="clear">&nbsp;</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear">&nbsp;</div>
+                </div>
+            </div>
+            
+            <!-- Footer -->
+            <footer>
+                <div id="footer" class="no-border">
+                    <div class="area">
+                        <a href="#" class="icon"><img src="css/images/icons/icon.png" onclick="GoToVoiceContactPage()"
+                            alt="icon" /> </a>
+                    </div>
+                    
+                </div>
+            </footer>
+            
+            <script type="text/javascript">
+                $("#login").on("pageshow", function(e) {
+                               
+                               navigator.splashscreen.hide();
+                               });
+                </script>
+        </div>
+        
+        
+        
+    </body>
+</html>

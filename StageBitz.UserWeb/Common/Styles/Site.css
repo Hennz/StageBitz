@@ -1,0 +1,2033 @@
+﻿@charset "utf-8";
+
+/* CSS Document */
+html, body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, em, font, img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, center, dl, dt, dd, form, label, table, caption, tbody, tfoot, thead, tr, th, td {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: 0;
+    font-family: Tahoma, Arial, Geneva, sans-serif !important;
+    font-size: 13px;
+    color: #675271;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+body {
+    background: url(../images/stagebitz-background.jpg?v=634988608514495256) repeat-x #FFF;
+    text-align: center;
+}
+
+/* Transition styles */
+
+a,
+.buttonStyle, .buttonArea button[type="button"], .buttonArea button[type="reset"], .buttonArea button[type="submit"], .buttonArea input[type='button'], .buttonArea input[type='submit'], .buttonArea input[type='reset'] {
+    -webkit-transition: none;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.RadTabStripTop_Office2010Blue .rtsLevel1 .rtsLink, .RadTabStripTop_Office2010Blue .rtsLevel1 .rtsOut, .RadTabStripBottom_Office2010Blue .rtsLevel1 .rtsLink, .RadTabStripBottom_Office2010Blue .rtsLevel1 .rtsOut, .RadTabStripTop_Office2010Blue .rtsLevel1, .RadTabStripBottom_Office2010Blue .rtsLevel1 {
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none;
+}
+
+.Position {
+    margin-left: 10px !important;
+}
+
+.GridColoumnHeaderRight {
+    padding-right: 15px !important;
+}
+
+/*Test class to test table borders*/
+/*table td
+{
+    border: 1px solid black;
+}*/
+
+.wrapper, .LargeWrapper {
+    padding: 20px 25px;
+    text-align: left;
+    margin: 0 auto;
+    width: 1000px;
+    border: none;
+    background: #fff;
+}
+
+
+.LargeWrapper {
+    width: 1400px !important;
+}
+
+/*header Start*/
+#header {
+    background: url(../images/stagebitz-logo.gif?v=634988608514495256) top left no-repeat;
+    height: 114px;
+    width: 100%;
+    border: 0px solid #000;
+}
+
+    #header #left {
+        float: left;
+        text-align: right;
+        width: 685px;
+        height: 114px;
+        border: 0px solid #ff0000;
+    }
+
+    #header #right {
+        float: right;
+        text-align: left;
+        width: 24px;
+        height: 114px;
+        border: 0px solid #00ff00;
+    }
+
+/*header End*/
+.mainNavi, .largemainNavi {
+    width: 1000px;
+    padding: 10px 0px;
+}
+
+.largemainNavi {
+    width: 1400px !important;
+}
+
+.navigation {
+}
+
+    .navigation a {
+        padding: 0 5px;
+        font-size: 14px;
+        text-decoration: none;
+    }
+
+        .navigation a.highlight {
+            font-weight: bold;
+        }
+
+.removeButton {
+    float: right;
+    border: none;
+}
+
+userInfo {
+    width: 300px;
+    text-align: right;
+    white-space: nowrap;
+}
+
+#headerUserNameDisplay {
+    max-width: 175px;
+    float: left;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.Container, .LargeContainer {
+    background: #F2F0F4;
+    border: 1px solid #E8E3ED;
+    padding: 40px 35px 40px 35px;
+    width: 930px;
+}
+
+
+.LargeContainer {
+    width: 1330px !important;
+}
+
+.gridRow, .RadGrid_Borderless .rgRow {
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    background: #eae6ef;
+    height: 25px;
+}
+
+.gridAltRow, .RadGrid_Borderless .rgAltRow {
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    background: #f7f7f7;
+    height: 25px;
+}
+
+@font-face {
+    font-family: 'ChunkFiveRegular';
+    src: url('../fonts/Chunkfive-webfont-webfont.eot');
+    src: url('../fonts/Chunkfive-webfont-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Chunkfive-webfont-webfont.woff') format('woff'), url('../fonts/Chunkfive-webfont-webfont.ttf') format('truetype'), url('../fonts/Chunkfive-webfont-webfont.svg#ChunkFiveRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 {
+    color: #675271;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 14px;
+    font-weight: bold;
+    color: #000;
+    margin: 10px 0;
+}
+
+h3 {
+    color: #333;
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+h4 {
+    font-size: 15px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+/* Footer Start */
+#footer {
+    line-height: 12px;
+    font-size: 12px;
+    color: #FFF;
+    width: 100%;
+    background: #665271;
+    border: 1px solid #665271;
+    padding: 12px 0 11px 0;
+    margin: 12px 0;
+    clear: both;
+    text-align: center;
+    border-bottom: 1px solid #665271;
+    border-top: 1px solid #665271;
+}
+
+    #footer a.copyright {
+        color: #FFF;
+        text-decoration: none;
+        border-bottom: 1px solid #725D7E;
+    }
+
+        #footer a.copyright:hover {
+            border-bottom: 1px solid #9f8baa;
+        }
+
+    #footer a.incognitoLink {
+        color: #FFF;
+        text-decoration: none;
+    }
+
+#appVersion {
+    float: right;
+    margin-right: 20px;
+    color: #816c8d;
+    font-size: 10px;
+    width: 150px;
+    position: relative;
+    bottom: 5px;
+}
+
+    #appVersion a {
+        color: #91809c;
+        font-size: 10px;
+    }
+
+/* Footer End */
+
+img {
+    border: 0;
+}
+
+#clearfooter {
+    clear: both;
+    height: 35px;
+}
+
+#cleardiv {
+    clear: both;
+    height: 0px;
+    border: 1px solid #FF0000;
+}
+
+input[type='text'], input[type='password'], input[type='file'], select, textarea, .ruInput {
+    font-family: Tahoma, Arial, Geneva, sans-serif !important;
+    font-size: 12px;
+    border: 1px solid #DBD5DF !important;
+    margin: 5px 0px;
+    width: 98%;
+}
+
+.ruInput {
+    font-family: Tahoma, Arial, Geneva, sans-serif !important;
+    font-size: 12px !important;
+}
+
+/* RadComboBox */
+.rcbInputCell input[type='text'] {
+    margin: 0px;
+}
+
+/*BreadCrumbs control*/
+
+.breadCrumbs {
+    padding: 0 0;
+    margin: 0 0 20px 0;
+    color: #000;
+}
+
+    .breadCrumbs a {
+        margin-right: 5px;
+    }
+
+    .breadCrumbs ol {
+        padding-left: 0;
+    }
+
+    .breadCrumbs ol, .breadCrumbs li {
+        display: inline;
+    }
+
+    .breadCrumbs li {
+        background: url(../images/bread_crumb_arrow.png?v=634988608514495256) no-repeat left center;
+        padding-left: 10px;
+        font-size: 11px;
+        color: #806b88;
+    }
+
+        .breadCrumbs li a {
+            font-size: 11px;
+            color: #8d7c94;
+        }
+
+            .breadCrumbs li a:hover {
+                color: #675271;
+            }
+
+    .breadCrumbs ol li:first-child {
+        background: none;
+        padding-left: 0;
+    }
+
+
+.blueText {
+    font-weight: bold;
+    color: #cd7067;
+}
+
+.lightBlueText {
+    color: #665271;
+}
+
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.center {
+    float: none !important;
+}
+
+a.bigLinks {
+    font-size: 16px;
+}
+
+a, .rtsTxt, .ruCancel, .ruRemove {
+    color: #665271;
+    text-decoration: underline;
+}
+
+.aWhiteLink {
+    color: #FFFFFF !important;
+}
+
+
+a:hover {
+    color: #c55f56;
+    text-decoration: underline;
+}
+
+a.boxNotificationBadge:hover, a.boxNotificationBadgeDisabled:hover {
+    color: white !important;
+}
+
+.btnRemoveItemTypes {
+    float: right;
+    padding-right: 2px;
+    padding-top: 2px;
+    display: none;
+    height: 2px;
+    color: red;
+}
+
+.btnRemoveItemTypesDisabled {
+    float: right;
+    padding-right: 2px;
+    padding-top: 2px;
+    height: 2px;
+    display: none;
+}
+
+a.btnRemoveItemTypesDisabled:hover {
+    color: #665271 !important;
+    cursor: pointer;
+}
+
+#loginContainer {
+    margin: 30px auto 0px auto;
+    width: 800px;
+    text-align: center;
+}
+
+#itemBriefDetailsTable > tr {
+    height: 22px;
+}
+
+.divSingleColumnL {
+    width: 700px;
+    margin: 10px auto;
+}
+
+.notices {
+    background: #f1d2cf;
+    padding: 10px;
+    border: 1px solid #f1d2cf;
+}
+
+.infobox {
+    background: #FFEEA6;
+    padding: 10px;
+    border: 1px solid #FFEEA6;
+}
+
+.lightNotice {
+    background: #f4f4f4;
+    padding: 10px;
+    border: 1px solid #CCC;
+}
+
+.message, .error, .success {
+    margin: 2px 0px;
+    padding: 0;
+    clear: both;
+    display: block;
+}
+
+.message {
+    border: 1px solid #da6060;
+    padding: 2px 4px;
+    list-style: none;
+    background-color: #de6969;
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+    top: 5px;
+    padding: 3px 10px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+}
+
+
+.PaymentSummary {
+    border: 4px solid #C2ACCB;
+    margin: 5px;
+    border-radius: 5px;
+    padding: 5px;
+    -moz-border-radius: 5px;
+    background-color: white;
+}
+
+.PaymentPackageSaved {
+    background: #D2C6D7 !important;
+}
+
+.PaymentPackageSelected {
+    background: #E6D3D1 !important;
+    border: 2px solid #CF6E65 !important;
+}
+
+.PaymentPackage, .PaymentPackageSaved, .PaymentPackageSelected {
+    border: 2px solid #C2ACCB;
+    background-color: white;
+    margin: 5px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    float: left;
+    width: 165px;
+    min-height: 100px;
+    text-align: center;
+    padding: 2px;
+}
+
+    .PaymentPackage :hover {
+        cursor: pointer;
+        text-decoration: none;
+        background: #E6D3D1;
+    }
+
+a.aspNetDisabled .PaymentPackage :hover {
+    text-decoration: none;
+    cursor: default !important;
+    background: none !important;
+}
+
+a.aspNetDisabled .PaymentPackageSelected :hover {
+    cursor: default !important;
+}
+
+
+a.aspNetDisabled .PaymentPackageSaved :hover {
+    cursor: default !important;
+}
+
+.paymentPackageDurationSelector, .paymentPackageDurationSelected {
+    border: 2px solid #C2ACCB;
+    color: #E2E0E4;
+    background-color: white;
+    margin: 2px;
+    padding: 3px;
+}
+
+.paymentPackageDurationSelected {
+    background-color: #D2C6D7;
+}
+
+.paymentPackageDurationSelector :hover {
+    cursor: pointer;
+    text-decoration: none;
+    background: #CAB8D2;
+}
+
+.paymentPackageDurationSelector.ReadOnly :hover {
+    text-decoration: none;
+    cursor: default !important;
+    background: none !important;
+}
+
+.paymentPackageDurationSelected.ReadOnly :hover {
+    cursor: default !important;
+}
+
+
+.packageTypeTitle {
+    /*filter:  progid:DXImageTransform.Microsoft.BasicImage(rotation=3);  /* IE6,IE7 */
+    /*-ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";*/
+    -ms-transform: rotate(-90deg); /* IE 9 */
+    -ms-transform-origin: 20% 40%; /* IE 9 */
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    white-space: nowrap;
+    display: block;
+    width: 10px;
+    vertical-align: top;
+    position: relative;
+    top: 150px;
+}
+
+
+
+
+/* Also for invalid form elements */
+.message.error, input[type='text'].error {
+    border-color: #FFBBBB;
+}
+
+.message.warn {
+    background-color: #F2E9BF;
+    color: #111;
+    border-color: #8A7B10;
+}
+
+.message.success {
+    background-color: #DFF2BF;
+    color: #4F8A10;
+    border-color: #4F8A10;
+}
+
+.notification, .inlineNotification {
+    display: none;
+    color: Gray;
+}
+
+.inlineNotification {
+    padding-top: 5px;
+}
+
+.whiteText {
+    color: #FFF;
+}
+
+.itemCompletedStatus {
+    color: #090;
+}
+
+.itemInProgressStatus {
+    color: #F60;
+}
+
+.BlueBoxesS, .tabPage {
+    background: #e6e2eb;
+    border: 1px solid #e0dbe6;
+    width: 390px;
+    padding: 10px 40px;
+    margin: 0px auto;
+}
+
+    .BlueBoxesS ul {
+        list-style: none;
+        list-style-position: inside;
+        margin: 10px 0;
+        padding: 0;
+        border: 0px solid red;
+    }
+
+        .BlueBoxesS ul li {
+            clear: both;
+            border: 0px solid red;
+        }
+
+.tabPage {
+    border-top: 0px;
+    margin-left: 0px;
+    padding: 20px 20px 10px 20px;
+}
+
+.groupBox,
+.blueHeaders ~ div {
+    margin-bottom: 20px;
+    -webkit-box-shadow: 0px 1px 3px 0px rgba(134, 134, 134, 0.25);
+    box-shadow: 0px 1px 3px 0px rgba(134, 134, 134, 0.25);
+    background: #FFF;
+}
+
+.groupBoxContent {
+    padding: 5px 5px 15px 5px;
+    background: #FFF; /*
+	-webkit-border-radius: 0px 0px 10px 10px;
+        border-radius: 0px 0px 10px 10px;*/
+}
+
+.blueHeaders {
+    background: #675271;
+    background: -webkit-gradient(linear, left top, left bottom, from(#675271), to(#4f4161)); /* Saf4+, Chrome */
+    background: -webkit-linear-gradient(top, #675271, #4f4161); /* Chrome 10+, Saf5.1+ */
+    background: -moz-linear-gradient(top, #675271, #4f4161); /* FF3.6+ */
+    background: -ms-linear-gradient(top, #675271, #4f4161); /* IE10 */
+    background: -o-linear-gradient(top, #675271, #4f4161); /* Opera 11.10+ */
+    background: linear-gradient(top, #675271, #4f4161); /* W3C */
+    border: none;
+    color: White;
+    font-weight: bold;
+    padding: 7px; /*
+   -webkit-border-radius: 10px 10px 0px 0px;
+        border-radius: 10px 10px 0px 0px;*/
+}
+
+.blueHeadersLeft, .blueHeadersLeft strong {
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+    .blueHeadersLeft strong { /*tooltips?*/
+        color: #665271;
+    }
+
+.blueHeadersRight {
+    color: White;
+    font-weight: normal;
+}
+
+.helpTipIcon {
+    background-image: url('../Images/help_tip.png?v=634988608514495256');
+    width: 14px;
+    height: 15px;
+    position: relative;
+}
+
+.blueHeaders .helpTipIcon {
+    background-image: url('../Images/help_tip.png?v=634988608514495256');
+    width: 14px;
+    height: 15px;
+    position: relative;
+    top: 4px;
+}
+
+.helpTipContent {
+    text-align: left;
+    max-width: 400px;
+    font-family: Arial, Verdana, sans-serif;
+    font-size: 8px;
+}
+
+    .helpTipContent h5, .helpTipContent li {
+        margin-bottom: 10px;
+    }
+
+.blueHeadersLeft .helpTipIcon {
+    float: right;
+    margin: 0px 4px;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.imageDisplay img {
+    border: 1px solid #CCC;
+    padding: 2px;
+    text-decoration: none;
+}
+
+.highlighted img {
+    border: 4px solid #039;
+}
+
+.imageList td {
+    vertical-align: middle;
+    padding-right: 2px;
+}
+
+.imageList .imageDisplay {
+    margin-right: 10px;
+}
+
+.boxedItemDisplay, .itemDisplay, .boxedItemTypeDisplay {
+    margin: 10px 0 10px 10px;
+    padding: 0;
+    clear: both;
+    display: block;
+}
+
+    .boxedItemDisplay > li, .itemDisplay > li {
+        display: inline-block;
+        text-align: center;
+        min-width: 135px;
+        min-height: 100px;
+        margin: 10px;
+        padding: 20px;
+        vertical-align: top;
+    }
+
+    .boxedItemTypeDisplay > li {
+        display: inline-block;
+        text-align: center;
+        min-width: 190px;
+        min-height: 100px;
+        margin: 10px;
+        vertical-align: top;
+    }
+
+
+.divItemTypeBox {
+    color: #665271;
+}
+
+.AddNewLink {
+    background: #006699;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+    .AddNewLink.over {
+        background: #2C7699;
+    }
+
+fieldset, .fieldsetCD {
+    border: 1px solid #c5c2c8;
+    min-height: 200px;
+    padding: 10px;
+    display: inline-block;
+    text-align: center;
+    width: 250px;
+}
+
+.itemDisplay > li {
+    min-width: 110px;
+    min-height: 115px;
+}
+
+.boxedItemDisplay > li,
+.boxedItemTypeDisplay > li {
+    border: 1px solid #c5c2c8;
+    background: #f9f9f9;
+}
+
+
+.boxedItemDisplay img, itemDisplay img, .boxedItemTypeDisplay img {
+    vertical-align: top;
+}
+
+/* Used when the itemDisplay is a list of radio buttons with a thumbnail/text which can be used to select the radio */
+.boxedItemDisplay li > label, .itemDisplay listItem > label, .boxedItemTypeDisplay li > label {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.boxedItemDisplay li a, .boxedItemTypeDisplay li a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+    .boxedItemDisplay li a.smallText,
+    .boxedItemTypeDisplay li a.smallText,
+    .boxNotificationBadge {
+        font-weight: normal !important;
+        font-size: 10px !important;
+    }
+
+a.thumbGrid span {
+    text-decoration: none;
+}
+
+.largeText {
+    font-size: 14.5px !important;
+}
+
+.smallText {
+    font-size: 10px;
+}
+
+.focusEditField.largeText {
+    font-size: 14.5px !important;
+}
+
+.mandatory {
+    color: #E86835;
+}
+
+.instructionDataGrid {
+    width: 100%;
+    border: 1px solid #000;
+    background: #E4EEFA;
+}
+
+.instructionList {
+    text-align: left;
+    float: left;
+}
+
+.instructionBoxes {
+    background: #F0F8FF;
+}
+
+/* The asterisk 'required field' marker */
+.requiredMarker {
+    color: #FF0000;
+}
+
+/* Login page */
+#acceptInvitationMessage {
+    background-color: #DFF2BF;
+    border: 1px solid #4F8A10;
+    color: #4F8A10;
+    width: 230px;
+    float: right;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+#loginBox {
+    padding: 10px;
+    border: 1px solid #CCC;
+    background: #F3F3F3;
+    width: 500px;
+    text-align: left;
+    margin: 30px auto;
+    -webkit-box-shadow: 0px 1px 3px 0px rgba(134, 134, 134, 0.3);
+    box-shadow: 0px 1px 3px 0px rgba(134, 134, 134, 0.3);
+}
+
+    #loginBox h2 {
+        font-weight: 400;
+        font-size: 16px;
+        color: #65536D;
+        margin: 0 0 10px 0;
+    }
+
+    #loginBox #login {
+        margin: 20px 0 0 0;
+    }
+
+    #loginBox input[type="submit"] {
+        float: right;
+        margin: 5px 0 0 0;
+    }
+
+    #loginBox #forgotPasswordLink {
+        display: inline-block;
+        clear: both;
+        margin-top: 25px;
+    }
+
+/* The box which lets the user accept or reject an invitation, should be within a itemDisplay list */
+li.invitationBox {
+    width: 200px;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    min-height: 90px;
+    padding: 10px;
+}
+
+    li.invitationBox .submit {
+        display: inline-block;
+        margin-right: 5px;
+    }
+
+.orangeHeadingText {
+    color: #564666;
+    font-weight: bold;
+}
+
+.buttonStyle, .buttonArea button[type="button"], .buttonArea button[type="reset"], .buttonArea button[type="submit"], .buttonArea input[type='button'], .buttonArea input[type='submit'], .buttonArea input[type='reset'] {
+    background: #c55f56; /* Old browsers */
+    background: -moz-linear-gradient(top, #c55f56 0%, #c46660 36%, #c45a52 64%, #c4473e 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c55f56), color-stop(36%,#c46660), color-stop(64%,#c45a52), color-stop(100%,#c4473e)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #c55f56 0%,#c46660 36%,#c45a52 64%,#c4473e 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #c55f56 0%,#c46660 36%,#c45a52 64%,#c4473e 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #c55f56 0%,#c46660 36%,#c45a52 64%,#c4473e 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #c55f56 0%,#c46660 36%,#c45a52 64%,#c4473e 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c55f56', endColorstr='#c4473e',GradientType=0 ); /* IE6-9 */
+    border: 1px solid #ccc;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    color: #fff;
+    font: bold 11px "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans",Geneva, Verdana, sans-serif;
+    text-align: center;
+    vertical-align: middle;
+    padding: 2px 7px;
+    margin: 4px;
+    float: right;
+}
+
+a.rwPopupButton {
+    background: #c55f56 !important; /* Old browsers */
+    background: -moz-linear-gradient(top, #c55f56 0%, #c46660 36%, #c45a52 64%, #c4473e 100%) !important; /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c55f56), color-stop(36%,#c46660), color-stop(64%,#c45a52), color-stop(100%,#c4473e)) !important; /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #c55f56 0%,#c46660 36%,#c45a52 64%,#c4473e 100%) !important; /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #c55f56 0%,#c46660 36%,#c45a52 64%,#c4473e 100%) !important; /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #c55f56 0%,#c46660 36%,#c45a52 64%,#c4473e 100%) !important; /* IE10+ */
+    background: linear-gradient(to bottom, #c55f56 0%,#c46660 36%,#c45a52 64%,#c4473e 100%) !important; /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c55f56', endColorstr='#c4473e',GradientType=0 ) !important; /* IE6-9 */
+    border: 1px solid #ccc !important;
+    -webkit-border-radius: 3px !important;
+    -moz-border-radius: 3px !important;
+    border-radius: 3px !important;
+    color: #fff !important;
+    font: bold 11px "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans",Geneva, Verdana, sans-serif !important;
+    text-align: center !important;
+    vertical-align: middle !important;
+    padding: 2px 7px !important;
+    margin: 4px !important;
+    float: right !important;
+}
+
+    a.rwPopupButton span {
+        color: #fff !important;
+    }
+
+
+.buttonStyle:hover, .buttonArea input[type='button']:hover, .buttonArea input[type='submit']:hover, .buttonArea input[type='reset']:hover, .buttonArea input[type='submit']:hover {
+    background: #c4473e; /* Old browsers */
+    background: -moz-linear-gradient(top, #c4473e 0%, #c45a52 36%, #c46660 64%, #c55f56 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c4473e), color-stop(36%,#c45a52), color-stop(64%,#c46660), color-stop(100%,#c55f56)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #c4473e 0%,#c45a52 36%,#c46660 64%,#c55f56 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #c4473e 0%,#c45a52 36%,#c46660 64%,#c55f56 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #c4473e 0%,#c45a52 36%,#c46660 64%,#c55f56 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #c4473e 0%,#c45a52 36%,#c46660 64%,#c55f56 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c4473e', endColorstr='#c55f56',GradientType=0 ); /* IE6-9 */
+    border: 1px solid #bbb;
+}
+
+.buttonStyle[disabled]:hover, .buttonArea input[type='button'][disabled]:hover, .buttonArea input[type='submit'][disabled]:hover, .buttonArea input[type='reset'][disabled]:hover, .buttonArea input[type='submit'][disabled]:hover {
+    background-color: #eeeeee;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eeeeee),color-stop(100%, #eeeeee) );
+    background-image: -webkit-linear-gradient(top, #eeeeee, #eeeeee);
+    background-image: -moz-linear-gradient(top, #eeeeee, #eeeeee);
+    background-image: -ms-linear-gradient(top, #eeeeee, #eeeeee);
+    background-image: -o-linear-gradient(top, #eeeeee, #eeeeee);
+    background-image: linear-gradient(top, #eeeeee, #eeeeee);
+    filter: none !important;
+    border: 1px solid #ccc;
+    border-bottom: 1px solid #bbb;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    color: #999;
+    font: bold 11px "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans",Geneva, Verdana, sans-serif;
+    text-align: center;
+    text-shadow: 0 1px 0 #eee;
+    padding-left: 7px;
+    padding-right: 7px;
+    margin: 4px;
+    float: right;
+}
+
+.buttonStyle[disabled], .buttonArea input[type='button'][disabled], .buttonArea input[type='submit'][disabled], .buttonArea input[type='reset'][disabled], .buttonArea input[type='submit'][disabled] {
+    background-color: #eeeeee;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eeeeee),color-stop(100%, #eeeeee) );
+    background-image: -webkit-linear-gradient(top, #eeeeee, #eeeeee);
+    background-image: -moz-linear-gradient(top, #eeeeee, #eeeeee);
+    background-image: -ms-linear-gradient(top, #eeeeee, #eeeeee);
+    background-image: -o-linear-gradient(top, #eeeeee, #eeeeee);
+    background-image: linear-gradient(top, #eeeeee, #eeeeee);
+    filter: none !important;
+    border: 1px solid #ccc;
+    border-bottom: 1px solid #bbb;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    color: #999;
+    font: bold 11px "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans",Geneva, Verdana, sans-serif;
+    text-align: center;
+    text-shadow: 0 1px 0 #eee;
+    padding-left: 7px;
+    padding-right: 7px;
+    margin: 4px;
+    float: right;
+}
+
+a.buttonStyle, a.buttonStyle:hover {
+    padding: 3.5px 6px;
+    text-decoration: none;
+    color: white;
+}
+
+a.rwPopupButton {
+    background: #c55f56 !important; /* Old browsers */
+    background: -moz-linear-gradient(top, #c55f56 0%, #c46660 36%, #c45a52 64%, #c4473e 100%) !important; /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c55f56), color-stop(36%,#c46660), color-stop(64%,#c45a52), color-stop(100%,#c4473e)) !important; /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #c55f56 0%,#c46660 36%,#c45a52 64%,#c4473e 100%) !important; /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #c55f56 0%,#c46660 36%,#c45a52 64%,#c4473e 100%) !important; /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #c55f56 0%,#c46660 36%,#c45a52 64%,#c4473e 100%) !important; /* IE10+ */
+    background: linear-gradient(to bottom, #c55f56 0%,#c46660 36%,#c45a52 64%,#c4473e 100%) !important; /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c55f56', endColorstr='#c4473e',GradientType=0 ) !important; /* IE6-9 */
+    border: 1px solid #ccc !important;
+    -webkit-border-radius: 3px !important;
+    -moz-border-radius: 3px !important;
+    border-radius: 3px !important;
+    color: #fff !important;
+    font: bold 11px "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans",Geneva, Verdana, sans-serif !important;
+    text-align: center !important;
+    vertical-align: middle !important;
+    padding: 2px 7px !important;
+    margin: 4px !important;
+    float: right !important;
+}
+
+    a.rwPopupButton span {
+        color: #fff !important;
+    }
+
+/* Styles for the PopupBox control */
+
+.popupBox {
+    display: none;
+    width: 0px;
+    height: 0px;
+}
+
+.popupBoxOverlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #D0D0D0;
+    filter: alpha(opacity=50);
+    opacity: .5;
+    z-index: 100;
+}
+
+.popupBoxDialogContainer {
+    position: fixed;
+    top: 30%;
+    left: 30%;
+    z-index: 101;
+}
+
+.popupBoxDialogShadow {
+    background: #FFF;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -12px;
+    left: -12px;
+    z-index: -1;
+    filter: alpha(opacity=20);
+    opacity: 0.6;
+    padding: 12px;
+}
+
+.popupBoxDialog {
+    background: #FFF;
+    padding: 12px 12px 0px 12px;
+}
+
+.popupBoxTitlebar {
+    font-size: 17px;
+    white-space: nowrap;
+    text-align: center;
+    vertical-align: middle;
+    cursor: move;
+    overflow: hidden;
+    background: #675271;
+    background: -webkit-gradient(linear, left top, left bottom, from(#675271), to(#4f4161)); /* Saf4+, Chrome */
+    background: -webkit-linear-gradient(top, #675271, #4f4161); /* Chrome 10+, Saf5.1+ */
+    background: -moz-linear-gradient(top, #675271, #4f4161); /* FF3.6+ */
+    background: -ms-linear-gradient(top, #675271, #4f4161); /* IE10 */
+    background: -o-linear-gradient(top, #675271, #4f4161); /* Opera 11.10+ */
+    background: linear-gradient(top, #675271, #4f4161); /* W3C */
+    border: none;
+    color: White;
+    padding: 12px;
+}
+
+.popupBoxCornerCloseButton {
+    background-image: url('../Images/popup_close_btn.gif?v=634988608514495256');
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    opacity: 0.95;
+}
+/*
+/*The class that should be used by elements that will act as popupbox close buttons.
+This is not intended for visual styling. This is included in the css
+for VisualStudio intellisense support.*/
+
+.popupBoxCloser {
+}
+
+/*Your CSS Breaks here, most other items moved above the Popup box section */
+
+.popupBoxContent {
+    text-align: left;
+    padding: 10px;
+}
+
+.popupBoxBottomStripe {
+    height: 30px;
+    padding: 5px;
+}
+/* End of popupbox control stlyes */
+.focusEditBoxDisplay {
+    min-width: 80px;
+    cursor: default;
+    display: inline-block;
+    height: 15px;
+}
+
+.focusEditBoxInput, .focusEditBoxDisplay {
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+.focusEditField, .focusEditBoxDisplay {
+    padding: 0px;
+    border: 1px solid transparent !important;
+    border-bottom: 1px dashed black !important;
+    background-color: #EEE !important;
+}
+
+    .focusEditField:focus {
+        border: 1px solid #DDDBDF !important;
+        background-color: White !important;
+    }
+
+.inputError {
+    position: relative;
+    top: -2px;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    padding: 0px 10px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+}
+
+
+
+    .inputError.Show {
+        background-color: #DE6969 !important;
+        border: 1px solid #da6060 !important;
+    }
+
+.gridRowValidator .inputError {
+    position: relative;
+    top: -2px;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    padding: 0px 0px !important;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+}
+
+.sideErrorContainer .inputError {
+    position: inherit;
+}
+
+.labelField {
+    vertical-align: top;
+    padding-top: 5px;
+}
+
+.divBoxProjectEvents {
+    border: 1px Solid #acbece;
+    padding: 5px;
+}
+
+.divBoxDailyChargeSlider {
+    border: 1px Solid #acbece;
+    padding: 5px;
+}
+
+/*Telerik RadTabStrip style overrides*/
+.rtsTxt {
+    font-weight: bold;
+}
+
+.rtsSelected .rtsTxt {
+    color: Black;
+}
+
+/*Telerik RadUpload style overrides*/
+.ruFakeInput {
+    margin: 0px !important;
+    width: inherit !important;
+}
+
+.ruCancel, .ruRemove {
+    color: #665271 !important;
+    text-decoration: none;
+    background: none !important;
+}
+
+    .ruRemove:hover {
+        text-decoration: underline !important;
+        color: #CD7067 !important;
+    }
+
+.grayText {
+    color: gray;
+}
+
+.boxBorder {
+    border: 1px solid #8d7f94;
+}
+
+.boxBorderDark, .groupBoxContent { /*
+	border: 1px solid #675271;*/
+}
+
+.InventoryBookingPanelBoxBorder {
+    border: 1px solid #e4e1e8;
+}
+
+.WatchListEmptyDataBox {
+    border: 1px solid #e4e1e8;
+    width: 680px;
+    height: 518px;
+}
+
+.updateProgressOverlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    opacity: .5;
+    filter: alpha(opacity = 50);
+    background-color: White;
+    z-index: 99998;
+}
+
+.updateProgressIcon {
+    position: fixed;
+    background: url('../images/in_progress.gif?v=634988608514495256');
+    top: 50%;
+    left: 50%;
+    margin-top: -16px;
+    margin-left: -16px;
+    width: 32px;
+    height: 32px;
+    z-index: 99999;
+}
+
+/* RadGrid global style overrides */
+.RadGrid td a {
+    color: #9e99c7 !important;
+    text-decoration: none !important;
+}
+
+    .RadGrid td a:hover {
+        color: #604887 !important;
+        text-decoration: none !important;
+    }
+
+/*.rgDataDiv > table, .rgHeaderDiv > table
+{
+	width:100% !important;
+}*/
+
+.rgDataDiv {
+    overflow-x: hidden !important;
+    /*overflow-y:scroll !important;*/
+}
+
+.rgHeader {
+    font-weight: bold !important;
+    background: #e6e2eb;
+}
+
+    .rgHeader a {
+        font-weight: bold !important;
+        text-decoration: underline !important;
+    }
+
+.ProjectItemTile {
+    color: #9e99c7;
+}
+
+.watermark {
+    color: gray;
+}
+
+.noData {
+    color: #C0C3C6;
+    text-align: center;
+    padding: 5px;
+}
+
+.viewModeIcon {
+    width: 12px;
+    height: 12px;
+    padding: 2px;
+}
+
+.viewModeIconSelected {
+    cursor: default;
+    background-color: #9990a6;
+}
+
+.thumbListItem {
+    text-align: center;
+    margin: 10px 7px;
+    width: 130px;
+    height: 127px;
+    white-space: nowrap;
+    overflow: hidden;
+    float: left;
+}
+
+    .thumbListItem table {
+        width: 105px;
+        height: 110px;
+        margin: 0px auto;
+        border-collapse: collapse;
+    }
+
+        .thumbListItem table td {
+            text-align: center;
+            vertical-align: middle;
+            padding: 0px;
+        }
+
+.rgHeader, .rgHeader a {
+    font-size: 11px;
+}
+
+.highlightBox {
+    background-color: #FFC;
+    border: 1px solid gray;
+    border: 1px solid #e5bdb9;
+    background: #f1d2cf;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+
+.skillItem {
+    border-radius: 3px;
+    border: 1px solid #c5c0cc;
+    background-color: #c5c0cc;
+    margin: 2px;
+    padding: 2px;
+    display: inline-block;
+}
+
+.skillLabel {
+    /*display:inline-block;*/
+    float: left;
+    max-width: 260px;
+    overflow: hidden;
+    min-height: 18px;
+}
+
+.skillDeleteIcon {
+    /*display:inline-block;*/
+    margin-left: 4px;
+    padding: 2px;
+    width: 12px;
+    height: 12px;
+    line-height: 10px;
+    text-align: center;
+    float: right;
+    text-decoration: none;
+    color: Gray;
+}
+
+    .skillDeleteIcon:hover {
+        background-color: #cd7067;
+        text-decoration: none;
+        border-radius: 3px;
+        color: #fff;
+    }
+
+/*Notification badge on the top-right corner of a box*/
+.boxNotificationBadge {
+    min-width: 18px;
+    height: 16px;
+    margin: 1px;
+    margin-top: -8px;
+    margin-right: -8px;
+    padding: 3px 1px 1px 1px;
+    float: right;
+    text-align: center;
+    font-size: 10px;
+    background-color: #CF6E65;
+    color: White;
+    border-radius: 11px;
+    cursor: pointer !important;
+    z-index: 100;
+    position: relative;
+}
+
+.boxNotificationBadgeDisabled {
+    background-color: #D8D8D8;
+    min-width: 18px;
+    height: 16px;
+    margin: 1px;
+    margin-top: -8px;
+    margin-right: -8px;
+    padding: 3px 1px 1px 1px;
+    float: right;
+    text-align: center;
+    font-size: 10px;
+    color: White;
+    border-radius: 11px;
+    /* cursor:pointer;*/
+    z-index: 100;
+    position: relative;
+}
+
+.boxProjectWarning {
+    background: url(../Images/warning.gif?v=634988608514495256) no-repeat;
+    width: 16px;
+    height: 16px;
+    margin: 5px 0px 0px 0px;
+    float: left;
+}
+
+.boxProjectClosed {
+    background: url(../Images/Closed.png?v=634988608514495256) no-repeat;
+    width: 16px;
+    height: 16px;
+    margin: 3px 0px 0px 0px;
+    float: left;
+}
+
+.boxProjectSuspended {
+    background: url(../Images/Suspended.png?v=634988608514495256) no-repeat;
+    width: 16px;
+    height: 16px;
+    margin: 3px 0px 0px 0px;
+    float: left;
+}
+
+/*Inline notification badge (used inside table cells)*/
+.inlineNotificationBadge {
+    min-width: 8px;
+    height: 16px;
+    margin: 1px;
+    margin-right: -8px;
+    padding: 0px 4px 0px 4px;
+    margin-right: 0px;
+    position: relative;
+    top: -1px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 10px !important;
+    background-color: #CF6E65;
+    color: White;
+    border-radius: 11px;
+}
+
+    .boxNotificationBadge:hover, .inlineNotificationBadge:hover {
+        color: White !important;
+        cursor: pointer;
+    }
+
+.inlineBoxProjectWarning {
+    background: url(../Images/warning.gif?v=634988608514495256) no-repeat;
+    width: 16px;
+    height: 14px;
+    display: inline-block;
+}
+
+.inlineBoxProjectClosed {
+    background: url(../Images/Closed.png?v=634988608514495256) no-repeat;
+    width: 20px;
+    position: relative;
+    top: 4px;
+    height: 17px;
+    display: inline-block;
+}
+
+.inlineBoxProjectSuspended {
+    background: url(../Images/Suspended.png?v=634988608514495256) no-repeat;
+    width: 20px;
+    position: relative;
+    top: 4px;
+    height: 17px;
+    display: inline-block;
+}
+
+.projectTileNotificationArea {
+    height: 20px;
+    margin-top: -20px;
+    margin-left: -15px;
+    margin-right: -20px;
+}
+
+.NotificationCountBox {
+    color: Black;
+    text-decoration: none;
+    background-color: #e6e2eb;
+    border-radius: 7px;
+    min-width: 200px;
+    padding: 5px;
+    border: 1px solid #e0dce6;
+}
+
+    .NotificationCountBox:hover {
+        color: Black;
+        text-decoration: none;
+        background-color: #e0dce6;
+        border: 1px solid #dcd6e2;
+    }
+
+.NotificationBlock {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 10px;
+}
+
+.NotificationBlockWithBackground {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 10px;
+    background-color: #e6e2eb;
+}
+
+.projectWarningNotice {
+    margin: 10px 0px;
+    padding: 5px 10px 10px 10px;
+    border: 1px solid #e5bdb9;
+    border-radius: 5px;
+    background-color: #f1d2cf;
+}
+
+    .projectWarningNotice p {
+        margin-top: 5px;
+    }
+
+.ProjectCalenderHighLighted td {
+    background-color: #E6E2EB;
+    font-weight: bold;
+}
+
+.FreeTrialPeriod {
+    background-color: #CCFB5D !important;
+}
+
+
+
+.LockedPeriod {
+    background-color: #cdc9c9 !important;
+}
+
+.Suspended {
+    background-color: #C2DFFF !important;
+}
+
+.DropDownMenuItem {
+    padding: 5px 8px;
+    display: block;
+    background-color: #DEF0FE;
+}
+
+.AddNewLink {
+    color: #fff !important;
+    padding: 5px 10px 3px 4px;
+    text-decoration: none;
+}
+
+    .AddNewLink:hover {
+        color: #fff !important;
+        text-decoration: none;
+        background: #2C7699;
+    }
+
+.linkColor {
+    background: #006699;
+}
+
+a.PopupLink {
+    font-size: 12px;
+    background: #675271;
+    background: -webkit-gradient(linear, left top, left bottom, from(#675271), to(#4f4161)); /* Saf4+, Chrome */
+    background: -webkit-linear-gradient(top, #675271, #4f4161); /* Chrome 10+, Saf5.1+ */
+    background: -moz-linear-gradient(top, #675271, #4f4161); /* FF3.6+ */
+    background: -ms-linear-gradient(top, #675271, #4f4161); /* IE10 */
+    background: -o-linear-gradient(top, #675271, #4f4161); /* Opera 11.10+ */
+    background: linear-gradient(top, #675271, #4f4161);
+    padding: 5px 8px;
+    font-weight: normal;
+    letter-spacing: 0.3px;
+    border: 1px solid #675271;
+}
+
+    a.PopupLink:hover {
+        background: #867896;
+    }
+
+.itemTypePopup {
+    background-color: White;
+    border-top: 1px solid #ccc;
+    position: absolute;
+    margin-left: -58px;
+    margin-top: 5px;
+    width: 150px;
+    -webkit-box-shadow: 1px 1px 10px rgba(50, 50, 50, 0.46);
+    -moz-box-shadow: 1px 1px 10px rgba(50, 50, 50, 0.46);
+    box-shadow: 1px 1px 10px rgba(50, 50, 50, 0.46);
+}
+
+    .itemTypePopup a {
+        border-bottom: 1px #ccc solid;
+        border-left: 1px #ccc solid;
+        border-right: 1px #ccc solid;
+        background: #FAFAFA;
+        text-decoration: none !important;
+        color: #080808;
+    }
+
+        .itemTypePopup a:hover {
+            background: #E8E8E8;
+        }
+
+.boldText {
+    font-weight: bold;
+}
+
+.boldLink > a {
+    font-weight: bold;
+}
+
+.BusinessCardTileDisplay {
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    text-align: center;
+    margin-right: 10px;
+    width: 380px;
+    min-height: 200px;
+    height: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    float: left;
+    border: 1px solid #b1a9c2;
+    padding: 10px 3px 15px 15px;
+}
+
+.BusinessCardDescription {
+    table-layout: fixed;
+    width: 200px;
+    word-wrap: break-word;
+    word-break: break-all;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+}
+
+div.RadToolTip_Default table.rtWrapper td.rtWrapperContent {
+    color: Black !important;
+}
+
+.reportDropDown.over {
+    background: #2C7699;
+}
+
+.reportDropDown {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+    .reportDropDown:hover {
+        color: #c55f56 !important;
+        text-decoration: none;
+    }
+
+.fieldsetCD {
+    min-height: 100px !important;
+    width: 400px !important;
+}
+
+
+
+.reportsPopup {
+    background-color: White;
+    border-top: 1px solid #ccc;
+    position: absolute;
+    margin-top: 5px;
+    width: 200px;
+    -webkit-box-shadow: 1px 1px 20px rgba(50, 50, 50, 0.46);
+    -moz-box-shadow: 1px 1px 10px rgba(50, 50, 50, 0.46);
+    box-shadow: 1px 1px 10px rgba(50, 50, 50, 0.46);
+}
+
+    .reportsPopup a {
+        border-bottom: 1px #ccc solid;
+        border-left: 1px #ccc solid;
+        border-right: 1px #ccc solid;
+        background: #FAFAFA;
+        text-decoration: none !important;
+        color: #080808;
+    }
+
+        .reportsPopup a:hover {
+            background: #E8E8E8;
+        }
+
+.searchbox {
+    padding-left: 30px;
+    margin: 3px;
+    background: url('../Images/search.png?v=634988608514495256') no-repeat 8px 6px #fff;
+    border-width: 1px;
+    border-color: #bcbcbc;
+    border-style: solid;
+}
+
+.clearBox {
+    background: 8px 6px #fff;
+    border-width: 1px;
+    border-color: #bcbcbc;
+    border-style: solid;
+}
+
+.rounded {
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+.searchbox div {
+    position: relative;
+    top: -2px;
+}
+
+
+.searchbox input[type=text], .rad_autocomplete input[type=text] {
+    border: 0px solid #f1f0f2 !important;
+    background-color: #FFF;
+    margin: 2px;
+}
+
+.clearBox input[type=text], .rad_autocomplete input[type=text] {
+    border: 0px solid #f1f0f2 !important;
+    background-color: #FFF;
+    margin: 2px;
+}
+
+.searchbox .searchButton {
+    padding-right: 3px;
+    position: relative;
+    top: 4px;
+    cursor: default;
+}
+
+.clearBox .searchButton {
+    padding-right: 2px;
+    position: relative;
+    top: 4px;
+    cursor: default;
+}
+
+.searchbox .rcbInputCellLeft {
+    background-image: none !important;
+}
+
+.searchbox .rcbArrowCellRight {
+    background-image: none !important;
+}
+
+.watermark {
+    font-style: italic;
+}
+
+.rdpWrap {
+    padding: 1px !important;
+    white-space: nowrap;
+}
+
+.message a {
+    color: White;
+}
+
+.messageSucessLink {
+    color: #4F8A10 !important;
+}
+
+.message a:hover {
+    color: #edc5c5;
+}
+
+.firstTimeLoginPopupHeading {
+    font-size: 200%;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.firstTimeLoginPopupSubHeading {
+    font-size: 120%;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.firstTimeLoginPopupOptions {
+    padding-left: 90px;
+    padding-top: 10px;
+}
+
+    .firstTimeLoginPopupOptions label {
+        padding-left: 5px;
+        font-weight: bold;
+    }
+
+    .firstTimeLoginPopupOptions p {
+        padding-left: 30px;
+    }
+
+.firstTimeLoginPopupParagraph {
+    text-align: center;
+}
+
+.firstTimeLoginPopupSectionHeader {
+    font-size: 110%;
+    font-weight: bold;
+}
+
+.firstTimeLoginPopupSectionHeaderText {
+    font-size: 90%;
+}
+
+.firstTimeLoginPopupDiv > div {
+    margin-top: 10px;
+}
+
+.WarningIconForFinance {
+    vertical-align: middle;
+}
+
+.riTextBox.riEmpty {
+    font-style: italic !important;
+}
+
+.groupBox.thin > .blueHeaders {
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+    font-size: 14.5px !important;
+}
+
+    .groupBox.thin > .blueHeaders > .blueHeadersLeft {
+        font-size: 14.5px !important;
+    }
+
+.RadGrid_Default .rgHeader .rgSortAsc {
+    width: 11px;
+    position: absolute;
+    margin-top: 4px;
+}
+
+.RadGrid_Default .rgHeader .rgSortDesc {
+    width: 11px;
+    position: absolute;
+    margin-top: 4px;
+}
+
+.chkTerms > input {
+    padding-right: 5px;
+    float: left;
+    clear: both;
+}
+
+.chkTerms > label {
+    display: block;
+    float: left;
+    width: 810px;
+}
+
+.companyWarningNotice {
+    margin: 10px 0px;
+    padding: 5px 10px 10px 10px;
+    border: 1px solid #e5bdb9;
+    border-radius: 5px;
+    background-color: #f1d2cf;
+}
+
+    .companyWarningNotice p {
+        margin-top: 5px;
+    }
+
+.spanCompanySuspended {
+    background: url(../Images/Suspended.png?v=634988608514495256) no-repeat;
+    width: 16px;
+    height: 16px;
+    margin: 3px 0px 0px 0px;
+    float: right;
+}
+
+span.ActionLink {
+    color: #999;
+}
+
+#ui-datepicker-div {
+    font-size: 11px;
+}
+
+.ui-datepicker-trigger {
+    position: relative;
+    top: 3px;
+}
+
+.CancelClearInIE::-ms-clear {
+    display: none;
+}
+
+.DivNavigation {
+    float: left;
+}
+
+    .DivNavigation :hover {
+        cursor: pointer;
+        text-decoration: none;
+        color: #c55f56;
+        text-decoration: underline;
+    }
+
+.EditBookingDetailDisabledChkBox {
+    background-color: #bbb;
+    opacity: 0.5;
+    margin-bottom: -200px;
+}
+
+.rtWrapperTopCenter {
+    position: relative;
+}
+
+div.RadToolTip td.rtWrapperTopCenter a.rtCloseButton {
+    position: absolute;
+    right: -16px;
+    background-image: url(../Images/HelpTipClose.png) !important;
+    background-position: 0 0;
+    margin-top: 7px;
+}
+
+.sbAutocomplete {
+    text-align: left;
+    padding: 0px;
+}
+
+.locationTree {
+    background-color: White;
+    position: absolute;
+    width: 200px;
+    -webkit-box-shadow: 1px 1px 10px rgba(50, 50, 50, 0.46);
+    -moz-box-shadow: 1px 1px 10px rgba(50, 50, 50, 0.46);
+    box-shadow: 1px 1px 10px rgba(50, 50, 50, 0.46);
+}
+
+:-webkit-input-placeholder {
+    font-size: 11px !important;
+    font-style: italic;
+    color: #CCC;
+}
+
+:-moz-placeholder {
+    font-size: 11px !important;
+    font-style: italic;
+    color: #CCC;
+}
+
+:-ms-input-placeholder {
+    font-size: 11px !important;
+    font-style: italic;
+    color: #CCC;
+}
+
+.switchOn, .switchOn.hover {
+    background-image: url(../Images/switch-on-24.png) !important;
+    width: 53px !important;
+    height: 19px !important;
+    background-position: center !important;
+}
+
+.switchOff, .switchOff.hover {
+    background-image: url(../Images/switch-off-24.png) !important;
+    width: 53px !important;
+    height: 19px !important;
+    background-position: center !important;
+}
+
+.rgSelectedRow {
+    background: #E8E3ED 0 -3900px repeat-x !important;
+}
+
+.chkBold label {
+    font-weight: bold;
+}
+
+
+.font11 a, .font11 label, .font11 table, .font11 caption, .font11 tbody, .font11 tfoot, .font11 thead, .font11 tr, .font11 th, .font11 td {
+    font-size: 11px !important;
+}
+
+.font12 a, .font12 label, .font12 table, .font12 caption, .font12 tbody, .font12 tfoot, .font12 thead, .font12 tr, .font12 th, .font12 td {
+    font-size: 12px !important;
+}
+
+
+.TableWrap label {
+    display: block;
+    padding-left: 15px;
+    text-indent: -20px;
+}
+
+.TableWrap input[type=checkbox]{
+    position :relative;
+    top: 2px;
+}

@@ -1,0 +1,382 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7883EDF8-00CA-4ADE-968D-DE2EAF453E95}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StageBitz.AdminWeb</RootNamespace>
+    <AssemblyName>StageBitz.AdminWeb</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\CommonResources\Libraries\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Telerik.Web.Design, Version=2013.1.417.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CommonResources\Libraries\Telerik.Web.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI, Version=2013.1.417.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CommonResources\Libraries\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI.Skins, Version=2013.1.417.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CommonResources\Libraries\Telerik.Web.UI.Skins.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Logout.aspx" />
+    <Content Include="Common\Images\administrator.png" />
+    <Content Include="Common\Images\background_image.png" />
+    <Content Include="Common\Images\bread_crumb_arrow.png" />
+    <Content Include="Common\Images\container_bg.png" />
+    <Content Include="Common\Images\error - Small.png" />
+    <Content Include="Common\Images\error.png" />
+    <Content Include="Common\Images\errorBig.png" />
+    <Content Include="Common\Images\footer.png" />
+    <Content Include="Common\Images\header.png" />
+    <Content Include="Common\Images\Ignore.png" />
+    <Content Include="Common\Images\in_progress.gif" />
+    <Content Include="Common\Images\Keep.png" />
+    <Content Include="Common\Images\msginfo.png" />
+    <Content Include="Common\Images\navi_bg.png" />
+    <Content Include="Common\Images\placeholder_thumb.png" />
+    <Content Include="Common\Images\popup_close_btn.png" />
+    <Content Include="Common\Images\refreshIcon.gif" />
+    <Content Include="Common\Images\shade _background.png" />
+    <Content Include="Common\Images\StageBitzLogo_small.png" />
+    <Content Include="Common\Images\success.png" />
+    <Content Include="Common\Images\warning.gif" />
+    <Content Include="Common\Scripts\global.js" />
+    <Content Include="Common\Scripts\jquery-ui.custom.min.js" />
+    <Content Include="Common\Scripts\jquery.min.js" />
+    <Content Include="Common\Scripts\popupBox.js" />
+    <Content Include="Common\Styles\Site.css" />
+    <Content Include="Company\Companies.aspx" />
+    <Content Include="Company\CompanyDetails.aspx" />
+    <Content Include="Company\ManageDiscountCodes.aspx" />
+    <Content Include="Company\PricingPlanHistory.aspx" />
+    <Content Include="Controls\Common\BreadCrumbs.ascx" />
+    <Content Include="Controls\Common\TransactionSearch.ascx" />
+    <Content Include="Controls\Company\CompanyPaymentPackageTestConfigurations.ascx" />
+    <Content Include="Controls\Inventory\InventoryActivity.ascx" />
+    <Content Include="Controls\Personal\UserActivity.ascx" />
+    <Content Include="Controls\Project\ProjectActivity.ascx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Finance\TransactionSearch.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="ItemTypes\ItemTypeFieldPreferences.aspx" />
+    <Content Include="Public\Error.aspx" />
+    <Content Include="System\SystemSettings.aspx" />
+    <Content Include="User\ActivationsPending.aspx" />
+    <Content Include="User\Skills.aspx" />
+    <Content Include="User\UserDetails.aspx" />
+    <Content Include="User\Users.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\CommonResources\Version.cs">
+      <Link>Version.cs</Link>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Helpers\MasterBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Helpers\PageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Helpers\Support.cs" />
+    <Compile Include="Common\Helpers\UserControlBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Company\Companies.aspx.cs">
+      <DependentUpon>Companies.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Company\Companies.aspx.designer.cs">
+      <DependentUpon>Companies.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Company\CompanyDetails.aspx.cs">
+      <DependentUpon>CompanyDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Company\CompanyDetails.aspx.designer.cs">
+      <DependentUpon>CompanyDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Company\ManageDiscountCodes.aspx.cs">
+      <DependentUpon>ManageDiscountCodes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Company\ManageDiscountCodes.aspx.designer.cs">
+      <DependentUpon>ManageDiscountCodes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Company\PricingPlanHistory.aspx.cs">
+      <DependentUpon>PricingPlanHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Company\PricingPlanHistory.aspx.designer.cs">
+      <DependentUpon>PricingPlanHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Content.master.cs">
+      <DependentUpon>Content.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Content.master.designer.cs">
+      <DependentUpon>Content.master</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\BreadCrumbs.ascx.cs">
+      <DependentUpon>BreadCrumbs.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Common\BreadCrumbs.ascx.designer.cs">
+      <DependentUpon>BreadCrumbs.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\GroupBox.cs" />
+    <Compile Include="Controls\Common\PopupBox.cs" />
+    <Compile Include="Controls\Common\SBRadGrid.cs" />
+    <Compile Include="Controls\Common\TransactionSearch.ascx.cs">
+      <DependentUpon>TransactionSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Common\TransactionSearch.ascx.designer.cs">
+      <DependentUpon>TransactionSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Company\CompanyPaymentPackageTestConfigurations.ascx.cs">
+      <DependentUpon>CompanyPaymentPackageTestConfigurations.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Company\CompanyPaymentPackageTestConfigurations.ascx.designer.cs">
+      <DependentUpon>CompanyPaymentPackageTestConfigurations.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Inventory\InventoryActivity.ascx.cs">
+      <DependentUpon>InventoryActivity.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Inventory\InventoryActivity.ascx.designer.cs">
+      <DependentUpon>InventoryActivity.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Personal\UserActivity.ascx.cs">
+      <DependentUpon>UserActivity.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Personal\UserActivity.ascx.designer.cs">
+      <DependentUpon>UserActivity.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Project\ProjectActivity.ascx.cs">
+      <DependentUpon>ProjectActivity.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Project\ProjectActivity.ascx.designer.cs">
+      <DependentUpon>ProjectActivity.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\TransactionSearch.aspx.cs">
+      <DependentUpon>TransactionSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Finance\TransactionSearch.aspx.designer.cs">
+      <DependentUpon>TransactionSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="ItemTypes\ItemTypeFieldPreferences.aspx.cs">
+      <DependentUpon>ItemTypeFieldPreferences.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ItemTypes\ItemTypeFieldPreferences.aspx.designer.cs">
+      <DependentUpon>ItemTypeFieldPreferences.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Public\Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Public\Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="System\SystemSettings.aspx.cs">
+      <DependentUpon>SystemSettings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="System\SystemSettings.aspx.designer.cs">
+      <DependentUpon>SystemSettings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ActivationsPending.aspx.cs">
+      <DependentUpon>ActivationsPending.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ActivationsPending.aspx.designer.cs">
+      <DependentUpon>ActivationsPending.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Skills.aspx.cs">
+      <DependentUpon>Skills.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Skills.aspx.designer.cs">
+      <DependentUpon>Skills.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\UserDetails.aspx.cs">
+      <DependentUpon>UserDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\UserDetails.aspx.designer.cs">
+      <DependentUpon>UserDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Users.aspx.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Users.aspx.designer.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StageBitz.Common\StageBitz.Common.csproj">
+      <Project>{23F0AADB-BAFD-4730-8528-49CE5B15B111}</Project>
+      <Name>StageBitz.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StageBitz.Data\StageBitz.Data.csproj">
+      <Project>{D23AA30A-4470-4E0D-926C-80EE618F4D1D}</Project>
+      <Name>StageBitz.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StageBitz.Logic\StageBitz.Logic.csproj">
+      <Project>{e2180c6d-8c6d-48ba-87b2-e8499c8aaffb}</Project>
+      <Name>StageBitz.Logic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StageBitz.Reports\StageBitz.Reports.csproj">
+      <Project>{4986f884-2f5a-4080-b287-4a6adb62a771}</Project>
+      <Name>StageBitz.Reports</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Common\Scripts\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Common\Images\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Common\Styles\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content.master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Default\Default.skin" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <SaveServerSettingsInUserFile>True</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

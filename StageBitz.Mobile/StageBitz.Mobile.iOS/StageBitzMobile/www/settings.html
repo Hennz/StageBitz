@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>STAGEBITZ</title>
+
+<style type="text/css" media="screen, handheld">
+@import url("./public/css/main.css");
+
+@import url("public/css/jquery.selectbox.css");
+</style>
+
+<script type="text/javascript" src="public/js/jquery.js"></script>
+<script type="text/javascript" src="public/js/jquery.selectbox.js"></script>
+<script type="text/javascript" src="public/js/main.js"></script>
+
+</head>
+<body>
+	<div data-role="page" id="settings">
+
+		<script type="text/javascript">
+        function changeSyncSetting() {
+                window.localStorage["SyncWifyOnly"] =$("#syncWifi").val();
+            }
+        function changeSearchStting() {
+            
+            window.localStorage["SearchWifiOnly"] = $("#searchWifi").val();
+            
+        }
+        function changeStorageSettings() {
+            window.localStorage["savetoGallery"] = $("#selectLocatVersion").val();
+        }
+        
+        $('#settings').on('pageinit',function() {
+                    
+                          
+                    if (window.localStorage["SyncWifyOnly"] != null){
+                          $("#syncWifi").val(window.localStorage["SyncWifyOnly"]);
+                          $("#syncWifi").slider('refresh');
+                    }
+                          
+                    if (window.localStorage["SearchWifiOnly"] != null){
+                          $("#searchWifi").val(window.localStorage["SearchWifiOnly"]);
+                          $("#searchWifi").slider('refresh');
+                          
+                    }
+                          
+                    if (window.localStorage["savetoGallery"] != null){
+                          $("#selectLocatVersion").val(window.localStorage["savetoGallery"]);
+                          $("#selectLocatVersion").slider('refresh');
+                    }
+
+
+        });
+        
+        $('#settings').on('pageshow',function() {
+                          if (window.device.platform == "iOS" && parseFloat(window.device.version) >= 7) {
+                            $('#statusBar').css('display','block');
+                          }
+        
+                          checkSync(function(hasSync){
+                                    if(hasSync){
+                                    $('.sync img').attr("src","css/images/icons/sync-02.png");
+                                    }else{
+                                    $('.sync img').attr("src","css/images/icons/sync.png");
+                                    }
+                                    });
+                          $("#version").text(appAPIVersion);
+                          });
+        
+        function navigateSync(){
+            $.mobile.changePage("sync.html");
+            return false;
+        }
+        
+        function navigateHome(){
+            $.mobile.changePage("home.html");
+            return false;
+        }
+		</script>
+        <div id="item-background"></div>
+		<div class="push-footer">
+			<div class="padding">
+				<!-- Header -->
+				<header>
+                    <div id="statusBar" style="height:20px;background:#fff;display:none;"></div>
+					<div id="header">
+						<div class="area">
+							<div class="header">
+								<a href="#" class="home" onclick="navigateHome()"> <img
+									src="css/images/icons/home.png" alt="Home" /> </a>
+								<h1>
+									<a href="#" class="logotype"> <img
+										src="css/images/logotype.png" alt="STAGEBITZ" /> </a>
+								</h1>
+								<a href="#" class="settings"> <img
+									src="css/images/icons/settings.png" alt="Settings" /> </a><a
+									href="#" class="sync" onclick="navigateSync()"> <img
+									src="css/images/icons/sync.png" alt="Sync" /> </a>
+							</div>
+						</div>
+					</div>
+				</header>
+				<!-- Content -->
+				<div id="content">
+					<div class="area" style="text-align: right !important">
+						<div class="boxes">
+							<div class="settingContainer" style="text-align: center">
+								<h2>SETTINGS</h2>
+							</div>
+							<div class="settingContainer">
+								<div class="settingDiv">Sync only with Wi-Fi connection</div>
+								<div class="containing-element switch"
+									style="display: inline; width: 35%">
+									<select name="flip-mini" id="syncWifi" data-role="slider"
+										data-mini="true" onchange="changeSyncSetting()">
+										<option value="false">OFF</option>
+										<option value="true">ON</option>
+									</select>
+								</div>
+
+								<div class="clear">&nbsp;</div>
+								<div class="infoDiv"
+									style="text-align: left; font-size: 1em; color: #665271 !important; padding-top: 10px; width: 100%">ON
+									selected: We will only sync your Items when you are only
+									connected to Wi-Fi.</div>
+								<div class="infoDiv"
+									style="text-align: left; font-size: 1em; color: #665271 !important; padding-top: 10px; width: 100%">OFF
+									selected: We will sync your Items using the first available Internet connection (Wi-Fi or mobile data).</div>
+							</div>
+							<div class="settingContainer">
+								<div class="settingDiv">Search only with Wi-Fi connection</div>
+								<div class="containing-element switch"
+									style="display: inline; width: 35%">
+									<select name="flip-mini" id="searchWifi" data-role="slider"
+										data-mini="true" onchange="changeSearchStting()">
+										<option value="false">OFF</option>
+										<option value="true">ON</option>
+									</select>
+								</div>
+
+								<div class="clear">&nbsp;</div>
+								<div class="infoDiv"
+									style="text-align: left; font-size: 1em; color: #665271 !important; padding-top: 10px; width: 100%">ON selected: Save your data and search only when you are connected to Wi-Fi.
+                                </div>
+								<div class="infoDiv"
+									style="text-align: left; font-size: 1em; color: #665271 !important; padding-top: 10px; width: 100%">OFF selected: Search anytime using the first available Internet connection (Wi-Fi or mobile data).</div>
+							</div>
+							<div class="settingContainer">
+								<div class="settingDiv">Keep local version of photos</div>
+								<div class="containing-element switch"
+									style="display: inline; width: 35%">
+									<select name="flip-mini" id="selectLocatVersion"
+										data-role="slider" data-mini="true"
+										onchange="changeStorageSettings()">
+										<option value="false">OFF</option>
+										<option value="true">ON</option>
+									</select>
+								</div>
+
+								<div class="clear">&nbsp;</div>
+								<div class="infoDiv"
+									style="text-align: left; font-size: 1em; color: #665271 !important; padding-top: 10px; width: 100%">When
+									taking larger quantities of photos you may wish to disable
+									this option.</div>
+							</div>
+                            <div class="version small">
+                                <label >Version</label>
+                                <label id="version" ></label>
+                            </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+        <!-- Footer -->
+        <footer>
+            <div id="footer">
+                <div class="area">
+                    <!--<a href="#" class="arrow">
+                     <img src="public/images/icons/left-arrow.png" alt="left-arrow" /></a>-->
+                    <a href="#" class="icon">
+                        <img src="css/images/icons/icon.png" alt="icon" onclick="GoToVoiceContactPage()"/></a>
+                </div>
+                <div class="clear">&nbsp;</div>
+            </div>
+        </footer>
+	</div>
+</body>
+</html>

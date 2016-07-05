@@ -1,0 +1,81 @@
+
+/* RadGrid Windows 7 skin style overrides */
+
+.RadGrid_Windows7.RadGrid
+{
+	background-color:white !important;
+}
+
+.RadGrid.RadGrid_Windows7 td
+{
+	border-left:1px solid #EAEAEA !important;
+	border-bottom:1px solid #EAEAEA !important;
+}
+
+.RadGrid_Windows7 .rgRow
+{
+	background-color:white !important;
+}
+
+.RadGrid_Windows7 .rgAltRow
+{
+	background-color:#f7f7f7 /*#F2F8FD*/ !important;
+}
+
+.RadGrid_Windows7 .rgPagerCell
+{
+	background-color:#cfcaca /*#F2F8FD*/ !important;
+}
+
+.RadGrid_Windows7 .rgEditRow
+{
+	background-image:none !important;
+	background-color : #ddd7e0 !important;
+}
+
+.RadGrid_Windows7 .rgEditRow > td
+{
+	border-top:1px solid #cac0cf !important;
+	border-bottom:1px solid #cac0cf !important;
+}
+
+.rgHeader
+{
+	
+	background:#e6e2eb !irgAltRowmportant;
+}
+.RadGrid_Windows7 .rgHeader, .RadGrid_Windows7 .rgHeader a
+{
+    color:#564666 !important;
+}
+
+.rtsUL li .rtsOut
+{
+    background:#5a4969;
+   
+}
+.rtsUL li .rtsTxt
+{
+     color:#fff !important;
+}
+.rtsLI :hover .rtsOut
+{
+      background:#cd7067 !important;
+}
+.rtsSelected .rtsOut
+{
+    background:#cd7067 !important;
+}
+
+.RadTabStripTop_Office2010Blue .rtsLevel1 .rtsLink, .RadTabStripTop_Office2010Blue .rtsLevel1 .rtsOut, .RadTabStripBottom_Office2010Blue .rtsLevel1 .rtsLink, .RadTabStripBottom_Office2010Blue .rtsLevel1 .rtsOut, .RadTabStripTop_Office2010Blue .rtsLevel1, .RadTabStripBottom_Office2010Blue .rtsLevel1
+{
+  background-image:none !important;  
+}
+.rtsSelected
+{
+    margin:0px !important;
+}
+.rtsLevel
+{
+    background:transparent !important;
+}

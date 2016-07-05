@@ -1,0 +1,161 @@
+﻿/* RadWindow for ASP.NET AJAX Metro Skin */
+
+
+/* Window/WindowHorizontalSprites.gif */
+
+.RadWindow_Purple
+{
+    border: solid 1px #e6e6e6;
+}
+
+.RadWindow_Purple .rwStatusbarRow .rwCorner,
+.RadWindow_Purple .rwStatusbarRow .rwStatusbar
+{
+	border-top: solid 1px #e6e6e6;
+}
+
+.RadWindow_Purple .rwTopLeft,
+.RadWindow_Purple .rwTopRight,
+.RadWindow_Purple .rwTitlebar,
+.RadWindow_Purple .rwTopResize
+{
+    background: #675271;
+}
+
+.RadWindow_Purple .rwBodyLeft,
+.RadWindow_Purple .rwBodyRight,
+.RadWindow_Purple tr td.rwStatusbar input,
+.RadWindow_Purple .rwStatusbar td,
+.RadWindow_Purple .rwFooterRow .rwCorner,
+.RadWindow_Purple .rwFooterCenter,
+.RadWindow_Purple .rwStatusbar td
+{
+	background-color: #ffffff !important;
+}
+
+.rwWindowContent
+{
+    border: solid 1px #ffffff;
+}
+
+.RadWindow_Purple iframe
+{
+    display: block;
+}
+
+.RadWindow_Purple a.rwIcon,
+.RadWindow_Purple .rwShadow a.rwIcon
+{
+    background: url('Window/Icon.gif?v=634988533635545065') no-repeat center;
+    margin: 3px 5px 0 0;
+}
+
+.RadWindow_Purple ul.rwControlButtons
+{
+    margin: 0;
+}
+
+.RadWindow_Purple .rwControlButtons a
+{
+    background-color: #caa9d9;
+    background-image: url('Window/CommandButtonSprites.gif?v=634988533635545065');
+    width: 29px;
+    height: 19px;
+    border: solid 1px #caa9d9;
+}
+
+div.RadWindow_Purple .rwTitlebarControls em
+{
+	color: #ffffff;
+	font-size: 14px;
+	text-transform: uppercase;
+	font-weight: normal;
+	padding: 1px 0 0 1px;
+}
+
+div.RadWindow_Purple .rwStatusbar div
+{
+	background-image: url('Window/rwResize.gif?v=634988533635545065');
+	background-position: 10px 8px;
+	margin: 0 -4px -7px 0;
+}
+
+*html div.RadWindow_Purple .rwStatusbar div
+{
+	margin: 0 -1px -4px 0;
+}
+
+*+html div.RadWindow_Purple .rwStatusbar div
+{
+	margin: 0 -1px -4px 0;
+}
+
+div.RadWindow_Purple .rwDialogInput
+{
+	border: solid 1px #e6e6e6;
+}
+
+div.RadWindow_Purple .rwDialogInput:hover
+{
+	border: solid 1px #757575;
+}
+
+div.RadWindow_Purple tr td.rwLoading
+{
+    background-color: #ffffff;
+}
+
+.RadWindow_Purple td.rwWindowContent.rwLoading
+{
+    background-image: url('Common/loading.gif?v=634988533635545065');
+}
+
+/* When ShowContentDuringLoad="false" */
+.RadWindow_Purple input.rwLoading
+{
+    background-image: url('Common/loading_small.gif?v=634988533635545065');
+}
+
+div.RadWindow_Purple a.rwPopupButton
+{
+    background: #ffffff;
+    border: solid 1px #e6e6e6;
+}
+
+div.RadWindow_Purple a.rwPopupButton:hover
+{
+    background: #e6e6e6;
+    border-color: #e6e6e6;
+}
+
+div.RadWindow_Purple a.rwCancel,
+div.RadWindow_Purple a.rwCancel span
+{
+    background: none !important;
+    cursor: pointer;
+    border: 0 !important;
+}
+
+div.RadWindow_Purple a.rwCancel span span,
+div.RadWindow_Purple a.rwCancel:hover span span
+{
+    color: #757575;
+    text-decoration: underline;
+}
+
+
+
+ div.RadWindow_Purple .rwTitlebarControls em {
+
+	color: #fff;
+
+}
+
+ div.RadWindow_Purple .rwCloseButton {
+
+	
+    display:none !important;
+}
+
+
+

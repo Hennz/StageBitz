@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appSettings>
+        
+        <!-- QA Server-->
+<!--         <service url="http://stagebitz.geveo.com/service/api/" /> -->
+        <!-- Live Server-->
+        <!--service url="https://user.stagebitz.com/service/api/" /-->
+        <!-- Main Server-->
+        <!--service url="http://morpheus/StageBitz.Service/api/" /-->
+        <!-- Local Server-->
+        <service url="http://192.168.94.39/StageBitzEpicMobile.Service/api/" />
+        
+        <version versionnumber="1.0.0.0" />
+        <itemurl value="http://192.168.94.10/StageBitz.EpicMobileUserWeb/Inventory/ItemDetails.aspx?ItemId={0}&CompanyId={1}"/>
+        <contacturl value="http://stagebitz.uservoice.com/knowledgebase/topics/44096-stagebitz-mobile-app"/>
+
+    </appSettings>
+</configuration>

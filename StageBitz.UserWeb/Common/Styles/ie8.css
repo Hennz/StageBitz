@@ -1,0 +1,11 @@
+﻿.packageTypeTitle {
+    filter:  progid:DXImageTransform.Microsoft.BasicImage(rotation=3);  /* IE6,IE7 */
+    ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
+	white-space:nowrap;
+	display:block;
+	width:200px;
+    vertical-align:top;
+    position:relative;
+    top:30px;
+    left:-25px;
+}

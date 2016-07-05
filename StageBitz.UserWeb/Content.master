@@ -1,0 +1,71 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Content.master.cs"
+    Inherits="StageBitz.UserWeb.Content" %>
+
+<%@ Register Src="~/Controls/Common/BreadCrumbs.ascx" TagName="BreadCrumbs" TagPrefix="sb" %>
+<asp:Content ID="HtmlHeaderContent" ContentPlaceHolderID="HeadContent" runat="server">
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="NavigationContent" ContentPlaceHolderID="NavigationContent" runat="server">
+    <div id="divMainNavi" runat="server">
+        <div class="left navigation">
+            <a id="lnkHomePage" href="~/Default.aspx" runat="server">Home</a><asp:ContentPlaceHolder
+                ID="PageNavigationLinks" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div id="divUserInfo" runat="server" class="right userInfo">
+            <div id="headerUserNameDisplay">
+                <asp:UpdatePanel ID="upnlUserName" UpdateMode="Conditional" runat="server">
+                    <ContentTemplate>
+                        Welcome <a id="lnkPersonalProfile" href="~/Personal/UserDetails.aspx" runat="server">
+                            Personal Profile</a>&nbsp;</ContentTemplate>
+                </asp:UpdatePanel>
+            </div>
+            <div class="left">
+                | <a href="~/Account/Logout.aspx" runat="server">Sign Out</a>
+            </div>
+        </div>
+        <br style="clear: both;" />
+    </div>
+</asp:Content>
+<asp:Content ID="MainContentArea" ContentPlaceHolderID="MainContent" runat="server">
+    <div class="left">
+        <h1>
+            <asp:Literal ID="ltrlPageTitle" runat="server"></asp:Literal></h1>
+        <div class="breadCrumbs">
+            <sb:BreadCrumbs ID="breadCrumbs" runat="server" />
+        </div>
+    </div>
+    <div class="right">
+        <asp:ContentPlaceHolder ID="PageTitleRight" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    <div style="clear: both;">
+    </div>
+    <asp:ContentPlaceHolder ID="PageContent" runat="server">
+    </asp:ContentPlaceHolder>
+    <!-- UserVoice JavaScript SDK (only needed once on a page) -->
+    <script type="text/javascript">
+        (function () {
+            var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;
+            uv.src = '//widget.uservoice.com/<%= ConfigurationManager.AppSettings["UserVoiceAccountKey"] %>.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(uv, s);
+        })();
+    </script>
+    <!-- A tab to launch the Classic Widget -->
+    <script>
+        UserVoice = window.UserVoice || [];
+        UserVoice.push(['showTab', 'classic_widget', {
+            mode: 'full',
+            primary_color: '#C55F56',
+            link_color: '#675271',
+            default_mode: 'support',
+            forum_id: 176287,
+            tab_label: 'Feedback & Support',
+            tab_color: '#C55F56',
+            tab_position: 'bottom-left',
+            tab_inverted: false
+        }]);
+    </script>
+</asp:Content>
